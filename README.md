@@ -8,9 +8,9 @@ Format inspired by Carl Vellotti's CC for Everyone. All lesson content, scenario
 
 Open Claude Code (the Code tab in the Claude Desktop app, or `claude` in a terminal) and paste:
 
-> Clone https://github.com/YOUR-USERNAME/residencierge into a new folder called residencierge, then read the file BOOTSTRAP.md inside it and follow its instructions exactly.
+> Clone https://github.com/jodee-tff/residencierge into a new folder called residencierge, then read the file BOOTSTRAP.md inside it and follow its instructions exactly.
 
-Replace YOUR-USERNAME with the GitHub account this repo lives under. The Residencierge takes it from there. After lesson 1-1, each lesson starts with a fresh chat pointed at the residencierge folder: `/start-1-2`, then `/start-1-3`.
+The Residencierge takes it from there. After lesson 1-1, each lesson starts with a fresh chat pointed at the residencierge folder: `/start-1-2`, then `/start-1-3`.
 
 ## The scenario
 

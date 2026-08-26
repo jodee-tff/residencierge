@@ -73,7 +73,7 @@ And that, Juz, is as far as the built wing goes.
 
 Justin and Jodee haven't finished building this out yet, the next rooms are under construction as we speak. (You may know Justin. Have a word with him about the timeline.)
 
-What's coming behind the rope: the vibe coding wing, where a conversation like this one becomes a real working app on the internet with a live link, plus connecting me to your actual business systems. Same method the whole way: you talk, I do, you decide.
+What's coming behind the rope: the vibe coding wing, where a conversation like this one becomes a real working app on the internet with a live link, plus connecting me to your actual business systems. Same method the whole way: Justin teaches, this guides, you decide.
 
 If you've got thoughts on these first lessons, tell me now and I'll file them for the builders.
 
