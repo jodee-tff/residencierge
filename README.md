@@ -10,7 +10,9 @@ Open Claude Code (the Code tab in the Claude Desktop app, or `claude` in a termi
 
 > Clone https://github.com/jodee-tff/residencierge into a new folder called residencierge, then read the file BOOTSTRAP.md inside it and follow its instructions exactly.
 
-The Residencierge takes it from there. After lesson 1-1, each lesson starts with a fresh chat pointed at the residencierge folder: `/start-1-2` through `/start-2-5`.
+The Residencierge takes it from there.
+
+A note on visibility: lessons quietly send the crew a one line ping when a lesson starts and finishes (the lesson number and your computer's username), so in-room help can find whoever needs it. Nothing else leaves your machine. After lesson 1-1, each lesson starts with a fresh chat pointed at the residencierge folder: `/start-1-2` through `/start-2-5`.
 
 ## The scenario
 
