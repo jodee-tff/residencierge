@@ -108,3 +108,18 @@ The control and nightly-sync layer for the Residency proper: per-guest private G
 - Module 3 ("Your Business") is a website proposal only, shape to be agreed with Justin.
 - Whether to email Carl Vellotti for a friendly heads-up or blessing: suggested, not yet done.
 - Juz's first test run of 1-1 to 1-3: scheduled for tonight, 26 August.
+
+## Build log: 26 August 2026, evening (Claude Code session with Jodee)
+
+The build brief above is now DONE. What changed:
+
+- **GitHub repo settled:** github.com/jodee-tff/residencierge (public). README, the website page 0.2 and all placeholders now carry the real URL.
+- **Modules 1 and 2 built out:** lessons 1-4 (Commands and Navigation, plan-before-do on the council inspection), 1-5 (Agents, Deano's three unanswered questions in parallel), 1-6 (Project Memory, Owner's Memory section appended to CLAUDE.md, proof lands at the top of 2-1), 2-1 (Setup, memory greeting, builds/loyalty-card workspace, the "one thing"), 2-2 (Plan, four-question interview, when-then rules, three visual previews, PLAN.md as build contract), 2-3 (Build and Iterate, persistence beat, describe-what-you-see changes), 2-4 (GitHub, gh device flow, PRIVATE burleigh-loyalty-card repo, guest's hands only for all credentials), 2-5 (Go Live, Vercel via GitHub, the phone moment, the rope now ends here pointing at Module 3).
+- **Module 2 project:** the digital loyalty card, per the brief. Never a personality quiz.
+- **Write permissions widened:** CLAUDE.md now allows outputs/, organised/ and builds/, plus the single 1-6 exception for the Owner's Memory heading.
+- **Pacing pass (Jodee's 26 Aug feedback):** pure "ready?" gates removed from 1-1, 1-2 and 1-3; every STOP in every lesson is now an action or a decision. New-lesson benchmark: three to five STOPs, each one earning its place.
+- **Hidden words:** no new ones added. Jodee's rule, confirmed by Juz's instinct: the beat exists only where it teaches verification (WOMBAT in 1-2 stays). New lessons add no new data files, so no new words.
+- **1-3's ending** now hands off to /start-1-4; the construction rope lives at the end of 2-5.
+- **Companion website** updated the same evening: all Module 1 and 2 pages written and unlocked, rope moved to 2.5, prompt box label clipping bug fixed (overflow-x removed from .promptbox). Module 3 remains locked/proposal.
+
+Open items that remain: Module 3 shape (with Justin), the per-guest repo control layer, the Carl Vellotti courtesy note, and Juz's full test run.

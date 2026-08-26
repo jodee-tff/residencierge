@@ -12,10 +12,6 @@ Three things before we start, and they're the only rules of the whole Residency:
 
 **Three. If you're ever lost, raise your hand.** Confused, not sure where to start, not seeing what you should be seeing? Hand up, and Jodee or Erik will come over and get you back on track. That's what they're there for, and they love it.
 
-STOP: All three make sense? Ready to hear what you've gotten yourself into?
-
-USER: Yes / Ready
-
 ---
 
 ## Your New Business

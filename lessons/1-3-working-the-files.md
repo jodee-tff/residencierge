@@ -43,9 +43,7 @@ ACTION: Open and analyse attachments/loyalty-flyer.png. Describe it: the cheerfu
 
 Yes, I read images too: flyers, whiteboard photos, screenshots, scanned contracts. If your business has it lying around, I can look at it.
 
-STOP: Mystery solved. Want to know how the outside world handles this before you decide the fix?
-
-USER: Yes
+Mystery solved. Before you decide the fix, one more move, and it takes seconds: let's see how the outside world handles this.
 
 ACTION: Do a quick live web search on cafe loyalty program best practice (typical stamps-to-reward, whether expiry windows are used, digital vs paper cards). Report back in five lines maximum, plain English, with the one or two facts that matter for his decision. If web access fails, say so plainly and offer the widely known basics instead, labelled as such.
 
@@ -61,25 +59,17 @@ USER: Gives his decision
 
 ACTION: Take templates/insight-brief-template.md as the structure and create outputs/loyalty-insight-brief.md: the situation, the evidence (reviews pattern, 500 vs 9, the 14 day small print), the outside benchmark from the web, and his decision as the recommendation, dated, with "Prepared by The Residencierge for Justin Kabbani" at the bottom. Then invite him to open it in the split screen and admire it: a board-ready one-pager that did not exist three minutes ago, built from a mess, a picture and the live internet.
 
-STOP: That's the trick you'll use on your real business this week: point me at chaos, I find the pattern, you make the call, we file the brief. Pretty good, right?
-
-USER: Reacts
-
 ---
 
-## The Rope Across the Corridor
+## Wrap
 
-And that, Juz, is as far as the built wing goes.
+That's the trick you'll use on your real business this week: point me at chaos, I find the pattern, you make the call, we file the brief. That loop is the engine of everything still to come. And the loyalty program? You've diagnosed it. Later in the course you'll do something better than write another memo about it.
 
-Justin and Jodee haven't finished building this out yet, the next rooms are under construction as we speak. (You may know Justin. Have a word with him about the timeline.)
+Next lesson is the shortest of the week: the driving skills. Saved commands, one job per chat, and the planning move that runs all of Module 2. If you've got thoughts on these first lessons, tell me any time and I'll file them for Justin and Jodee.
 
-What's coming behind the rope: the vibe coding wing, where a conversation like this one becomes a real working app on the internet with a live link, plus connecting me to your actual business systems. Same method the whole way: Justin teaches, this guides, you decide.
+**When you're ready:** fresh chat pointed at this folder, then `/start-1-4`.
 
-If you've got thoughts on these first lessons, tell me now and I'll file them for the builders.
-
-See you at the Residency. 🏖️
-
-STOP: End of the built lessons. If he has questions about how any of this works, answer them plainly and stay in character. If he offers feedback, append it dated to outputs/feedback.md.
+STOP: See you there. ☕
 
 ---
 
@@ -91,7 +81,6 @@ STOP: End of the built lessons. If he has questions about how any of this works,
 - The reveal order is the lesson: reviews pattern, then the 500 vs 9 contradiction, then the flyer small print. Do not spoil the flyer early, even if he guesses expiry, confirm only when the image is opened ("let's check the evidence" energy).
 - Only write inside organised/ and outputs/.
 - If any step misfires twice, the hand-raise line: Jodee or Erik will get you back on track (or "message Jodee" during remote testing).
-- Do not invent lessons beyond this one under any circumstances.
 
 ## Success Criteria
 
@@ -101,4 +90,4 @@ STOP: End of the built lessons. If he has questions about how any of this works,
 - [ ] The flyer image was analysed and the 14 day small print revealed as the villain
 - [ ] He saw one quick piece of live web research folded in
 - [ ] outputs/loyalty-insight-brief.md exists, from the template, with HIS decision in it
-- [ ] He heard the construction rope ending, who the builders are, and what's coming next
+- [ ] He knows 1.4 is a fresh chat plus /start-1-4

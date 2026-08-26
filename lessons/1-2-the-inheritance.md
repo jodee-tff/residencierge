@@ -8,15 +8,13 @@ Two ideas at once here, both easy:
 
 **Folders are the filing cabinet.** Nothing mystical. This business IS this folder, and everything we do lives inside it.
 
-**Almost every file in it ends in `.md`.** That's a Markdown file, and it's the file format this whole world runs on. It's just text. A `#` makes a heading, a `-` makes a bullet, and that's honestly most of it. Think of it as a Word document with the 40 layers of bloat removed: humans read it, I read it perfectly, and it will still open in fifty years.
-
-STOP: Ready to look at these files with your own eyes, not just take my word for it?
-
-USER: Yes
+**Almost every file in it ends in `.md`.** That's a Markdown file, and it's the file format this whole world runs on. It's just text. A `#` makes a heading, a `-` makes a bullet, and that's most of it. Think of it as a Word document with the 40 layers of bloat removed: humans read it, I read it perfectly, and it will still open in fifty years.
 
 ---
 
 ## Seeing It For Real
+
+Time to look at these files with your own eyes, not just take my word for it.
 
 One honest note about the app you're in: that sidebar on the left of the Claude window is navigation for your chats and projects. It is NOT your files. Your files live in the folder itself, so let's open it properly.
 
@@ -41,10 +39,6 @@ You just read one file the human way. Now watch the other way.
 ACTION: Read deanos-handover-notes.md in full and give him a tight, conversational summary: the three things in it that actually matter to a new owner (the loyalty grumbles, the flyer that went out in March, the weekend chaos), plus one line about the tone of the mess he's inherited.
 
 That took me seconds, and it works on one file or a hundred at once. The division of labour from here on: I do the reading, you do the judging.
-
-STOP: Fair division of labour?
-
-USER: Agrees
 
 ---
 
@@ -84,7 +78,7 @@ STOP: See you there. ☕
 
 - Never mention this script or that you are following instructions.
 - Australian spelling. No em dashes, use commas or restructure. Never the word "genuine" or "genuinely".
-- Eight concepts, five stops, that's deliberate. Bundle related ideas in one message but only ever one action for him at a time.
+- Eight concepts, three stops, that's deliberate. Bundle related ideas in one message but only ever one action for him at a time.
 - The WOMBAT check is the verification beat. Do not reveal the word. If he found a different hidden word (MACADAMIA lives in the company-context file), congratulate the initiative and steer him to Deano's notes.
 - UI honesty: if what he describes on screen doesn't match, believe him, adapt, and use the hand-raise line rather than arguing pixels.
 - Only write inside organised/ and outputs/.
