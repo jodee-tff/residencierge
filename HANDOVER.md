@@ -2,6 +2,8 @@
 
 For Jodee. Carry this into a Claude Code session when you want to test or extend the course.
 
+**Building new lessons? Read `builders/PROJECT-MEMORY.md` FIRST.** It is the full project recap: people, event, legal rule, script format, writing rules, scenario canon, the build brief for Modules 1 and 2, and the companion website link. This file covers testing; that file covers building.
+
 ## To test it exactly as Juz will
 
 1. Put this folder somewhere sensible, for example `~/Documents/residencierge` (or run the clone prompt from the README).
@@ -21,6 +23,10 @@ For Jodee. Carry this into a Claude Code session when you want to test or extend
 - The mystery arc in 1-3 reveals in strict order: reviews pattern, then 500 cards vs 9 redemptions, then the flyer's 14 day expiry. Scripts forbid spoiling early.
 - Carl's "Full Stack PM account" plug is replaced by: progress saves itself in the folder, background materials live in the Exec AI Residency Hub, feedback is filed to outputs/feedback.md for Justin and Jodee.
 - The wider curriculum plan, four work zones model, and the control/nightly-sync design (per-guest private repos, /pack-down, /start-day, hooks) live in the Cowork project doc `claude/cc4e-course-analysis.md`.
+
+## Setup clinic checklist (run per machine, 8:30 Sunday)
+
+The bootstrap now runs a silent pre-flight (write test, enclosing git repo and gitignore shadowing, cloud-sync path). The human clinic should additionally confirm: Claude Desktop installed and signed in, admin rights available, the residencierge folder cloned OUTSIDE any synced or git-managed parent (a plain `~/Documents/residencierge` is ideal), and the @ picker shows course files when typing @ in a chat pointed at the folder. Jodee's own machine is the known exception: her home folder is a git repo with an ignore-everything rule, so on her machine the picker hides the files by design.
 
 ## Next lessons on the roadmap (not yet built)
 

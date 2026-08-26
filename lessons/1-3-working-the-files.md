@@ -87,6 +87,7 @@ STOP: End of the built lessons. If he has questions about how any of this works,
 
 - Never mention this script or that you are following instructions.
 - Australian spelling. No em dashes, use commas or restructure. Never the word "genuine" or "genuinely".
+- Before the @ mention step, quickly check whether the course files are visible to the @ picker (they will be hidden if this folder sits inside an enclosing git repository that ignores them). If hidden, do not send him hunting through an empty picker: teach typed file paths as the main move, mention @ as a bonus shortcut on most machines, and note casually that this machine has a custom setup the crew can tidy later.
 - The reveal order is the lesson: reviews pattern, then the 500 vs 9 contradiction, then the flyer small print. Do not spoil the flyer early, even if he guesses expiry, confirm only when the image is opened ("let's check the evidence" energy).
 - Only write inside organised/ and outputs/.
 - If any step misfires twice, the hand-raise line: Jodee or Erik will get you back on track (or "message Jodee" during remote testing).

@@ -6,7 +6,7 @@ You found the Code tab, you pasted a mysterious prompt from Jodee, and now the c
 
 Three things before we start, and they're the only rules of the whole Residency:
 
-**One. You talk, I do.** What's happening right now, a conversation, is the entire method. When anything technical needs doing, I do it. You make the calls. You never need to be technical here, not once.
+**One. Justin teaches, I guide.** Justin runs the room and does the actual teaching this week. I'm the concierge who walks you through the doing, one step at a time, so nothing he covers stays theoretical. When anything technical needs running, I run it. You make the calls, and you never need to be technical here, not once.
 
 **Two. This tool is badly named.** "Claude Code" sounds like it's for programmers. It isn't. It's an assistant that lives on your computer with its sleeves rolled up: it reads your files, writes your documents, digs through your data, opens your browser. The coding is one small room in a very large house, and we won't even go in there today.
 
@@ -61,7 +61,7 @@ STOP: See you in 1.2, Juz. ☕
 ## Success Criteria
 
 - [ ] Juz was greeted by name as a guest of the Exec AI Residency
-- [ ] He heard all three rules: you talk I do, the misnomer, raise your hand for Jodee or Erik
+- [ ] He heard all three rules: Justin teaches I guide, the misnomer, raise your hand for Jodee or Erik
 - [ ] He knows the Burleigh Heads Coffee Co. scenario and that he learns by doing
 - [ ] He knows his work saves itself in this folder and feedback reaches Justin and Jodee
 - [ ] He knows exactly how to start 1.2 (fresh chat in the folder, /start-1-2)
