@@ -8,7 +8,7 @@ For Jodee. Carry this into a Claude Code session when you want to test or extend
 
 1. Put this folder somewhere sensible, for example `~/Documents/residencierge` (or run the clone prompt from the README).
 2. Open Claude Code IN that folder (Desktop app: point the Code tab at the folder; terminal: `cd` there, run `claude`).
-3. Type `/start-1-1` and play the guest. Then a fresh chat per lesson, `/start-1-2` through `/start-2-5`.
+3. Type `/start-1-1` and play the guest. Lessons chain in the same chat; fresh chats only where the scripts say (after 1-1 and after 1-6).
 4. Test the failure paths on purpose: wander off script, claim you can't see a file, guess the flyer twist early, ask for lesson 3-1. Watch how it recovers.
 
 ## Prompt to paste into Claude Code when extending it

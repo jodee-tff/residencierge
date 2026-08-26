@@ -1,4 +1,4 @@
-# reviews dump (deano copied these off google + the feedback jar, march to august)
+# customer reviews (copied off google + the feedback jar, march to august)
 
 1. ★★★★★ "Best flat white on the coast, no argument. Priya remembered my order after two visits." — Mel K
 2. ★★★★☆ "Coffee 10/10, macadamia cookie 11/10. Lost a star because they ran out of oat milk AGAIN on Saturday." — Josh T

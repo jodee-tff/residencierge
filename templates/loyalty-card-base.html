@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Burleigh Heads Coffee Co. Loyalty Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{display:flex;justify-content:center;background:#191919}
+  .card{width:100%;max-width:430px;min-height:100dvh;display:flex;flex-direction:column;position:relative;overflow:hidden}
+  .stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;padding:20px 26px 0;position:relative;z-index:2}
+  .st{aspect-ratio:1;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;border:none;font-size:20px;transition:transform .12s ease}
+  .st:active{transform:scale(.9)}
+  .head{position:relative;z-index:2}
+  .count-wrap{position:relative;z-index:2}
+  .promise{position:relative;z-index:2}
+  .btn{cursor:pointer;position:relative;z-index:2;transition:transform .12s ease}
+  .btn:active{transform:scale(.97)}
+  .toast{position:fixed;left:50%;transform:translateX(-50%) translateY(20px);bottom:30px;background:#111;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:all .3s ease;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
+  .celebrate{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:45;background:rgba(0,0,0,.45)}
+  .celebrate.show{display:flex}
+  .celebrate .box{background:#fff;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif;text-align:center;border-radius:22px;padding:34px 30px;max-width:320px;margin:0 20px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .celebrate .box .big{font-size:44px}
+  .celebrate .box h2{font-size:22px;margin:10px 0 6px}
+  .celebrate .box p{font-size:14px;color:#555;line-height:1.5}
+  .celebrate .box button{margin-top:18px;background:#1a1a1a;color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:700;padding:13px 26px;cursor:pointer}
+
+  /* ============ THEME A: BURLEIGH SUNRISE ============ */
+  body.theme-a .card{background:linear-gradient(175deg,#FFE9C9 0%,#FFD9A8 30%,#F6EFE3 30.2%,#F6EFE3 100%);color:#173F3F;font-family:'Nunito',sans-serif}
+  body.theme-a .sun{position:absolute;top:52px;right:30px;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#FFC978,#FF8A50 78%);box-shadow:0 0 54px 16px rgba(255,150,80,.5)}
+  body.theme-a .head{padding:58px 26px 6px}
+  body.theme-a .brand{font-family:'Fredoka',sans-serif;font-weight:700;font-size:27px;line-height:1.1;color:#124040;max-width:220px}
+  body.theme-a .subtitle{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C4633C;margin-top:7px}
+  body.theme-a .count-wrap{padding:14px 26px 0}
+  body.theme-a .count{font-family:'Fredoka',sans-serif;font-weight:600;font-size:98px;line-height:.95;color:#0E4A4A}
+  body.theme-a .count .of{font-size:30px;color:#C4633C;font-weight:600}
+  body.theme-a .count-label{font-size:14px;font-weight:800;color:#2A6161;margin-top:3px}
+  body.theme-a .st{border-radius:50%;border:3px dashed #D9A876;background:rgba(255,255,255,.55);color:transparent}
+  body.theme-a .st.on{background:#FF7A4E;border:3px solid #E85F33;color:#fff;box-shadow:0 3px 12px rgba(232,95,51,.35)}
+  body.theme-a .promise{margin:16px 26px 0;background:rgba(255,255,255,.72);border-radius:14px;padding:12px 15px;font-size:13.5px;font-weight:700;color:#1E5555}
+  body.theme-a .btn{margin:16px 26px;background:#0E4A4A;color:#FFEFD9;font-family:'Fredoka',sans-serif;font-weight:600;font-size:18px;border:none;border-radius:999px;padding:17px;box-shadow:0 6px 16px rgba(14,74,74,.32)}
+  body.theme-a .foot{margin-top:auto;height:76px;background:radial-gradient(64px 34px at 24% 0,#BFE3DA 98%,transparent),radial-gradient(64px 34px at 74% 0,#BFE3DA 98%,transparent),#8FCCC0}
+  body.theme-a .stamp-icon-on::before{content:"☀"}
+
+  /* ============ THEME B: MIDNIGHT GOLD ============ */
+  body.theme-b{background:#0D0C0A}
+  body.theme-b .card{background:linear-gradient(180deg,#141210 0%,#0D0C0A 100%);color:#EFE9DD;font-family:'Plus Jakarta Sans',sans-serif}
+  body.theme-b .frame{position:absolute;inset:14px;border:1px solid rgba(201,169,110,.4);border-radius:22px;pointer-events:none;z-index:3}
+  body.theme-b .head{padding:56px 30px 0;text-align:center}
+  body.theme-b .crest{font-size:20px;color:#C9A96E;letter-spacing:.4em;text-indent:.4em}
+  body.theme-b .brand{font-family:'Fraunces',serif;font-weight:300;font-size:29px;line-height:1.16;margin-top:10px;color:#F2ECDF}
+  body.theme-b .brand em{font-style:italic;color:#E2C893}
+  body.theme-b .subtitle{display:none}
+  body.theme-b .rule{width:48px;height:1px;background:#C9A96E;margin:14px auto 0}
+  body.theme-b .count-wrap{text-align:center;margin-top:8px}
+  body.theme-b .count{font-family:'Fraunces',serif;font-weight:600;font-size:104px;line-height:1;background:linear-gradient(160deg,#E2C893,#C9A96E 60%,#A8854D);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+  body.theme-b .count .of{display:none}
+  body.theme-b .count-label{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#8E8674;margin-top:2px;text-indent:.34em}
+  body.theme-b .st{border:1px solid rgba(201,169,110,.45);color:transparent;background:rgba(201,169,110,.05)}
+  body.theme-b .st.on{background:linear-gradient(150deg,#E2C893,#B98F55);color:#181509;border-color:#E2C893;box-shadow:0 2px 12px rgba(201,169,110,.34)}
+  body.theme-b .promise{margin:18px 32px 0;text-align:center;font-size:12.5px;color:#B4AC99;border-top:1px solid rgba(201,169,110,.22);border-bottom:1px solid rgba(201,169,110,.22);padding:11px 0}
+  body.theme-b .btn{margin:17px 32px;background:transparent;border:1px solid #C9A96E;color:#E2C893;font-size:13px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;text-indent:.26em;padding:16px}
+  body.theme-b .foot{margin-top:auto;text-align:center;padding-bottom:22px;font-size:10px;letter-spacing:.3em;color:#6E6654;text-transform:uppercase;text-indent:.3em}
+  body.theme-b .stamp-icon-on::before{content:"✦"}
+
+  /* ============ THEME C: THE POINT POP ============ */
+  body.theme-c{background:#FFF3E0}
+  body.theme-c .card{background:#FFF3E0;color:#1A1A1A;font-family:'Space Grotesk',sans-serif}
+  body.theme-c .banner{background:#E8442E;color:#FFF3E0;padding:54px 24px 15px;position:relative;z-index:2}
+  body.theme-c .banner::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:18px;background:radial-gradient(9px 9px at 9px 9px,transparent 8px,#E8442E 8.5px);background-size:22px 18px;background-position:0 -9px}
+  body.theme-c .brand{font-family:'Archivo Black',sans-serif;font-size:24px;line-height:1.04;text-transform:uppercase}
+  body.theme-c .subtitle{display:inline-block;background:#1F3BB3;color:#FFF3E0;font-weight:700;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;margin-top:10px;transform:rotate(-1.6deg)}
+  body.theme-c .count-wrap{display:flex;align-items:center;gap:15px;padding:30px 24px 4px}
+  body.theme-c .count{font-family:'Archivo Black',sans-serif;font-size:104px;line-height:.9;color:#E8442E;text-shadow:5px 5px 0 #F7C948}
+  body.theme-c .count .of{display:none}
+  body.theme-c .count-label{font-weight:700;font-size:15px;line-height:1.3;color:#1F3BB3;text-transform:uppercase;max-width:120px}
+  body.theme-c .st{border-radius:12px;border:3px solid #1A1A1A;font-weight:700;background:#fff;box-shadow:3px 3px 0 #1A1A1A;color:transparent}
+  body.theme-c .st.on{background:#F7C948;color:#1A1A1A}
+  body.theme-c .promise{margin:18px 24px 0;font-weight:700;font-size:13.5px;border:3px solid #1A1A1A;border-radius:12px;background:#fff;box-shadow:3px 3px 0 #1A1A1A;padding:11px 14px}
+  body.theme-c .btn{margin:17px 24px;background:#1F3BB3;color:#FFF3E0;font-family:'Archivo Black',sans-serif;font-size:17px;text-transform:uppercase;border:3px solid #1A1A1A;border-radius:14px;box-shadow:4px 4px 0 #1A1A1A;padding:15px}
+  body.theme-c .foot{margin-top:auto;background:repeating-linear-gradient(-45deg,#F7C948 0 14px,#1A1A1A 14px 28px);height:28px}
+  body.theme-c .stamp-icon-on::before{content:"★"}
+</style>
+</head>
+<body class="theme-b">
+<div class="card">
+  <div class="frame"></div>
+  <div class="sun"></div>
+  <div class="banner">
+    <div class="head">
+      <div class="crest">◆</div>
+      <div class="brand">Burleigh Heads <em>Coffee Co.</em></div>
+      <div class="rule"></div>
+      <div class="subtitle">Free coffee club</div>
+    </div>
+  </div>
+  <div class="count-wrap">
+    <span class="count"><span id="count">0</span><span class="of">/10</span></span>
+    <div class="count-label" id="countLabel">stamps collected</div>
+  </div>
+  <div class="stamps" id="stamps"></div>
+  <div class="promise" id="promise"></div>
+  <button class="btn" id="addBtn"></button>
+  <div class="foot" id="foot"></div>
+</div>
+<div class="toast" id="toast"></div>
+<div class="celebrate" id="celebrate"><div class="box">
+  <div class="big">☕🎉</div>
+  <h2 id="celebrateTitle"></h2>
+  <p id="celebrateText"></p>
+  <button id="newCardBtn"></button>
+</div></div>
+<canvas class="confetti" id="confetti"></canvas>
+<script>
+// ================= CONFIG: everything the owner decided lives here =================
+const CONFIG = {
+  theme: "b",                                   // "a" sunrise · "b" midnight gold · "c" pop
+  cardSize: 10,                                 // stamps for a free coffee
+  headStart: true,                              // new cards begin with stamp 1 already on
+  promiseText: "Your stamps never expire. Ever. We checked. Twice.",
+  addButtonText: "Add a stamp",
+  footText: "Est. 2007 · The Point · Burleigh",
+  celebrateTitle: "Free coffee!",
+  celebrateText: "Card complete. Show this screen at the till, and your next card starts with a head start.",
+  newCardText: "Start my next card"
+};
+// ===================================================================================
+
+document.body.className = "theme-" + CONFIG.theme;
+document.getElementById("promise").textContent = CONFIG.promiseText;
+document.getElementById("addBtn").textContent = CONFIG.addButtonText;
+document.getElementById("foot").textContent = CONFIG.theme === "b" ? CONFIG.footText : "";
+document.getElementById("celebrateTitle").textContent = CONFIG.celebrateTitle;
+document.getElementById("celebrateText").textContent = CONFIG.celebrateText;
+document.getElementById("newCardBtn").textContent = CONFIG.newCardText;
+
+const KEY = "burleigh-loyalty-card";
+let state;
+try { state = JSON.parse(localStorage.getItem(KEY)) || null; } catch(e){ state = null; }
+if (!state || !Array.isArray(state.stamps) || state.stamps.length !== CONFIG.cardSize) {
+  state = { stamps: Array(CONFIG.cardSize).fill(false), freeCoffees: 0 };
+  if (CONFIG.headStart) state.stamps[0] = true;
+}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+
+const stampsEl = document.getElementById("stamps");
+for (let i = 0; i < CONFIG.cardSize; i++) {
+  const b = document.createElement("button");
+  b.className = "st";
+  b.setAttribute("aria-label", "Stamp " + (i + 1));
+  b.addEventListener("click", () => toggle(i));
+  stampsEl.appendChild(b);
+}
+
+function render(){
+  const n = state.stamps.filter(Boolean).length;
+  document.getElementById("count").textContent = n;
+  const toGo = CONFIG.cardSize - n;
+  document.getElementById("countLabel").textContent =
+    n === CONFIG.cardSize ? "card complete!" :
+    toGo === 1 ? "one to go!" : "stamps collected, " + toGo + " to go";
+  [...stampsEl.children].forEach((el, i) => {
+    el.classList.toggle("on", state.stamps[i]);
+    el.classList.toggle("stamp-icon-on", state.stamps[i]);
+  });
+}
+
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 1800);
+}
+
+function toggle(i){
+  state.stamps[i] = !state.stamps[i];
+  save(); render();
+  const n = state.stamps.filter(Boolean).length;
+  if (n === CONFIG.cardSize) complete();
+}
+
+document.getElementById("addBtn").addEventListener("click", () => {
+  const i = state.stamps.indexOf(false);
+  if (i === -1) return;
+  state.stamps[i] = true;
+  save(); render();
+  const n = state.stamps.filter(Boolean).length;
+  if (n === CONFIG.cardSize) complete(); else toast("Stamped! " + (CONFIG.cardSize - n) + " to go");
+});
+
+function complete(){
+  confetti();
+  setTimeout(() => document.getElementById("celebrate").classList.add("show"), 650);
+}
+
+document.getElementById("newCardBtn").addEventListener("click", () => {
+  state.freeCoffees += 1;
+  state.stamps = Array(CONFIG.cardSize).fill(false);
+  if (CONFIG.headStart) state.stamps[0] = true;
+  save(); render();
+  document.getElementById("celebrate").classList.remove("show");
+  toast("New card started" + (CONFIG.headStart ? ", first stamp on us" : ""));
+});
+
+// -------- confetti --------
+function confetti(){
+  const cv = document.getElementById("confetti");
+  const ctx = cv.getContext("2d");
+  cv.width = innerWidth; cv.height = innerHeight;
+  const colors = ["#E8442E","#F7C948","#1F3BB3","#FF7A4E","#C9A96E","#8FCCC0","#fff"];
+  const parts = [];
+  for (let i = 0; i < 140; i++) parts.push({
+    x: cv.width/2 + (Math.random()-0.5)*140, y: cv.height*0.42,
+    vx: (Math.random()-0.5)*11, vy: -(Math.random()*11+5),
+    s: Math.random()*7+4, r: Math.random()*Math.PI, vr: (Math.random()-0.5)*0.3,
+    c: colors[Math.floor(Math.random()*colors.length)]
+  });
+  let frames = 0;
+  (function tick(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    parts.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.vy += 0.32; p.r += p.vr;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r);
+      ctx.fillStyle = p.c; ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*0.62);
+      ctx.restore();
+    });
+    if (++frames < 150) requestAnimationFrame(tick);
+    else ctx.clearRect(0,0,cv.width,cv.height);
+  })();
+}
+
+render();
+</script>
+</body>
+</html>

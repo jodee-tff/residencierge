@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loyalty Card: Three Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#191919;color:#eee;font-family:'Plus Jakarta Sans',system-ui,sans-serif;min-height:100vh;padding:34px 20px 44px}
+  .intro{text-align:center;margin-bottom:26px}
+  .intro h1{font-size:20px;font-weight:700;letter-spacing:.01em}
+  .intro p{color:#999;font-size:13px;margin-top:5px}
+  .row{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;align-items:flex-start}
+  .option{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .tag{display:flex;align-items:baseline;gap:9px}
+  .tag .letter{font-family:'Space Grotesk',monospace;font-weight:700;font-size:14px;background:#2c2c2c;border:1px solid #444;border-radius:7px;padding:3px 10px}
+  .tag .name{font-size:13px;color:#bbb}
+  .phone{width:290px;height:560px;border-radius:38px;padding:11px;background:#0a0a0a;box-shadow:0 24px 60px rgba(0,0,0,.55), inset 0 0 0 1.5px #333;position:relative}
+  .phone::before{content:"";position:absolute;top:11px;left:50%;transform:translateX(-50%);width:96px;height:24px;background:#0a0a0a;border-radius:0 0 16px 16px;z-index:5}
+  .screen{width:100%;height:100%;border-radius:28px;overflow:hidden;position:relative;display:flex;flex-direction:column}
+
+  /* ============ A: BURLEIGH SUNRISE ============ */
+  .a .screen{background:linear-gradient(175deg,#FFE9C9 0%,#FFD9A8 34%,#F7EFE2 34.2%,#F6EFE3 100%);color:#173F3F;font-family:'Nunito',sans-serif}
+  .a .sun{position:absolute;top:46px;right:26px;width:74px;height:74px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#FFC978,#FF8A50 78%);box-shadow:0 0 44px 12px rgba(255,150,80,.5)}
+  .a .head{padding:56px 24px 6px;position:relative;z-index:2}
+  .a .brand{font-family:'Fredoka',sans-serif;font-weight:700;font-size:23px;line-height:1.1;color:#124040;max-width:170px}
+  .a .sub{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C4633C;margin-top:6px}
+  .a .count-wrap{padding:12px 24px 0;position:relative;z-index:2}
+  .a .count{font-family:'Fredoka',sans-serif;font-weight:600;font-size:86px;line-height:.95;color:#0E4A4A}
+  .a .count small{font-size:26px;color:#C4633C;font-weight:600}
+  .a .count-label{font-size:13px;font-weight:800;color:#2A6161;margin-top:2px}
+  .a .stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;padding:18px 24px 6px;position:relative;z-index:2}
+  .a .st{aspect-ratio:1;border-radius:50%;border:2.5px dashed #D9A876;display:flex;align-items:center;justify-content:center;font-size:17px;background:rgba(255,255,255,.55)}
+  .a .st.on{background:#FF7A4E;border:2.5px solid #E85F33;color:#fff;box-shadow:0 3px 10px rgba(232,95,51,.35)}
+  .a .promise{margin:13px 24px 0;background:rgba(255,255,255,.72);border-radius:13px;padding:10px 13px;font-size:12px;font-weight:700;color:#1E5555;position:relative;z-index:2}
+  .a .promise span{color:#D2653A}
+  .a .btn{margin:14px 24px;background:#0E4A4A;color:#FFEFD9;font-family:'Fredoka',sans-serif;font-weight:600;font-size:16.5px;border:none;border-radius:999px;padding:15px;text-align:center;position:relative;z-index:2;box-shadow:0 6px 16px rgba(14,74,74,.32)}
+  .a .wave{margin-top:auto;height:64px;background:
+    radial-gradient(58px 30px at 24% 0,#BFE3DA 98%,transparent),
+    radial-gradient(58px 30px at 74% 0,#BFE3DA 98%,transparent),#8FCCC0}
+
+  /* ============ B: MIDNIGHT GOLD ============ */
+  .b .screen{background:linear-gradient(180deg,#141210 0%,#0D0C0A 100%);color:#EFE9DD;font-family:'Plus Jakarta Sans',sans-serif}
+  .b .frame{position:absolute;inset:12px;border:1px solid rgba(201,169,110,.4);border-radius:22px;pointer-events:none}
+  .b .head{padding:50px 28px 0;text-align:center}
+  .b .crest{font-size:19px;color:#C9A96E;letter-spacing:.4em;text-indent:.4em}
+  .b .brand{font-family:'Fraunces',serif;font-weight:300;font-size:25px;line-height:1.16;margin-top:9px;color:#F2ECDF}
+  .b .brand em{font-style:italic;color:#E2C893}
+  .b .rule{width:44px;height:1px;background:#C9A96E;margin:13px auto 0}
+  .b .count-wrap{text-align:center;margin-top:8px}
+  .b .count{font-family:'Fraunces',serif;font-weight:600;font-size:92px;line-height:1;background:linear-gradient(160deg,#E2C893,#C9A96E 60%,#A8854D);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .b .count-label{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:#8E8674;margin-top:1px;text-indent:.34em}
+  .b .stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;padding:16px 30px 0}
+  .b .st{aspect-ratio:1;border:1px solid rgba(201,169,110,.45);display:flex;align-items:center;justify-content:center;font-size:13px;color:#C9A96E;background:rgba(201,169,110,.05)}
+  .b .st.on{background:linear-gradient(150deg,#E2C893,#B98F55);color:#181509;border-color:#E2C893;box-shadow:0 2px 12px rgba(201,169,110,.34)}
+  .b .promise{margin:14px 30px 0;text-align:center;font-size:11.5px;color:#B4AC99;border-top:1px solid rgba(201,169,110,.22);border-bottom:1px solid rgba(201,169,110,.22);padding:9px 0;letter-spacing:.03em}
+  .b .promise span{color:#E2C893}
+  .b .btn{margin:13px 30px;background:transparent;border:1px solid #C9A96E;color:#E2C893;font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;text-indent:.26em;padding:14px;text-align:center}
+  .b .foot{margin-top:auto;text-align:center;padding-bottom:18px;font-size:9.5px;letter-spacing:.3em;color:#6E6654;text-transform:uppercase;text-indent:.3em}
+
+  /* ============ C: THE POINT POP ============ */
+  .c .screen{background:#FFF3E0;color:#1A1A1A;font-family:'Space Grotesk',sans-serif}
+  .c .banner{background:#E8442E;color:#FFF3E0;padding:52px 22px 13px;position:relative}
+  .c .banner::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:18px;background:radial-gradient(9px 9px at 9px 9px,transparent 8px,#E8442E 8.5px);background-size:22px 18px;background-position:0 -9px}
+  .c .brand{font-family:'Archivo Black',sans-serif;font-size:21px;line-height:1.04;text-transform:uppercase;letter-spacing:.01em}
+  .c .sub{display:inline-block;background:#1F3BB3;color:#FFF3E0;font-weight:700;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;margin-top:9px;transform:rotate(-1.6deg)}
+  .c .count-strip{display:flex;align-items:center;gap:13px;padding:26px 22px 4px}
+  .c .count{font-family:'Archivo Black',sans-serif;font-size:96px;line-height:.9;color:#E8442E;text-shadow:4px 4px 0 #F7C948}
+  .c .count-note{font-weight:700;font-size:13.5px;line-height:1.3;color:#1F3BB3;text-transform:uppercase}
+  .c .stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;padding:15px 22px 0}
+  .c .st{aspect-ratio:1;border-radius:12px;border:3px solid #1A1A1A;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:700;background:#fff;box-shadow:3px 3px 0 #1A1A1A}
+  .c .st.on{background:#F7C948;color:#1A1A1A}
+  .c .promise{margin:16px 22px 0;font-weight:700;font-size:12.5px;border:3px solid #1A1A1A;border-radius:12px;background:#fff;box-shadow:3px 3px 0 #1A1A1A;padding:9px 12px}
+  .c .promise span{color:#E8442E}
+  .c .btn{margin:15px 22px;background:#1F3BB3;color:#FFF3E0;font-family:'Archivo Black',sans-serif;font-size:15px;text-transform:uppercase;border:3px solid #1A1A1A;border-radius:14px;box-shadow:4px 4px 0 #1A1A1A;padding:13px;text-align:center}
+  .c .foot{margin-top:auto;background:repeating-linear-gradient(-45deg,#F7C948 0 14px,#1A1A1A 14px 28px);height:26px}
+</style>
+</head>
+<body>
+<div class="intro">
+  <h1>Your loyalty card: three directions</h1>
+  <p>Same rules on every card. Different personality. Pick A, B or C, or mix them.</p>
+</div>
+<div class="row">
+
+  <div class="option a">
+    <div class="tag"><span class="letter">A</span><span class="name">Burleigh Sunrise, warm and beachy</span></div>
+    <div class="phone"><div class="screen">
+      <div class="sun"></div>
+      <div class="head"><div class="brand">Burleigh Heads Coffee Co.</div><div class="sub">Loyalty Card</div></div>
+      <div class="count-wrap"><div class="count">4<small>/10</small></div><div class="count-label">stamps collected, 6 to go</div></div>
+      <div class="stamps"><div class="st on">☀</div><div class="st on">☀</div><div class="st on">☀</div><div class="st on">☀</div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div></div>
+      <div class="promise">Your stamps <span>never expire and never wash out</span>. Ever.</div>
+      <div class="btn">Stamp my coffee ☕</div>
+      <div class="wave"></div>
+    </div></div>
+  </div>
+
+  <div class="option b">
+    <div class="tag"><span class="letter">B</span><span class="name">Midnight Gold, premium hotel energy</span></div>
+    <div class="phone"><div class="screen">
+      <div class="frame"></div>
+      <div class="head"><div class="crest">◆</div><div class="brand">Burleigh Heads<br><em>Coffee Co.</em></div><div class="rule"></div></div>
+      <div class="count-wrap"><div class="count">4</div><div class="count-label">of ten stamps</div></div>
+      <div class="stamps"><div class="st on">✦</div><div class="st on">✦</div><div class="st on">✦</div><div class="st on">✦</div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div></div>
+      <div class="promise">Stamps held on your card, <span>never expiring</span></div>
+      <div class="btn">Add a stamp</div>
+      <div class="foot">Est. 2007 · The Point · Burleigh</div>
+    </div></div>
+  </div>
+
+  <div class="option c">
+    <div class="tag"><span class="letter">C</span><span class="name">The Point Pop, loud and cheerful</span></div>
+    <div class="phone"><div class="screen">
+      <div class="banner"><div class="brand">Burleigh Heads Coffee Co.</div><div class="sub">Free coffee club</div></div>
+      <div class="count-strip"><div class="count">4</div><div class="count-note">stamps<br>down,<br>six to go</div></div>
+      <div class="stamps"><div class="st on">★</div><div class="st on">★</div><div class="st on">★</div><div class="st on">★</div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div><div class="st"></div></div>
+      <div class="promise">Stamps <span>never expire</span>. We checked. Twice.</div>
+      <div class="btn">Stamp it!</div>
+      <div class="foot"></div>
+    </div></div>
+  </div>
+
+</div>
+</body>
+</html>

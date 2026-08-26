@@ -1,5 +1,7 @@
 # deanos notes for the new owner (sorry about the mess)
 
+WORD OF THE WEEK: WOMBAT. priya and i hide one in every doc as a joke. if you found this, you're actually reading, which puts you ahead of me.
+
 g'day mate. 19 years and this is the handover doc, one file, written the night before settlement with a beer. you'll be right.
 
 ## the important stuff (in no particular order)
@@ -22,7 +24,6 @@ g'day mate. 19 years and this is the handover doc, one file, written the night b
 
 - the council inspection is in november, the certificate is in the drawer under the till, the SECOND drawer
 - the wifi password is flatwhite2007
-- word of the week is WOMBAT. priya and i hide one in every doc as a joke. if you found this one, you're actually reading, which puts you ahead of me
 - the cookie recipe stays with priya's family, it's not ours to give away, don't ask
 
 ## from me
