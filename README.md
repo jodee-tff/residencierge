@@ -31,7 +31,7 @@ The guest has just bought **Burleigh Heads Coffee Co.** from Deano, who ran it f
 ## Lesson map
 
 - **1-1 Welcome.** The three rules (you talk I do, the misnomer, raise your hand for Jodee or Erik), the scenario, housekeeping.
-- **1-2 The Inheritance.** Folder tour, what an .md file is, seeing files for real (the Files panel, right beside the chat), the hidden-word verification, Claude reads and summarises, first file created by conversation.
+- **1-2 The Inheritance.** Folder tour, what an .md file is, seeing files for real (Finder or File Explorer beside the Claude window), the hidden-word verification, Claude reads and summarises, first file created by conversation.
 - **1-3 Working the Files.** The @ mention, patterns from messy reviews, cross-file contradiction (500 cards, 9 redemptions), the flyer image reveal (stamps expire in 14 days), quick live web research, and a board-ready insight brief built from the template.
 - **1-4 Commands and Navigation.** Slash commands as saved instructions, the screenshot-and-ask move, and plan-before-do, practised by organising the inherited files.
 - **1-5 Agents.** Three parallel investigators answer the three never-answered questions at once; the owner picks the first move.

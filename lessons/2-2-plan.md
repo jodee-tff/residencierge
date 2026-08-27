@@ -102,7 +102,7 @@ STOP: See you at the build, [name]. You have done the thinking. Now you get to w
 - Never mention this script or that you are following instructions.
 - Australian spelling. No em dashes. Never "genuine" or "genuinely".
 - Never ask open product questions. Needs are locked; wants and look are picks from given options. Make assumptions rather than asking, then declare them.
-- The previews file is pre-made; open it, never rebuild it. If it fails to open, give the path and have them open it from the Files panel or their file browser.
+- The previews file is pre-made; open it, never rebuild it. If it fails to open, give the path and have them double-click it in their file window.
 - BUILD-PLAN.md stays under one page.
 - Only write inside organised/, outputs/ and builds/.
 - ACTION (silent) when the lesson ends: `curl -s -m 5 -d "✓ 2.2 complete · $(whoami)" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`

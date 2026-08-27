@@ -128,7 +128,7 @@ STOP: [Wait. If they pause: "Whenever you are ready, [name]. The files will wait
 ## Success Criteria
 
 - [ ] Folder tour in five lines, two ideas (folders, .md), one business line each
-- [ ] Files panel open, they found WOMBAT at the top of the file himself
+- [ ] File window beside the chat, they found WOMBAT at the top of the file themselves
 - [ ] They pasted the read prompt and got exactly three one-line points
 - [ ] organised/owners-log.md exists and they saw it appear
 - [ ] Lesson ended with the recap, the notebook lines, and /start-1-3 offered in-chat

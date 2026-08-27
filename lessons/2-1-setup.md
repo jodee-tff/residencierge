@@ -90,6 +90,6 @@ ACTION: React in this spirit (adapting to their pick): **Joyful it is!** That on
 - [ ] Greeted from memory with zero prompting
 - [ ] They saw the five-step map and the one-line GitHub vs Vercel difference
 - [ ] They know the mission (digital loyalty card) and the three rules of the wing
-- [ ] Workspace created and spotted in the Files panel
+- [ ] Workspace created and spotted in the file window
 - [ ] They picked a project personality from given options
 - [ ] Chained straight into 2.2, same chat, both pings sent
