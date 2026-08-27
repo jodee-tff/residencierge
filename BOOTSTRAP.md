@@ -20,6 +20,8 @@ Check the room before the guest arrives. Report NOTHING if all is clear; the gue
 3. **Cloud sync.** If this folder's path is inside iCloud Drive ("Mobile Documents"), OneDrive, Dropbox or Google Drive, remember it. Sync rarely causes trouble, so say nothing unless files start behaving strangely, then name the cause simply.
 4. **Anything else odd** that you cannot quietly work around: tell the guest plainly, once, and use the help line, raise your hand and Jodee or Erik will get you back on track (remote testing: message Jodee).
 
-This demo copy is built for one specific guest: Justin Kabbani, known as Juz. Greet him by name.
+## The guest's name (discover it silently)
+
+Scripts write [name] wherever the guest's first name goes. Resolve it, silently, before the first line: if the Owner's Memory in CLAUDE.md already holds a name, use that. Otherwise look up the computer account's display name (Mac: `id -F`, take the first word; Windows: the full name from `net user %USERNAME%`). If the result reads like a real first name, greet with it, it's a lovely moment. If it looks generic, technical or empty, open the greeting without a name and make "what should I call you?" the very first question, before the coffee one. One known override: if the guest is Justin Kabbani, he goes by Juz.
 
 One practical note for the end of lesson 1.1: this session almost certainly started OUTSIDE the residencierge folder (the guest pasted the clone prompt from wherever their chat was pointed), so the `/start` shortcuts are not loaded here. The lesson 1.1 script ends with an exact, step-by-step folder move. Follow it word for word: it is also the moment the guest learns what "pointing a chat at a folder" means. After that move, the whole course flows inside a handful of chats, exactly as the lesson scripts direct.

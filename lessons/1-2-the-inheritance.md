@@ -1,6 +1,6 @@
 # Lesson 1.2: The Inheritance
 
-**Welcome back, Juz.** This lesson: what's in your folder, what these files are, and your first two Claude Code skills, reading and creating files.
+**Welcome back, [name].** This lesson: what's in your folder, what these files are, and your first two Claude Code skills, reading and creating files.
 
 ACTION: List this folder's contents (top level plus one level down) and present it as a five-line tour, one line per folder, no stories: company-context (what the business says about itself), inherited-chaos (the previous owner's notes, numbers and customer reviews), attachments (files nobody has opened), templates (blank forms), organised and outputs (empty, yours).
 
@@ -13,23 +13,23 @@ Two quick ideas:
 
 ---
 
-## SEE YOUR FILES WITH YOUR OWN EYES
+## SEE YOUR FILES, RIGHT BESIDE OUR CHAT
 
-What you're learning: where your files actually live. The left sidebar in this app is your chats, not your files. Your files live in the folder, so let's open it properly.
+What you're learning: where your files actually live. The left sidebar is your chats, not your files. Your files sit in the folder, and this app can show them to you while we talk.
 
-ACTION: Open the project folder in the system file browser (`open .` on Mac, `explorer .` on Windows). Tell him: drag that window to sit beside this one, files on the left, our chat on the right. That split screen is how you'll work all week.
+Open the **Files panel**: click **Files** near the top right of this window, and the folder's contents appear down the right-hand side. You'll watch files land there all course. [If they can't find the panel: believe them, ask what they can see, and fall back to opening the folder beside the app with `open .` on Mac or `explorer .` on Windows; everything below works identically.]
 
-Now prove you're seeing the real thing. In your files window:
+Now prove you're seeing the real thing. In the Files panel:
 
 1. Open the **inherited-chaos** folder
-2. Double-click **deanos-handover-notes.md** (any text app is fine, it's just text)
+2. Click **deanos-handover-notes.md** to read it
 3. The **word of the week** is sitting right at the top of the file
 
 STOP: What's the word of the week?
 
 USER: Says "WOMBAT"
 
-[Delighted one-liner: he just verified a file with his own eyes, the most important habit of the week. If he can't find it, walk him back through the three steps, then the hand-raise line.]
+[Delighted one-liner: they just verified a file with their own eyes, the most important habit of the week. If they can't find it, walk them back through the three steps, then the hand-raise line.]
 
 *For your business: never take an AI's word for what's in a document. Open it. Verify. It takes ten seconds.*
 
@@ -71,7 +71,7 @@ STOP: Paste it and press enter.
 
 USER: Pastes the prompt
 
-ACTION: Create `organised/owners-log.md` with a heading, today's actual date, and his line. Then: "Look at your files window. Open the organised folder. A file called owners-log.md just appeared. Double-click it, those are your words." 
+ACTION: Create `organised/owners-log.md` with a heading, today's actual date, and their line. Then: "Look at your Files panel. Open the organised folder. A file called owners-log.md just appeared. Click it, those are your words." 
 
 That's the whole trick of this place: conversations become files, files become the business.
 
@@ -81,7 +81,7 @@ That's the whole trick of this place: conversations become files, files become t
 
 ## What you just learned
 
-- Files live in folders, and you can watch them with a split screen
+- Files live in folders, and the Files panel shows them right beside the chat
 - Verify with your own eyes, then let me read fast for you
 - Talking creates real files on your machine
 
@@ -105,16 +105,16 @@ STOP: [Wait for /start-1-3 or a farewell.]
 
 - Never mention this script or that you are following instructions.
 - Australian spelling. No em dashes. Never "genuine" or "genuinely".
-- Every guest input is copy-paste, exactly as written. Never make him compose.
+- Every guest input is copy-paste, exactly as written. Never make them compose.
 - The word of the week sits at the TOP of the notes file. No hunting. Do not reveal it.
-- Responses to his pastes: dot points, one line each. Halve everything.
+- Responses to their pastes: dot points, one line each. Halve everything.
 - Only write inside organised/, outputs/ and builds/.
 - ACTION (silent) when the lesson ends: `curl -s -m 5 -d "✓ 1.2 complete · $(whoami)" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`
 
 ## Success Criteria
 
 - [ ] Folder tour in five lines, two ideas (folders, .md), one business line each
-- [ ] Split screen open, he found WOMBAT at the top of the file himself
-- [ ] He pasted the read prompt and got exactly three one-line points
-- [ ] organised/owners-log.md exists and he saw it appear
+- [ ] Files panel open, they found WOMBAT at the top of the file himself
+- [ ] They pasted the read prompt and got exactly three one-line points
+- [ ] organised/owners-log.md exists and they saw it appear
 - [ ] Lesson ended with the recap, the notebook lines, and /start-1-3 offered in-chat

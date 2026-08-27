@@ -140,3 +140,8 @@ Every lesson rewritten against the recorded feedback. The standing law now lives
 - **2-5 hardened:** short project name (burleigh-loyalty) for a typeable URL, Vercel Deployment Protection handled as an explicit neutral choice with exact clicks, what-now FAQ, and the big ending: the what-you-actually-did list with technical names in brackets, the replicate-to-your-business map, both-outcomes reassurance.
 - **/self-destruct built** (Jodee's request): typed DELETE EVERYTHING consent, Vercel project removal, manual GitHub deletion via the settings page (no scope elevation), folder to Trash never rm -rf, chats deleted by hand with instructions.
 - Justin quotes rule: never attribute specific claims to Justin that he hasn't said; credit the method generally.
+
+## 27 August 2026, morning: dynamic names and the Files panel
+
+- **Names are dynamic now.** Scripts carry [name]; BOOTSTRAP and SCRIPT_INSTRUCTIONS rule 14 resolve it (Owner's Memory, then the computer account's display name, then ask warmly). Override: Justin Kabbani goes by Juz. Guest pronouns default to they/them. No more per-copy editing for the cohort.
+- **The Files panel replaces the Finder split screen** as the primary way guests see files (Jodee's screenshot confirmed the Code tab's built-in panel, top right). Finder/Explorer stays as the scripted fallback. Rule 18 carries the details; lesson 1-2 teaches the panel.

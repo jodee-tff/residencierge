@@ -1,6 +1,6 @@
 # Lesson 1.5: Agents
 
-**Back again, Juz.** This lesson: one skill, and it's a big one. Running several of me at once.
+**Back again, [name].** This lesson: one skill, and it's a big one. Running several of me at once.
 
 ## MEET YOUR STAFF
 
@@ -44,7 +44,7 @@ STOP: Which moves first, boss?
 
 USER: Picks one
 
-ACTION: Create organised/three-questions-answered.md with the three mini-briefs and his pick at the top labelled "The owner's call", dated. One line: it's filed.
+ACTION: Create organised/three-questions-answered.md with the three mini-briefs and their pick at the top labelled "The owner's call", dated. One line: it's filed.
 
 One more thing while it's warm: agents can be permanent. A standing marketing brain, numbers brain, legal-cautious brain, each waking up already knowing its job. That's a Residency conversation for your real business.
 
@@ -83,8 +83,8 @@ STOP: [Wait for /start-1-6 or a farewell.]
 
 ## Success Criteria
 
-- [ ] He launched three agents with one pasted sentence
+- [ ] They launched three agents with one pasted sentence
 - [ ] Three labelled mini-briefs, one line per point, one recommended move each
-- [ ] He made one owner's pick and it's filed with the briefs
-- [ ] He heard permanent specialists exist, one paragraph
+- [ ] They made one owner's pick and it's filed with the briefs
+- [ ] They heard permanent specialists exist, one paragraph
 - [ ] Recap, notebook line, /start-1-6 offered in-chat

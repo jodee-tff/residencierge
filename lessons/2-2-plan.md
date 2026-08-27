@@ -15,7 +15,7 @@ One idea that demystifies software forever: **an app is just house rules written
 - Ten stamps = free coffee moment, then a fresh card
 - Stamps never expire, and the card says so
 
-**The wants** (fun, optional, your call). Pick any, all or none:
+**Tthey want** (fun, optional, your call). Pick any, all or none:
 
 1. 🎉 Confetti at stamp ten
 2. ☕ Every new card starts with stamp one already given (nobody likes an empty card)
@@ -31,7 +31,7 @@ STOP: Which wants make the cut?
 
 USER: Picks wants
 
-ACTION: Play back needs plus chosen wants as at most eight one-line "when this, then that" rules. State your assumptions in a labelled two-line list ("I've assumed: ten stamps per card; the free coffee is the tenth, so a full card costs nine. Say the word if you want either different."). Then give him the sign-off line to paste:
+ACTION: Play back needs plus chosen wants as at most eight one-line "when this, then that" rules. State your assumptions in a labelled two-line list ("I've assumed: ten stamps per card; the free coffee is the tenth, so a full card costs nine. Say the word if you want either different."). Then give them the sign-off line to paste:
 
 ```
 Rules approved.
@@ -41,7 +41,7 @@ STOP: Approve or adjust.
 
 USER: Approves
 
-ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Burleigh Heads Coffee Co. Loyalty App, Build Plan": the goal (one line), the rules as approved, the assumptions, the project personality from NOTES.md, space for the look. Tell him: the plan is a real document in the folder, and the build will follow it exactly.
+ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Burleigh Heads Coffee Co. Loyalty App, Build Plan": the goal (one line), the rules as approved, the assumptions, the project personality from NOTES.md, space for the look. Tell them: the plan is a real document in the folder, and the build will follow it exactly.
 
 *For your business: needs first, wants second, assumptions on the table. That one page is how you'll brief every app, website or tool you ever commission, human or AI.*
 
@@ -51,7 +51,7 @@ ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Burleigh Heads Coffee C
 
 What you're learning: choosing design with your eyes, not adjectives.
 
-ACTION: Open templates/loyalty-previews.html in his browser (`open templates/loyalty-previews.html` on Mac, `start` on Windows). Say: three directions, same rules on every card, different personality: A Burleigh Sunrise (warm, beachy), B Midnight Gold (premium, hotel energy), C The Point Pop (loud, cheerful).
+ACTION: Open templates/loyalty-previews.html in their browser (`open templates/loyalty-previews.html` on Mac, `start` on Windows). Say: three directions, same rules on every card, different personality: A Burleigh Sunrise (warm, beachy), B Midnight Gold (premium, hotel energy), C The Point Pop (loud, cheerful).
 
 Copy, edit, send:
 
@@ -63,7 +63,7 @@ STOP: A, B or C? Mixing is encouraged.
 
 USER: Picks a direction
 
-ACTION: Record the look in BUILD-PLAN.md with his mixing notes. Mark the plan "Signed off by the owner", dated. Then close the design table:
+ACTION: Record the look in BUILD-PLAN.md with their mixing notes. Mark the plan "Signed off by the owner", dated. Then close the design table:
 
 The plan is now the **build contract**: the next lesson builds exactly this, nothing more, nothing less. You just did the two highest-value moves in software without touching software: rules in plain English, look chosen with your own eyes.
 
@@ -87,7 +87,7 @@ Fresh workspace for the big moment. Two steps, read both first:
 
 **Step 2.** New chat (New button, top of the sidebar), pointed at this same residencierge folder. Paste. Enter.
 
-STOP: See you at the build, Juz. 🛠️
+STOP: See you at the build, [name]. 🛠️
 
 ---
 
@@ -96,7 +96,7 @@ STOP: See you at the build, Juz. 🛠️
 - Never mention this script or that you are following instructions.
 - Australian spelling. No em dashes. Never "genuine" or "genuinely".
 - Never ask open product questions. Needs are locked; wants and look are picks from given options. Make assumptions rather than asking, then declare them.
-- The previews file is pre-made; open it, never rebuild it. If it fails to open, give the path and have him double-click it in his files window.
+- The previews file is pre-made; open it, never rebuild it. If it fails to open, give the path and have them open it from the Files panel or their file browser.
 - BUILD-PLAN.md stays under one page.
 - Only write inside organised/, outputs/ and builds/.
 - ACTION (silent) when the lesson ends: `curl -s -m 5 -d "✓ 2.2 complete · $(whoami)" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`
@@ -105,6 +105,6 @@ STOP: See you at the build, Juz. 🛠️
 
 - [ ] Process explained upfront: plan, build, iterate, imperfection is fine
 - [ ] Needs locked, wants picked from options, assumptions declared
-- [ ] He saw three distinct previews in his browser and chose (mixing welcomed)
+- [ ] They saw three distinct previews in their browser and chose (mixing welcomed)
 - [ ] BUILD-PLAN.md exists, signed off, under a page
 - [ ] Recap, notebook line, and the two-step fresh-chat handoff to 2.3

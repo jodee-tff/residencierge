@@ -1,12 +1,12 @@
 # Lesson 2.5: Go Live
 
-**The finish line, Juz.** One line of recap: GitHub is the vault of versions, Vercel is the shopfront. Today the shopfront opens.
+**The finish line, [name].** One line of recap: GitHub is the vault of versions, Vercel is the shopfront. Today the shopfront opens.
 
 ## HOSTING, IN ONE LINE
 
 Your laptop sleeps when you do. Hosting moves the card to a computer that never sleeps, so anyone with the link can open it any time, on any phone. Vercel plugs straight into the GitHub account you just connected, and the starter tier costs nothing.
 
-ACTION: Check whether the vercel connector is installed and whether it's already signed in. Handle the three states like lesson 2.4 did (already signed in: name the account, ask if it's his, give the two replies to pick; not installed: npm install -g vercel, one narration line, installing node first only if truly missing; not signed in: start the login and have him pick "Continue with GitHub" in the browser so vault and shopfront become one connected set).
+ACTION: Check whether the vercel connector is installed and whether it's already signed in. Handle the three states like lesson 2.4 did (already signed in: name the account, ask if it's their, give the two replies to pick; not installed: npm install -g vercel, one narration line, installing node first only if truly missing; not signed in: start the login and have them pick "Continue with GitHub" in the browser so vault and shopfront become one connected set).
 
 STOP: [Path-dependent: account confirmed or browser approval done.] Tell me when Vercel welcomes you in.
 
@@ -34,7 +34,7 @@ STOP: Your door, your call.
 
 USER: Chooses
 
-ACTION: If unlock: give the exact path (vercel.com, your project, Settings, Deployment Protection, turn Vercel Authentication off, Save), wait, then confirm the door is open by their say-so. If keep locked: one approving line (his phone can still open it by signing in to Vercel there). Never push either way; there's nothing sensitive on the card either way.
+ACTION: If unlock: give the exact path (vercel.com, your project, Settings, Deployment Protection, turn Vercel Authentication off, Save), wait, then confirm the door is open by their say-so. If keep locked: one approving line (their phone can still open it by signing in to Vercel there). Never push either way; there's nothing sensitive on the card either way.
 
 ## THE PHONE MOMENT 📱
 
@@ -83,7 +83,7 @@ This is where the built wing ends. Behind the rope: **Module 3, Your Business**,
 
 If you've got thoughts on any of it, the pacing, the cafe, the card, tell me now and I'll file them for the builders. They read every word.
 
-See you at the Residency, Juz. 🛎️
+See you at the Residency, [name]. 🛎️
 
 STOP: End of the built lessons. Answer questions plainly, stay in character, file feedback dated to outputs/feedback.md.
 
@@ -104,8 +104,8 @@ STOP: End of the built lessons. Answer questions plainly, stay in character, fil
 ## Success Criteria
 
 - [ ] Vault vs shopfront recapped in one line before any action
-- [ ] Vercel connected via his GitHub, his hands only, already-signed-in handled
+- [ ] Vercel connected via their GitHub, their hands only, already-signed-in handled
 - [ ] Deployed with the short project name; URL big and clear, filed in BUILD-PLAN.md
 - [ ] The locked-door choice offered neutrally with both replies hand-fed
-- [ ] He opened it on his PHONE and stamped it
+- [ ] They opened it on their PHONE and stamped it
 - [ ] The what-you-actually-did list, the replicate map, the rope, and the feedback invitation all landed

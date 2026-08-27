@@ -2,9 +2,9 @@
 
 ## LET'S GET THAT APP GOING 🛠️
 
-**This is the one, Juz.** Your signed plan becomes a working app, in this chat, in the next minute.
+**This is the one, [name].** Your signed plan becomes a working app, in this chat, in the next minute.
 
-ACTION: Read builds/loyalty-card/BUILD-PLAN.md and NOTES.md. Confirm the build in two lines (his rules, his look). Then BUILD: copy templates/loyalty-card-base.html to builds/loyalty-card/index.html and customise it to the contract: set CONFIG.theme to his chosen direction (a, b or c), apply his wants (headStart, promise line text, celebration), his mixing notes (theme styles may be adjusted, keep the design system's fonts and spacing), and any wording he chose. Verify the file saved, then open it in his browser (`open index.html` on Mac, `start index.html` on Windows, from builds/loyalty-card). Announce it plainly: built to your contract, now on your screen.
+ACTION: Read builds/loyalty-card/BUILD-PLAN.md and NOTES.md. Confirm the build in two lines (their rules, their look). Then BUILD: copy templates/loyalty-card-base.html to builds/loyalty-card/index.html and customise it to the contract: set CONFIG.theme to their chosen direction (a, b or c), apply their wants (headStart, promise line text, celebration), their mixing notes (theme styles may be adjusted, keep the design system's fonts and spacing), and any wording they chose. Verify the file saved, then open it in their browser (`open index.html` on Mac, `start index.html` on Windows, from builds/loyalty-card). Announce it plainly: built to your contract, now on your screen.
 
 Take it for a proper test drive. In your browser:
 
@@ -47,13 +47,13 @@ STOP: Name your change.
 
 USER: Requests a change
 
-ACTION: Make the change in index.html, keeping the design system intact (same fonts, same spacing scale, same theme unless the change IS the theme). Tell him: refresh the page and judge it. Offer one more round. [Each further round: change, refresh, judge. "Change it back" must be honoured instantly and cheerfully.]
+ACTION: Make the change in index.html, keeping the design system intact (same fonts, same spacing scale, same theme unless the change IS the theme). Tell them: refresh the page and judge it. Offer one more round. [Each further round: change, refresh, judge. "Change it back" must be honoured instantly and cheerfully.]
 
 STOP: Another change, or is version one done?
 
 USER: Iterates or calls it done
 
-ACTION: When he calls it done, add "Version 1, approved by the owner" with today's date to BUILD-PLAN.md.
+ACTION: When they call it done, add "Version 1, approved by the owner" with today's date to BUILD-PLAN.md.
 
 *For your business: you now know how to steer a build without touching code. This loop, look, describe, change, look again, is the whole game.*
 
@@ -92,9 +92,9 @@ STOP: [Wait for /start-2-4 or a farewell.]
 
 ## Success Criteria
 
-- [ ] index.html built FROM the base template, themed to his contract, opened in the browser
-- [ ] He ran the four-step test drive, including close-and-reopen persistence
-- [ ] He heard the how-to-ask-for-changes list
+- [ ] index.html built FROM the base template, themed to their contract, opened in the browser
+- [ ] They ran the four-step test drive, including close-and-reopen persistence
+- [ ] They heard the how-to-ask-for-changes list
 - [ ] At least one change round: request, change, refresh, judge
 - [ ] Version 1 stamped in BUILD-PLAN.md
 - [ ] Recap, notebook line, /start-2-4 offered in-chat
