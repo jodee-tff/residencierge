@@ -1,4 +1,4 @@
-# Bright and Burleigh Coffee Co.
+# Burleigh Heads Coffee Co.
 
 The little cafe on the point. Established 2007 by Dean "Deano" Maloney. New ownership as of this week.
 

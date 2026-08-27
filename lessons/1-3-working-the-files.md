@@ -77,7 +77,7 @@ ACTION: Analyse attachments/loyalty-flyer.png. Present three bolded findings: th
 
 ## Skill four: compare with current public research
 
-You have found the problem inside Bright and Burleigh Coffee Co. Now we will compare it with current industry and regulatory guidance outside the business.
+You have found the problem inside Burleigh Heads Coffee Co. Now we will compare it with current industry and regulatory guidance outside the business.
 
 Copy and paste this:
 

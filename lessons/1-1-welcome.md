@@ -48,7 +48,7 @@ To practise those moves, you'll need some business material. We could use your o
 
 So instead, everyone is receiving a brand-new, entirely fictional business to run.
 
-**CONGRATULATIONS! You are now the new owner of Bright and Burleigh Coffee Co., a much-loved little coffee shop in Burleigh Heads. ☕️**
+**CONGRATULATIONS! You are now the new owner of Burleigh Heads Coffee Co., a much-loved little coffee shop in Burleigh Heads. ☕️**
 
 The previous owner has left you the keys and one folder containing every document for the business: handover notes, customer reviews, loyalty figures and one unknown attachment. The keys are yours. The oat milk problem, regrettably, is also yours.
 

@@ -49,7 +49,7 @@ STOP: Approve or adjust.
 
 USER: Approves
 
-ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Bright and Burleigh Coffee Co. Loyalty App, Build Plan": the goal (one line), the rules as approved, the assumptions, the personality from NOTES.md, space for the look. Then, in this spirit: **Approved and recorded.** That document is the source of truth for Version 1: what the prototype must do, which optional touches you selected and which limitations you knowingly accepted. This protects the build from a surprisingly common failure: everyone believing they agreed to the same thing when they did not.
+ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Burleigh Heads Coffee Co. Loyalty App, Build Plan": the goal (one line), the rules as approved, the assumptions, the personality from NOTES.md, space for the look. Then, in this spirit: **Approved and recorded.** That document is the source of truth for Version 1: what the prototype must do, which optional touches you selected and which limitations you knowingly accepted. This protects the build from a surprisingly common failure: everyone believing they agreed to the same thing when they did not.
 
 *For your business: brief an app, website or internal tool with needs, wants, assumptions and exclusions. The exclusions matter. "Not in Version 1" can protect time and budget as effectively as any feature.*
 

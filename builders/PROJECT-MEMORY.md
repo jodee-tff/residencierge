@@ -69,7 +69,7 @@ Guests use the Code tab of the Claude Desktop app, NOT a code editor. The app's 
 
 ## Scenario canon (do not contradict any of this)
 
-**Bright and Burleigh Coffee Co.**, the little cafe on the point at Burleigh Heads QLD, bought this week by the guest from **Deano** (Dean Maloney), who ran it 19 years and retired to fish. Cast: **Priya** (head barista, runs the floor, pay rise due October, her nan's macadamia cookie recipe stays in her family), **Callum** (late Mondays, blames the surf report), **Tommo** (the roaster in Currumbin), **Big Al** (machine servicing). Facts in play: oat milk runs out every Saturday, the weekend queue from 8 to 10am is feral, wifi password flatwhite2007, council inspection in November, flat white $5.00 small and $5.80 large.
+**Burleigh Heads Coffee Co.**, the little cafe on the point at Burleigh Heads QLD, bought this week by the guest from **Deano** (Dean Maloney), who ran it 19 years and retired to fish. Cast: **Priya** (head barista, runs the floor, pay rise due October, her nan's macadamia cookie recipe stays in her family), **Callum** (late Mondays, blames the surf report), **Tommo** (the roaster in Currumbin), **Big Al** (machine servicing). Facts in play: oat milk runs out every Saturday, the weekend queue from 8 to 10am is feral, wifi password flatwhite2007, council inspection in November, flat white $5.00 small and $5.80 large.
 
 **Hidden verification words** (the tutor asks the guest to find one with their own eyes, proving they truly opened the file): WOMBAT in `inherited-chaos/deanos-handover-notes.md`, MACADAMIA in `company-context/about-burleigh-heads-coffee.md`. Convention: hide one per major new data file, and never reveal them unprompted.
 
@@ -90,7 +90,7 @@ Carl's course plugs a Full Stack PM account (progress, certificates, community).
 
 **Module 2, Vibe Coding** (five lessons, Carl's arc, original project):
 - 2-1 Setup, 2-2 Plan, 2-3 Build and Iterate, 2-4 GitHub, 2-5 Go Live (Vercel).
-- **Recommended build project: a digital loyalty card for Bright and Burleigh Coffee Co.** It is the payoff of the whole story: Module 1 diagnosed the loyalty program (paper stamps that expire), Module 2 builds the fix, stamps that never vanish, live on the internet with a real link. Do NOT build a coffee personality quiz; that is Carl's exact project.
+- **Recommended build project: a digital loyalty card for Burleigh Heads Coffee Co.** It is the payoff of the whole story: Module 1 diagnosed the loyalty program (paper stamps that expire), Module 2 builds the fix, stamps that never vanish, live on the internet with a real link. Do NOT build a coffee personality quiz; that is Carl's exact project.
 - 2-4 GitHub mechanics: the tutor installs the gh CLI (brew on Mac, cli.github.com otherwise) and drives the browser device-code login so the guest never types scary commands. Guests sign up to Vercel WITH GitHub so everything connects. 2-5 installs the Vercel CLI (`npm i -g vercel`) the same way.
 - Every new lesson: fresh secret word in any new data file, Mac and Windows ACTION paths, Important Notes, Success Criteria, the compression rule, and the handoff footer.
 
