@@ -16,7 +16,7 @@ A note on visibility: lessons quietly send the crew a one line ping when a lesso
 
 ## The scenario
 
-The guest has just bought **Burleigh Heads Coffee Co.** from Deano, who ran it for 19 years and left one messy folder behind. The loyalty program is quietly failing, the clues are scattered across the files, and the answer is hiding in the small print of an unopened flyer image.
+The guest has just bought **Bright and Burleigh Coffee Co.** from Deano, who ran it for 19 years and left one messy folder behind. The loyalty program is quietly failing, the clues are scattered across the files, and the answer is hiding in the small print of an unopened flyer image.
 
 ## What's inside
 

@@ -1,75 +1,71 @@
 # Lesson 2.3: Build and Iterate
 
-## LET'S GET THAT APP GOING 🛠️
+ACTION: Read builds/loyalty-card/BUILD-PLAN.md and NOTES.md. Then BUILD: copy templates/loyalty-card-base.html to builds/loyalty-card/index.html and customise it to the contract: set CONFIG.theme to the chosen direction, apply the wants (headStart, promise line text, celebration), any mixing notes (adjust theme styles while keeping the design system's fonts and spacing), and any wording they chose. Verify the file saved, then open it in their browser (`open index.html` on Mac, `start index.html` on Windows, from builds/loyalty-card). Then announce, in this spirit:
 
-**This is the one, [name].** Your signed plan becomes a working app, in this chat, in the next minute.
+# YOUR FIRST BUILD IS ALIVE! 🛠️🎉
 
-ACTION: Read builds/loyalty-card/BUILD-PLAN.md and NOTES.md. Confirm the build in two lines (their rules, their look). Then BUILD: copy templates/loyalty-card-base.html to builds/loyalty-card/index.html and customise it to the contract: set CONFIG.theme to their chosen direction (a, b or c), apply their wants (headStart, promise line text, celebration), their mixing notes (theme styles may be adjusted, keep the design system's fonts and spacing), and any wording they chose. Verify the file saved, then open it in their browser (`open index.html` on Mac, `start index.html` on Windows, from builds/loyalty-card). Announce it plainly: built to your contract, now on your screen.
+**This is the moment, [name].** The plan you approved is now a working prototype on your screen. You described it. You made the decisions. And there it is.
 
-Take it for a proper test drive. In your browser:
+It follows the brief: [name the visual direction, the borrowed elements, the tappable progress, the celebration, the welcome stamp, the persistence, each in a few words].
 
-1. **Tap a stamp box.** It fills. Tap it again, it empties (for till mistakes).
-2. **Tap "add a stamp"** a few times and watch the big count move.
-3. **Close the page completely. Open it again.** Your stamps are still there. That right there is what paper never managed.
-4. **Run it to ten.** Enjoy the moment you chose.
+Before we get distracted by how lovely it looks, let us test whether it keeps the promises in the plan. Professionals call this **acceptance testing**. Very serious name. Very simple question: *does the thing we built actually do what we agreed it would do?*
 
-STOP: Give it the full test. What's the best bit, and what's not right yet?
+In the browser:
+
+1. **Add a stamp.** The count should increase and the stamp should visibly fill.
+2. **Tap the filled stamp again.** It should empty, so a till mistake can be corrected.
+3. **Add several stamps.** Watch whether the large count stays accurate.
+4. **Close the page completely, then reopen it in the same browser.** The stamps should still be there.
+5. **Take the card to ten.** Check the celebration, confetti and reset.
+
+The persistence test deserves one honest explanation. Version 1 uses the browser's local storage. That usually survives closing and reopening the page on the same browser and device. It is not account-based storage: clearing browser data, private browsing or another device may lose the count. That limitation is acceptable for this prototype, because today's goal is to learn the build-and-test loop. It would not be acceptable for a real loyalty balance involving customers and money.
+
+If something does not work, that is not evidence that you "broke the code". It is useful test information. Tell me what you did, what you expected and what happened instead.
+
+STOP: Once you have tested it, give me two things: **what is the best part, and what does not feel right yet?**
 
 USER: Reacts, ideally with something to change
 
-*For your business: from signed plan to working product in one step. The plan is why it came out right.*
+*For your business: this is how you test any AI-built tool. Return to the agreed requirements and check them one by one. Attractive is not the same as correct, and correct is not yet the same as secure or ready for customers.*
 
----
+## The change round
 
-## THE ITERATION MASTERCLASS
-
-What you're learning: the skill that matters more than the build. Changing things. This is the exact skill you'll use on your real app in the next 48 hours, so we practise on a small app where nothing can go wrong.
+ACTION: Take their change request (or invite one if they only praised it: one visible thing, described in sight-words). Make the change in index.html, keeping the design system intact. Confirm what changed in two or three concrete lines (what an empty state looks like, what tapping does), then: refresh the page and test both directions. Praise the FEEDBACK itself when it is specific, in this spirit: that is excellent build feedback, you named the behaviour worth protecting and described one visible change precisely.
 
 How to ask for changes, keep this list:
 
-- **Describe what you see**, not what you think the code is: "the stamps are too small"
-- **Name the spot** if you can: "the button at the bottom", "the line under the count"
-- **Design or function or just vibes**, all fine: "feels cramped", "make it sunnier"
+- **Describe what you see**, not what you think the code is
+- **Name the spot** if you can: "the button at the bottom"
 - **Ask for options**: "show me two other button styles"
 - **Exact words**: "make the promise line say: stamps for life, no fine print"
 - **Instant undo**: "change it back", any time, no cost
 - **The nuclear option**: "bin it, start again". Also free.
 
-Round one, on the house. Pick one, or write your own:
+STOP: Does that complete Version 1, or is there one more change you want before we save this point?
 
-```
-1. Turn the stamps into stars I can tap on and off.
-2. Make the free coffee moment twice as loud.
-3. Swap the main colour for something sunnier.
-```
+USER: Iterates or calls it done [honour "change it back" instantly and cheerfully; each round: change, refresh, judge]
 
-STOP: Name your change.
+ACTION: When they call it done, add "Version 1, approved by the owner" with today's date to BUILD-PLAN.md. Then, in this spirit:
 
-USER: Requests a change
+**VERSION 1 IS COMPLETE! 🎉**
 
-ACTION: Make the change in index.html, keeping the design system intact (same fonts, same spacing scale, same theme unless the change IS the theme). Tell them: refresh the page and judge it. Offer one more round. [Each further round: change, refresh, judge. "Change it back" must be honoured instantly and cheerfully.]
+It has been named and dated in the build plan. A version number does not mean "perfect forever". It means: this is a coherent, working point we understand and may want to return to. That is why saving versions matters.
 
-STOP: Another change, or is version one done?
+## Look what you can do now
 
-USER: Iterates or calls it done
+- Turn an approved brief into a working prototype
+- Test behaviour against written requirements
+- Describe a design change in clear, observable language
+- Understand what browser persistence does and does not guarantee
+- Decide when a version has done its job
 
-ACTION: When they call it done, add "Version 1, approved by the owner" with today's date to BUILD-PLAN.md.
+You also proved something personally important: you did not need to read the source code to direct a useful iteration. You used judgement, observation and precise language. Those are the skills that moved the build forward.
 
-*For your business: you now know how to steer a build without touching code. This loop, look, describe, change, look again, is the whole game.*
+**For your notebook:** test the promise, describe the evidence, change one thing clearly, then test again.
 
----
+Right now, this working version exists only on this laptop. If the laptop has an unexpected meeting with the Pacific Ocean, our prototype has a very bad afternoon. Next, we create a proper version snapshot and place the project in GitHub, so today's working point is not dependent on one machine.
 
-## What you just learned
-
-- A signed plan becomes a working build in one move
-- Changes are described in plain sight-words, and undo is free
-- Persistence beat paper: your stamps survived a closed page
-
-**For the notebook:** iterate small things hard, so big builds feel familiar.
-
-One catch: this app lives only on this laptop. Laptop goes in the ocean, app goes with it. Next: the safe.
-
-Type this right here to keep going:
+Type this here when you are ready:
 
 ```
 /start-2-4

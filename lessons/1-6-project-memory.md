@@ -1,58 +1,68 @@
 # Lesson 1.6: Project Memory
 
-**Last room of Module 1, [name].** One skill, and it might be the most valuable in the course.
+**Last room of Module 1, [name]. And this one changes everything.**
 
-## WHY MOST PEOPLE GET MEDIOCRE AI ANSWERS
+The final lesson is about giving Claude useful context that survives beyond one conversation.
 
-The number one reason people get low-quality answers from AI is that every chat starts from zero: no memory of who they are, how they work, or what matters. The fix is one special file, **CLAUDE.md**, which every chat in this folder reads automatically before you've typed a word.
+This may be the most valuable lesson in the module. Even a very capable assistant gives generic answers when it has to guess who you are, what the project is and what good work looks like to you.
 
-Think of it as the laminated card by the till that every new staff member reads on day one. The Residency crew already keeps house rules on it. Today you get your own section: the **Owner's Memory**.
+## A note every new session reads
 
-You told me your coffee order back in lesson 1.1, but that was a different chat, and chats forget. The card never does. That's the whole lesson, and you're about to prove it.
+Each Claude Code session has its own conversation history. Start a fresh session and the old chat does not automatically come with you.
 
-Three things for your card. Answer in one message, using this shape:
+Inside a project, `CLAUDE.md` solves a different problem. It is a plain-text instruction file that Claude reads at the start of each session in that project. You write the information that should not need to be re-explained every time.
+
+Think of it as the laminated induction card beside the till. Every new team member reads it before their first shift: what this business is, what matters right now, how work should be presented, what rules should be followed.
+
+Claude treats `CLAUDE.md` as guidance and context, not an unbreakable technical control. Specific, concise instructions work better than a sprawling life story.
+
+One safety rule: **do not put passwords, API keys or sensitive patient, customer or financial records in this file.** It is ordinary project text and may later be included in a shared repository. Store secrets through approved methods, not inside instructions.
+
+You told me your coffee order in another session. We will now place it, your current priority and your preferred report style in the project guidance, then prove that a fresh session can read them.
+
+Reply in this format, changing any detail you wish:
 
 ```
 Coffee: flat white with one, not too hot. Priority: fix the loyalty program. Reports: one page, bullets, numbers first.
 ```
 
-STOP: Fill in your three (or paste that one as-is).
+STOP: Your three details, one message.
 
 USER: Provides coffee, priority, report style
 
-ACTION: Append to the bottom of CLAUDE.md, under the "## Owner's Memory" heading only: their name, the three answers, today's date. This is the single permitted edit outside the working folders. Confirm in one line: it's on the card.
+ACTION: Append to the bottom of CLAUDE.md, under the "## Owner's Memory" heading only: their name, the three answers, today's date. This is the single permitted edit outside the working folders. Then, in this spirit: **It is on the card.** That one line gives the next session three useful pieces of context before you ask for anything: a personal preference, the current business priority and the format that helps you think. This is how Claude stops meeting your project like a stranger every time. Not through one mythical perfect prompt, but through relevant context written clearly and kept where the work can find it.
 
-*For your business: a memory file that says who you are, what you sell, how you like output. Ten minutes to write, and every AI answer gets sharper. It also moves with you, tool to tool.*
+*For your business: include the organisation's purpose, audience, approved terminology, recurring constraints and preferred output style. `CLAUDE.md` is the briefing note, not the filing cabinet.*
 
----
+## Trust, then verify
 
-## TRUST, BUT VERIFY
+You know the house rule by now: if a file matters, look at the file. Trust is lovely. Verification is better.
 
-House rule: never take my word for it. In your Files panel, click **CLAUDE.md** and scroll to the bottom.
+Open **CLAUDE.md** in the file window and scroll to the bottom.
 
-STOP: Is your memory on the card, word for word?
+STOP: **Is your Owner's Memory there, word for word?**
 
 USER: Confirms [anything wrong: fix immediately, have them re-check]
 
----
+# MODULE 1 COMPLETE! 🛎️🎉
 
-## MODULE 1, COMPLETE 🛎️
+**Look at you, [name]. Seriously.**
 
-Everything in your folder that didn't exist this morning: an owner's log, a board-ready brief, an organised archive, three investigations with your call on top, and a memory card.
+You arrived in an unfamiliar folder. You can now: inspect and verify source files, ask Claude to read across documents and images, compare internal evidence with current research, turn analysis into a filed decision, plan changes before approving them, direct focused subagents and give future sessions useful project context.
 
-## What you just learned
+And the folder now contains work that did not exist when you began: an owner's log, a sourced loyalty decision brief, an organised working archive, three investigations with your priority at the top and project guidance a fresh session can read.
 
-- Chats forget; CLAUDE.md remembers, automatically, every chat
-- Ten minutes of memory-writing upgrades every future answer
-- Verify the file yourself, always
+That is not merely "following along". That is a completely new way of working beginning to take shape.
 
-**For the notebook:** write your business's memory card this week: who you are, what you sell, how you like output.
+**For your notebook:** create a short project brief for your own business. Include who you serve, what the work must achieve, the rules that matter and how you want answers presented.
 
-## THE PROOF, AND MODULE 2
+## The memory proof, then Module 2
 
-Module 2 is the payoff: you found the 14 day rule killing the loyalty cards. Next, we don't write a memo about it. We BUILD the fix, a digital loyalty card, live on the internet by the end of the module.
+Module 1 uncovered the 14 day rule damaging the loyalty card. Module 2 is the payoff: a **working prototype** of the fix, a digital loyalty card you can open through a web link.
 
-And the memory proof comes with it. Three steps, read all three first:
+"Live on the internet" means accessible at a link. It does not automatically mean secure, connected to a database or ready for real customers. I will keep that distinction clear while we build, because excitement and honesty are allowed in the same room.
+
+But first, you are going to prove the memory works. Read all three steps before you begin.
 
 **Step 1.** Copy this:
 
@@ -60,15 +70,15 @@ And the memory proof comes with it. Three steps, read all three first:
 How do I take my coffee?
 ```
 
-**Step 2.** Open a **new chat** pointed at this same residencierge folder (New button, top of the sidebar, choose the residencierge folder). Paste, press enter, and watch a brand-new chat answer something you never told it.
+**Step 2.** Open a **new session** using this same **residencierge** project folder. Paste the question and press Enter or Return. A brand-new conversation should answer from `CLAUDE.md`, even though you never gave that conversation your order. If it does not, do not start doubting your ability: the most likely causes are the wrong folder or an unsaved file. Raise your hand and we will check those two things first.
 
-**Step 3.** Then type:
+**Step 3.** After the coffee answer, type:
 
 ```
 /start-2-1
 ```
 
-STOP: See you in Module 2, [name]. 🛠️
+STOP: See you in Module 2, [name]. You have learned how to work with the business. Next, you are going to build for it. 🛠️ [If they pause: "Beautifully done. Take the break. When you return: new session, same folder, one coffee question. I will meet you there."]
 
 ---
 

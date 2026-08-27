@@ -1,26 +1,45 @@
 # Lesson 1.3: Working the Files
 
-**Back again, [name].** Four new skills this lesson, one per turn: pointing at exact files, searching across folders, reading images, and live web research. By the end you'll have found what's quietly killing the loyalty program, and filed a board-ready brief about it.
+**Welcome back, [name]. Detective hat on. 🔎**
 
-## SKILL ONE: THE @ MENTION
+Last lesson, you worked with one file at a time. This lesson, you are going to follow clues across the whole business.
 
-What you're learning: how to point me at exactly the file you mean, no guessing.
+You will learn four moves:
 
-Type the `@` symbol in the message box. A file picker pops up. Choose **customer-reviews.md** (inside inherited-chaos), then finish the message with: `what patterns can you see in this?` and press enter.
+1. Point Claude at one exact file.
+2. Search across a folder without knowing the filenames.
+3. Read information held inside an image.
+4. Compare business evidence with current web research.
 
-STOP: Your move. (If the @ picker shows nothing, type the file name in plain text instead, works the same.)
+By the end, you will have found the rule quietly sabotaging the loyalty program and turned the evidence into a decision brief.
 
-USER: @ mentions the reviews and asks for patterns
+The deeper lesson is bigger than file handling: **a strong decision can show where its facts came from.**
 
-ACTION: Read inherited-chaos/customer-reviews.md. Answer in two short lists: "Loved" (3 dot points, one line each) and "Complaints, ranked" (3 dot points, one line each, loyalty stamps first because it breaks the one thing it exists to do). No review quotes, no names, no banter.
+## Skill one: point at an exact file with @
 
-*For your business: gather your own reviews into one file and this exact move ranks what your customers actually think.*
+Typing `@` lets you point me at one specific project file. It is the digital equivalent of placing a document on the table, tapping it with one finger and saying, "This one."
 
----
+Type `@` in the message box. When the file picker appears, choose **customer-reviews.md** inside **inherited-chaos**, then complete the message with:
 
-## SKILL TWO: SEARCH ACROSS FOLDERS, NO FILE NAMES NEEDED
+```
+@customer-reviews.md what patterns can you see in this?
+```
 
-What you're learning: you don't even need to know which file. Describe the information, I'll find it across every folder.
+If the `@` picker is unavailable or shows nothing, type the filename in ordinary text instead. Different versions may show the files slightly differently. The move is still the same.
+
+STOP: Your move.
+
+USER: Sends the @ prompt
+
+ACTION: Read inherited-chaos/customer-reviews.md. Answer with two headed lists from the actual reviews: "What customers value" (three dot points, one line each) and "What customers complain about" (three numbered points, ranked, loyalty stamps first because it breaks the promise the card is meant to keep). Then one honest catch, in this spirit: reviews tell us what this group felt strongly enough to write about, not total sales, profit or what every silent customer thinks. Use review patterns to decide what to investigate next, not to pretend the investigation is finished.
+
+*For your business: product reviews can reveal repeated friction, patient feedback can expose communication gaps, member comments can flag service problems and campaign responses can show which promise is landing. The pattern is a lead. Your wider data decides how much weight it deserves.*
+
+## Skill two: search across the folder
+
+Now we make the job harder. You do not know which file contains the answer.
+
+Happily, you do not need to. Describe the information you need and Claude can search across the project for it.
 
 Copy and paste this:
 
@@ -32,17 +51,17 @@ STOP: Paste it and press enter.
 
 USER: Pastes the prompt
 
-ACTION: Read inherited-chaos/loyalty-card-numbers.md and connect it to the reviews in dot points, one line each: about 500 cards handed out since March; only 9 free coffees ever redeemed; customers say stamps "disappear". End with one line: two different files, one contradiction, found without you naming either file.
+ACTION: Read inherited-chaos/loyalty-card-numbers.md and connect it with the reviews. Present: around 500 cards handed out since March, only nine free coffees redeemed, customers reporting stamps that "disappear" or "expire". Name the recorded redemption rate (about 1.8%), then the honest caveat in this spirit: that number does not prove the cause by itself, cards may be unfinished, lost or poorly recorded, but beside repeated expiry complaints it is a strong reason to inspect the rules of the offer. Close: one source gives the scale, another the human experience, together they tell you where to look next.
 
-*For your business: "find my Q3 numbers and compare them to what the sales team promised" is this same move.*
+*For your business: compare product returns with reviews, membership cancellations with exit feedback, campaign results with the original brief, or forecast figures with the assumptions behind them.*
 
----
+## Skill three: read an image
 
-## SKILL THREE: I READ IMAGES
+Useful information does not always have the decency to arrive as tidy text. It may be hiding inside a flyer, scan, whiteboard photo, screenshot or PDF.
 
-What you're learning: photos, flyers, screenshots, scans. If you can see it, I can read it.
+There is one mysterious flyer inside **attachments** that nobody has opened.
 
-There's a picture in the attachments folder that nobody has opened. Copy and paste this:
+Let us see what it has been hiding. Copy and paste this:
 
 ```
 Open the flyer in attachments and tell me what the fine print says.
@@ -50,17 +69,15 @@ Open the flyer in attachments and tell me what the fine print says.
 
 STOP: Paste it and press enter.
 
-USER: Pastes the prompt
+USER: Pastes the prompt [if they guess the expiry problem first instead: praise the instinct for connecting complaints with the low redemption number, then: now do the part that turns a good instinct into a defensible finding, check the source. Re-offer the same paste. Never confirm before the image is read.]
 
-ACTION: Analyse attachments/loyalty-flyer.png. Report in three dot points: the offer (buy 9, 10th free); the fine print (stamps expire 14 days after purchase, no digital records); the maths in one line (a three-coffees-a-week regular needs three weeks, so almost every card dies before ten). Close: that's the mystery solved, the 14 day rule was hiding in an image the whole time. Then offer one line of what you'd change on the flyer if reprinting.
+ACTION: Analyse attachments/loyalty-flyer.png. Present three bolded findings: the offer (buy nine, tenth free), the hidden condition (stamps expire 14 days after purchase, no digital record kept), the practical effect (a regular buying three coffees a week earns about six stamps in 14 days; reaching nine before expiry needs about four and a half coffees every week). Then, in this spirit: the program is asking a loyal customer to behave like a caffeinated endurance athlete. Bold strategy. Terrible loyalty program. The number of stamps is reasonable; the time allowed does not match how customers actually buy. And the owner's lesson worth keeping: technology cannot rescue a broken promise. Fix the rule first, then choose the best way to record it.
 
-*For your business: whiteboard photos, signed contracts, competitor flyers. Snap it, drop it in, ask.*
+*For your business: Claude can inspect scanned forms, supplier sheets, packaging, invoices and screenshots. Treat extracted text as a reading of the source, then inspect the original before relying on a critical detail.*
 
----
+## Skill four: compare with current public research
 
-## SKILL FOUR: LIVE WEB RESEARCH
-
-What you're learning: I can compare your private data with the live internet, in one move.
+You have found the problem inside Bright and Burleigh Coffee Co. Now we will compare it with current industry and regulatory guidance outside the business.
 
 Copy and paste this:
 
@@ -72,15 +89,22 @@ STOP: Paste it and press enter.
 
 USER: Pastes the prompt
 
-ACTION: Do a live web search on cafe loyalty best practice. Report five lines maximum: typical stamps-to-reward, whether expiry windows are recommended, paper vs digital. Then a **Sources** list: each source on its own line, name and link. If web access fails, say so plainly and give widely known basics, labelled as such.
+ACTION: Do a live web search on cafe loyalty program practice, preferring Australian and regulatory sources where they surface. Report five lines maximum: whether the stamps-to-reward shape is normal, what good practice says about matching the timeframe to real visit patterns, what digital cards fix and what they don't, and any consumer-protection guidance about expiry terms being clear rather than buried. Then a **Sources** list, each on its own line, name and link. Add one research habit, in this spirit: notice who published each source; vendors are useful for patterns but are not neutral proof, a regulator is the authoritative voice. If web access fails, say so plainly and give widely known basics, labelled as such.
 
-*For your business: your data plus live market data, in the same conversation. That's a research analyst on tap.*
+*For your business: you can compare internal data with current regulation, supplier documentation, industry benchmarks or competitor offers. Name the sources, check their dates and understand what each publisher stands to gain.*
 
----
+## Time for the owner's call
 
-## THE OWNER'S CALL
+You now have four parts of a sound decision:
 
-You've got the evidence and the outside view. Time to decide what happens to the loyalty program. Type your own call in one sentence, or use this one:
+- the internal figures
+- the customer experience
+- the rule causing the failure
+- the outside comparison
+
+The investigation has done its job. Now the business needs its owner.
+
+Write your call in one sentence, or use:
 
 ```
 My call: kill the 14 day expiry, keep it simple, and let's look at going digital.
@@ -90,31 +114,31 @@ STOP: Your decision, boss.
 
 USER: Gives the decision
 
-ACTION: Using templates/insight-brief-template.md, create outputs/loyalty-insight-brief.md: situation (2 lines), evidence (reviews pattern, 500 vs 9, the 14 day fine print, one line each, source named per line), the outside view with sources, their decision as the recommendation, dated. THEN also create outputs/loyalty-insight-brief.html, a clean printable one-page version, and open it in their browser. Tell them: the .md is the working copy, the browser version is ready to print or share with a board.
+ACTION: Using templates/insight-brief-template.md, create outputs/loyalty-insight-brief.md (situation, evidence with a source named per line, the outside view with sources, their decision as the recommendation, dated) AND outputs/loyalty-insight-brief.html, a clean printable one-page version, opened in their browser. Announce it in this spirit: decision made, and properly recorded. Two files have appeared: the editable working document and the presentation version, ready for review, printing or sharing. You began with scattered notes, reviews, figures and one overlooked flyer. You finished with a decision brief that shows exactly how the evidence led to the action. That is the complete loop: find the evidence, test the interpretation, make the call, record it.
 
-*For your business: messy inputs in, board-ready document out, with every source named. This is the loop.*
+*For your business: this can become a management brief, compliance note, campaign recommendation, product decision or board-paper draft. "Ready for review" is the right standard. Important decisions still deserve human checking and any professional review your field requires.*
 
----
+## Look what you can do now
 
-## What you just learned
+- Point Claude at one exact file with `@`
+- Find information without knowing which filename contains it
+- Extract information from an image and verify the source
+- Combine internal evidence with current web research
+- Separate facts from interpretation and finish with a recorded decision
 
-- @ points me at a file; plain description finds files you can't name
-- I read images and the live web, and mix both with your data
-- Evidence plus your decision becomes a filed, shareable brief
+**For your notebook:** a convincing answer is not the same as a supported answer. Ask, "What is the source, what is the inference and what still needs checking?"
 
-**For the notebook:** rank your reviews; hunt your own "14 day rules", the small print nobody checked; end analysis with a decision, filed.
+Next, you learn three control moves: reusable slash instructions, screenshots and planning before action.
 
-Next: the driving skills, including the one move that runs all of Module 2.
-
-Type this right here to keep going:
+Type this here when you are ready:
 
 ```
 /start-1-4
 ```
 
-(Or break here. Come back any time: new chat pointed at this folder, same command.)
+Or take a break. When you return, start a new session in this folder and use the same command.
 
-STOP: [Wait for /start-1-4 or a farewell.]
+STOP: [Wait. If they pause: "Ready when you are, [name]. You solved the loyalty mystery properly. Evidence first, owner second, technology third. Keep that order and you will make much better decisions than people who begin with a shiny tool."]
 
 ---
 

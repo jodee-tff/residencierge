@@ -2,26 +2,34 @@
 
 [Usually entered by chaining from 2.1 in the same chat. If entered by /start-2-2 directly, greet in one line and continue.]
 
-## THE DESIGN TABLE
+## The design table
 
-What you're learning: how an app gets designed in plain English before anything is built. Here's the process, upfront: we write a **build plan** (a one-page document), then I build a first version from it, then we iterate. It does not need to be perfect. Forgetting things is normal, that's what iteration is for.
+Before software is built, we write down the promises it must keep. Software teams call these **requirements**. We are going to call them the app's house rules.
 
-One idea that demystifies software forever: **an app is just house rules written down precisely.** Buy a coffee, get a stamp. Ten stamps, free coffee, card resets. That's the app. Everything else is paint.
+Version 1 does not need every clever idea we might ever have. It needs one clear purpose and a small set of behaviours we can actually test.
 
-**The needs** (the app is pointless without these, so I've locked them in):
+### The needs
 
-- Tap to add a stamp, tap again to remove a mistake
-- The stamp count readable at a glance
-- Ten stamps = free coffee moment, then a fresh card
-- Stamps never expire, and the card says so
+Without these, the prototype does not solve the lesson's problem:
 
-**Tthey want** (fun, optional, your call). Pick any, all or none:
+- Add a stamp with a tap
+- Remove a stamp added by mistake
+- Show the current count clearly at a glance
+- At ten stamps, celebrate the free coffee, then begin a fresh card
+- State plainly that stamps never expire
+- Keep the count when the page closes and reopens in the same browser
+
+### The wants
+
+These are optional choices that support the personality you chose:
 
 1. 🎉 Confetti at stamp ten
-2. ☕ Every new card starts with stamp one already given (nobody likes an empty card)
-3. 😄 A cheeky promise line on the card, like "Your stamps never expire. We checked. Twice."
+2. ☕ A new card begins with a complimentary first stamp, because a little head start makes progress feel underway
+3. 😄 A cheeky promise on the card, such as: "Your stamps never expire. We checked. Twice."
 
-Copy, edit the numbers, send:
+That starter stamp has real behavioural logic behind it. Research on the **endowed progress effect** (Nunes and Drèze, 2006) found people can be more likely to complete a reward journey when they feel it has already begun. In a real program, label it honestly as a welcome stamp rather than quietly pretending it was earned.
+
+Copy this, edit the numbers if needed, then send:
 
 ```
 Wants: 1, 2 and 3.
@@ -31,7 +39,7 @@ STOP: Which wants make the cut?
 
 USER: Picks wants
 
-ACTION: Play back needs plus chosen wants as at most eight one-line "when this, then that" rules. State your assumptions in a labelled two-line list ("I've assumed: ten stamps per card; the free coffee is the tenth, so a full card costs nine. Say the word if you want either different."). Then give them the sign-off line to paste:
+ACTION: Confirm the picks in one warm line, then play back the complete Version 1 behaviour as numbered one-line rules (tap to add, tap a filled stamp to remove, count in large readable type, celebration and confetti at ten, reset to a fresh card, the welcome stamp clearly identified, the never-expires statement, persistence in the same browser). Then put the assumptions on the table before any approval, in this spirit: I have made three assumptions and I am putting them right here. The tenth coffee is free, so a full card costs nine paid coffees. The celebration plays and the card resets without a separate staff-confirmed redeem step. And Version 1 stores progress in the browser on that device, no customer account, central database or staff authentication. That final assumption is why this is a learning prototype rather than a customer-ready loyalty system. If you want to change an assumption, say so now. Otherwise approve with:
 
 ```
 Rules approved.
@@ -41,43 +49,41 @@ STOP: Approve or adjust.
 
 USER: Approves
 
-ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Burleigh Heads Coffee Co. Loyalty App, Build Plan": the goal (one line), the rules as approved, the assumptions, the project personality from NOTES.md, space for the look. Tell them: the plan is a real document in the folder, and the build will follow it exactly.
+ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Bright and Burleigh Coffee Co. Loyalty App, Build Plan": the goal (one line), the rules as approved, the assumptions, the personality from NOTES.md, space for the look. Then, in this spirit: **Approved and recorded.** That document is the source of truth for Version 1: what the prototype must do, which optional touches you selected and which limitations you knowingly accepted. This protects the build from a surprisingly common failure: everyone believing they agreed to the same thing when they did not.
 
-*For your business: needs first, wants second, assumptions on the table. That one page is how you'll brief every app, website or tool you ever commission, human or AI.*
+*For your business: brief an app, website or internal tool with needs, wants, assumptions and exclusions. The exclusions matter. "Not in Version 1" can protect time and budget as effectively as any feature.*
 
----
+## Now choose the visual direction 🎨
 
-## NOW THE PAINT 🎨
+Now for the paint. Design becomes much easier when you can react to something you can actually see. Instead of asking you to invent the perfect combination of adjectives, I will show three real directions using the same approved requirements.
 
-What you're learning: choosing design with your eyes, not adjectives.
+ACTION: Open templates/loyalty-previews.html in their browser (`open templates/loyalty-previews.html` on Mac, `start` on Windows). Then present: three directions should now be open in your browser. Same house rules. Three completely different personalities. **A. Burleigh Sunrise**, warm, relaxed and coastal. **B. Midnight Gold**, refined, dark and quietly glamorous. **C. The Point Pop**, bright, bold and cheerful. If nothing opened, raise your hand before clicking around at random. Choose one direction, or borrow specific elements from more than one. "B, but use the larger count from C" is stronger creative direction than "make it better", because it tells the builder exactly what you value.
 
-ACTION: Open templates/loyalty-previews.html in their browser (`open templates/loyalty-previews.html` on Mac, `start` on Windows). Say: three directions, same rules on every card, different personality: A Burleigh Sunrise (warm, beachy), B Midnight Gold (premium, hotel energy), C The Point Pop (loud, cheerful).
-
-Copy, edit, send:
+Copy this, edit it if needed, then send:
 
 ```
 B, but steal the big stamp count from C.
 ```
 
-STOP: A, B or C? Mixing is encouraged.
+STOP: Which direction: A, B or C? Mixing is encouraged.
 
 USER: Picks a direction
 
-ACTION: Record the look in BUILD-PLAN.md with their mixing notes. Mark the plan "Signed off by the owner", dated. Then close the design table:
+ACTION: React in this spirit (adapting to the pick): that is a strong combination. You kept a clear visual direction and borrowed the clearest piece of information design from another option. That is not indecision. That is art direction. Record the look and any mixing notes in BUILD-PLAN.md, mark it "Signed off by the owner", dated. Then close: you have completed the two pieces of work that prevent most disappointing builds, deciding what the product must do and choosing what "right" looks like before it is built.
 
-The plan is now the **build contract**: the next lesson builds exactly this, nothing more, nothing less. You just did the two highest-value moves in software without touching software: rules in plain English, look chosen with your own eyes.
+## Look what you can do now
 
-## What you just learned
+- Map an idea from planning through deployment
+- Explain Git, GitHub and Vercel at a useful beginner level
+- Separate needs, wants and assumptions
+- Set an honest boundary between a prototype and a production system
+- Give precise visual direction by combining real references
 
-- Apps are house rules written down; needs before wants
-- Good briefs state their assumptions out loud
-- Pick design with your eyes, from real options
+**For your notebook:** the first version needs a purpose, a small set of testable promises and clearly stated limits.
 
-**For the notebook:** brief everything as needs, wants, assumptions. One page.
+## The build gets a fresh session
 
-## THE BUILD GETS ITS OWN CHAT
-
-Fresh workspace for the big moment. Two steps, read both first:
+The build is the big moment, so it gets a clean conversation. Read both steps before you begin.
 
 **Step 1.** Copy this:
 
@@ -85,9 +91,9 @@ Fresh workspace for the big moment. Two steps, read both first:
 /start-2-3
 ```
 
-**Step 2.** New chat (New button, top of the sidebar), pointed at this same residencierge folder. Paste. Enter.
+**Step 2.** Open a new session using this same **residencierge** folder. Paste the command and press Enter or Return.
 
-STOP: See you at the build, [name]. 🛠️
+STOP: See you at the build, [name]. You have done the thinking. Now you get to watch your decisions become something real. 🛠️
 
 ---
 

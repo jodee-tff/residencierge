@@ -1,43 +1,64 @@
 # Lesson 1.2: The Inheritance
 
-**Welcome back, [name].** This lesson: what's in your folder, what these files are, and your first two Claude Code skills, reading and creating files.
+**YOU MADE IT! 🎉 Welcome back, [name]. You are in the right folder.**
 
-ACTION: List this folder's contents (top level plus one level down) and present it as a five-line tour, one line per folder, no stories: company-context (what the business says about itself), inherited-chaos (the previous owner's notes, numbers and customer reviews), attachments (files nobody has opened), templates (blank forms), organised and outputs (empty, yours).
+That tiny folder choice has done something very important. Claude now has the right project, the right files and the right course instructions. Correct room key. Correct room. We are officially in business.
 
-Two quick ideas:
+This lesson gives you your first two Claude Code abilities: **reading files** and **creating files**.
 
-- **Folders are the filing cabinet.** This business IS this folder. Everything we do lives inside it.
-- **Nearly every file ends in `.md`.** That's Markdown: plain text with simple shorthand. A `#` makes a heading, a `-` makes a bullet. Humans read it easily, I read it perfectly, and it opens on anything, forever.
+No coding. No mysterious syntax. By the end, you will have asked a useful question of a real business document and created your first file through conversation.
 
-*For your business: this is the future of organised companies. A tidy folder of plain-text files is something AI can read, search and work across in seconds.*
+First, here is the business in five lines:
 
----
+- **company-context**: what the cafe says about itself
+- **inherited-chaos**: the previous owner's notes, figures and customer reviews
+- **attachments**: supporting files, including one nobody has opened
+- **templates**: blank forms ready to use
+- **organised** and **outputs**: empty for now, because those are yours to fill
 
-## SEE YOUR FILES, RIGHT BESIDE OUR CHAT
+Two ideas will make the folder easier to understand:
 
-What you're learning: where your files actually live. The left sidebar is your chats, not your files. Your files sit in the folder, and this app can show them to you while we talk.
+- **Folders give information a home.** The folder name tells you what kind of information belongs inside. Claude can use that same structure to find and connect material.
+- **Most files here end in `.md`.** That means Markdown. Markdown is plain text with a few simple signposts: `#` marks a heading and `-` marks a bullet. People can inspect it directly, Claude can work with it cleanly and the file can move between systems.
 
-Open the **Files panel**: click **Files** near the top right of this window, and the folder's contents appear down the right-hand side. You'll watch files land there all course. [If they can't find the panel: believe them, ask what they can see, and fall back to opening the folder beside the app with `open .` on Mac or `explorer .` on Windows; everything below works identically.]
+You are not learning Markdown because you need a new hobby. You are learning why clear, portable files make a business much easier for both people and AI to understand.
 
-Now prove you're seeing the real thing. In the Files panel:
+*For your business: these folders might hold pharmacy procedures, physio resources, campaign briefs, member feedback, product information or finance reports. Good structure reduces the amount you have to explain every single time.*
 
-1. Open the **inherited-chaos** folder
-2. Click **deanos-handover-notes.md** to read it
-3. The **word of the week** is sitting right at the top of the file
+## See the source for yourself
 
-STOP: What's the word of the week?
+The left sidebar in Claude contains your **sessions**. Your project files live in a separate file window, called **Finder** on Mac or **File Explorer** on Windows.
 
-USER: Says "WOMBAT"
+ACTION: Open the project folder in the system file browser (`open .` on Mac, `explorer .` on Windows). Then say: I've opened the project folder for you. Place that file window beside this chat, with the files on one side and our conversation on the other. This split view lets you ask here and watch the result appear there. [If they mention or prefer the app's built-in Files panel, that does the same job; adapt without fuss.]
 
-[Delighted one-liner: they just verified a file with their own eyes, the most important habit of the week. If they can't find it, walk them back through the three steps, then the hand-raise line.]
+Now let us prove you are looking at the real source files.
 
-*For your business: never take an AI's word for what's in a document. Open it. Verify. It takes ten seconds.*
+1. Open the **inherited-chaos** folder.
+2. Double-click **deanos-handover-notes.md**.
+3. If your computer asks which app to use, choose any plain-text editor available, such as TextEdit or Notepad.
+4. Look at the very top for the **word of the week**.
 
----
+STOP: **What is the word of the week?**
 
-## NOW LET ME READ IT FOR YOU
+USER: Says "WOMBAT" [if they've gone quiet: "The folder is open. Take your time and look at the first line of deanos-handover-notes.md. Send me the word when you find it. I am staying right here."]
 
-What you're learning: the other way to read, where I do it in seconds and hand you what matters.
+**WOMBAT! 🐾 There it is.**
+
+And you just did something quietly important. You checked the source yourself.
+
+The important part is not the wombat, delightful though it may be. It is the habit you just practised: **you verified what was in the file with your own eyes.**
+
+Claude can read far faster than you can. That makes it useful, not automatically right. For any decision that matters, keep this principle:
+
+> Delegate the reading. Keep responsibility for the judgement.
+
+*For your business: verify a medicine reference, a financial figure, a contractual term or a customer promise before you act on it. Ten seconds at the source can prevent a very expensive confident mistake.*
+
+## Now let me do the fast part
+
+You have seen the file yourself. Now let me show you why people fall in love with this way of working.
+
+I will scan the handover notes in seconds and bring the important parts to your attention. You keep the judgement. I handle the first pass.
 
 Copy and paste this:
 
@@ -49,17 +70,13 @@ STOP: Paste it and press enter.
 
 USER: Pastes the prompt
 
-ACTION: Read inherited-chaos/deanos-handover-notes.md and answer with exactly three dot points, one line each (the loyalty complaints, the weekend queue, the oat milk shortage), no quotes from the file, no colour.
+ACTION: Read inherited-chaos/deanos-handover-notes.md. Answer as three numbered findings, one bolded headline plus one plain line each (the loyalty cards upsetting customers, the weekend queue undiagnosed, the Saturday oat milk shortage with a dry nod to the previous owner's forecasting method of ordering "more than feels necessary"). Then close with: three business problems, one question, a few seconds. The division of labour: I scanned and prioritised, YOU decide what the business does about it. Note that the same prompt works on one file or a hundred, but answer quality still depends on the quality of the material.
 
-That took seconds, and it works on one file or a hundred. I read fast, you judge.
+*For your business: this could be a first pass across handover notes, supplier correspondence, customer complaints or a month's worth of reports. It gives your attention somewhere intelligent to begin.*
 
-*For your business: imagine every handover doc, meeting note and report in your company, readable this way.*
+## Now for your first bit of Claude Code magic
 
----
-
-## MAKE YOUR FIRST FILE BY TALKING
-
-What you're learning: conversations become files. You speak, a real document appears on your machine.
+So far, you have used Claude to read the business. Now you are going to create something inside it.
 
 Copy and paste this:
 
@@ -71,33 +88,30 @@ STOP: Paste it and press enter.
 
 USER: Pastes the prompt
 
-ACTION: Create `organised/owners-log.md` with a heading, today's actual date, and their line. Then: "Look at your Files panel. Open the organised folder. A file called owners-log.md just appeared. Click it, those are your words." 
+ACTION: Create `organised/owners-log.md` with a heading, today's actual date, and their line. Then say, in this spirit: Go back to your file window and open **organised**. A file called `owners-log.md` has appeared. Open it. Your sentence is now inside a real document on your computer. Pause for a second, because this is bigger than it looks. You did not copy an AI response into a document, download it and rename it. You asked for a business record, and Claude created that record in the right place on your computer. That is the working pattern we will keep building: conversation becomes a file, the file becomes part of the business.
 
-That's the whole trick of this place: conversations become files, files become the business.
+*For your business: the result might be a decision log, meeting summary, campaign brief, stock procedure or monthly commentary. If you can describe the document and its purpose clearly, Claude can help you produce and maintain it.*
 
-*For your business: minutes, decisions, logs, briefs. Anything you can say, I can file.*
+## Look what you can do now
 
----
+- Find the real project files on your computer
+- Open and verify a source yourself
+- Ask Claude to scan a file and identify what matters
+- Create a properly placed file through ordinary conversation
 
-## What you just learned
+**For your notebook:** let Claude handle the first pass. Verify anything important. Your judgement remains in charge.
 
-- Files live in folders, and the Files panel shows them right beside the chat
-- Verify with your own eyes, then let me read fast for you
-- Talking creates real files on your machine
+Next, we are going detective mode. You will point me at exact files, connect clues across folders, examine an image and compare private business information with current public research.
 
-**For the notebook:** ask AI to read before you read; verify anything important yourself; a tidy folder is an AI-ready business.
-
-Next lesson: you point me at exact files, connect facts across folders, and I read an image nobody has opened.
-
-Type this right here to keep going:
+Type this here when you are ready:
 
 ```
 /start-1-3
 ```
 
-(Or take a break. When you come back: new chat pointed at this folder, same command.)
+Or take a break. When you return, start a new session in this **residencierge** folder and use the same command.
 
-STOP: [Wait for /start-1-3 or a farewell.]
+STOP: [Wait. If they pause: "Whenever you are ready, [name]. The files will wait, and so will I. No cafe emergencies have been reported in the last thirty seconds."]
 
 ---
 

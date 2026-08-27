@@ -1,18 +1,28 @@
 # Lesson 1.5: Agents
 
-**Back again, [name].** This lesson: one skill, and it's a big one. Running several of me at once.
+**Back again, [name]. This is where things get slightly ridiculous, in the best possible way.**
 
-## MEET YOUR STAFF
+So far, you have had one Claude working with you. In this lesson, you are going to send several focused AI workers off at the same time.
 
-What you're learning: an **agent** is a copy of me I can send off with a job. It reads what it needs, works alone, reports back. Several run at once, like a chief of staff sending three analysts away and getting three one-pagers back.
+It is your first glimpse of how one person can direct several streams of analysis without trying to cram every document and question into one conversation.
 
-Let's use a real scenario to launch your first multi-agent prompt. The previous owner left three questions unanswered:
+## Meet your investigation team
 
-1. The weekend queue, out the door 8 to 10am: staffing problem or menu problem?
-2. Oat milk runs out every Saturday: what fixes the ordering?
-3. Eleven menu items: which actually earn their place?
+In Claude Code, a **subagent** is a specialised AI worker given one defined task. It works in its own context, reads what it needs and reports its findings back to the main conversation.
 
-Old way: three conversations, one after another. New way: one order, three investigators, all at once.
+Think of the main chat as your chief of staff. Instead of stuffing three investigations into one desk, it sends three researchers away with separate briefs and brings their findings back in a form you can compare.
+
+This gives you speed and focus. It does **not** sprinkle truth dust over every conclusion.
+
+> Agents make work parallel. They do not make judgement optional.
+
+The previous owner left three questions unresolved:
+
+1. The weekend queue runs out the door from 8 to 10 am. Is the problem staffing, ordering or the menu?
+2. Oat milk runs out every Saturday. What should change in the ordering?
+3. There are eleven menu items. Which ones truly earn their place?
+
+Old way: investigate them one after another. Your new way: one instruction, three focused workers, all moving at once.
 
 Copy and paste this:
 
@@ -24,17 +34,17 @@ STOP: Paste it and press enter.
 
 USER: Pastes the prompt
 
-ACTION: Launch three agents in parallel (queue: handover notes + reviews; oat milk: handover notes + menu; menu: menu + reviews). Present three labelled mini-briefs, maximum three dot points each, ONE LINE per dot point, each ending with a single recommended move. Close with one line: three investigations, one wait, and you never left this chat. [If parallel agents are unavailable, run the three analyses in one turn and present identically, no fuss.]
+ACTION: Launch three agents in parallel (queue: handover notes + reviews; oat milk: handover notes + menu; menu: menu + reviews). Present three headed findings, and inside each one separate **Evidence** (two or three one-line dot points from the actual files), **Working interpretation** (one or two lines, honestly labelled as hypothesis where the files lack proof) and **Next move** (one line, a small test or measurement rather than a grand plan). Close in this spirit: that is the real value of parallel analysis. It does not merely produce more words faster. It lets you compare several focused lines of reasoning while keeping their limits visible. [If parallel agents are unavailable, run the three analyses in one turn and present identically, no fuss.]
 
-*For your business: "investigate these five things at once" turns an afternoon of meetings into one coffee's wait.*
+*For your business: separate workers could examine customer sentiment, operational data and financial impact at the same time. A specialist can also be given a deliberately narrow toolset or reference set. Focus is part of safety.*
 
----
+## The owner's pick
 
-## THE OWNER'S PICK
+Three useful answers have come back. The business still needs one person to decide what happens first.
 
-What you're learning: parallel answers still need one decision-maker. That's you.
+That person is you, Owner.
 
-Pick the one to action first. Type your own, or use this:
+Choose your priority in your own words, or use:
 
 ```
 Oat milk first, it's costing us money every single Saturday.
@@ -44,31 +54,26 @@ STOP: Which moves first, boss?
 
 USER: Picks one
 
-ACTION: Create organised/three-questions-answered.md with the three mini-briefs and their pick at the top labelled "The owner's call", dated. One line: it's filed.
+ACTION: Create organised/three-questions-answered.md with the three findings and their pick at the very top labelled "The owner's call", dated. Say why the placement matters: a report should not make the reader excavate the decision from page four. Then one paragraph, no demonstration: subagents can be saved with a defined role, instructions and access. Your business might eventually have a recurring product-review analyst, campaign checker or very sensibly cautious financial reviewer. Start narrow: a careful "weekly returns analyst" beats a vague "business genius".
 
-One more thing while it's warm: agents can be permanent. A standing marketing brain, numbers brain, legal-cautious brain, each waking up already knowing its job. That's a Residency conversation for your real business.
+## Look what you can do now
 
-*For your business: your org chart can include AI specialists. You still hold the pen.*
+- Delegate focused investigations to separate subagents
+- Run related research streams without flooding the main conversation
+- Distinguish evidence from interpretation and recommendation
+- Choose one priority after several answers return
 
----
+**For your notebook:** list three questions your business has repeatedly postponed. Beside each one, write what evidence a trustworthy answer would need. That is your first real agent brief.
 
-## What you just learned
+Next, we open the file that gives every new session the essential project context before you ask your first question.
 
-- Agents are copies of me that work in parallel and report back
-- One sentence can launch a whole investigation team
-- Many answers, one decision-maker: you
-
-**For the notebook:** list the three questions your business has never had time to answer. That's your first agent job.
-
-Next: the most valuable file in the folder, the one that means no chat ever forgets you.
-
-Type this right here to keep going:
+Type this here when you are ready:
 
 ```
 /start-1-6
 ```
 
-STOP: [Wait for /start-1-6 or a farewell.]
+STOP: [Wait. If they pause: "Ready when you are, [name]. Your investigators have reported back, and not one of them has requested a corner office."]
 
 ---
 
