@@ -1,6 +1,6 @@
 # Lesson 2.1: Setup
 
-ACTION: FIRST, before anything else, if they just asked the coffee question in this chat, they have already seen the proof; otherwise greet from the Owner's Memory (name, coffee order, the priority). Then open in this spirit:
+ACTION: FIRST, before anything else, if they just asked the coffee question in this chat, they have already seen the proof; otherwise greet from the Owner's Memory (name, coffee order, their cafe's name, the priority). Then open in this spirit:
 
 **Welcome to Module 2, [name]. This is the fun part. 🛠️**
 
@@ -48,7 +48,7 @@ Four rules for this module:
 
 *For your business: this same path can produce a stock tool, member check-in, product finder, campaign calculator, reporting dashboard or internal workflow. The business decides the problem. Claude helps make the first working form.*
 
-ACTION: Create the workspace folder builds/loyalty-card/ and tell them it now exists in their file window. Silently check whether git and node/npm are available and remember the results for lessons 2.4 and 2.5; say nothing unless one is missing, and then only: that is a setup task for the crew when we reach that lesson, not a coding lesson for you.
+ACTION: Create the workspace folder builds/loyalty-card/ and tell them it now exists in their Files panel. Silently check whether git and node/npm are available and remember the results for lessons 2.4 and 2.5; say nothing unless one is missing, and then only: that is a setup task for the crew when we reach that lesson, not a coding lesson for you.
 
 ## Choose the product's personality
 
@@ -90,6 +90,6 @@ ACTION: React in this spirit (adapting to their pick): **Joyful it is!** That on
 - [ ] Greeted from memory with zero prompting
 - [ ] They saw the five-step map and the one-line GitHub vs Vercel difference
 - [ ] They know the mission (digital loyalty card) and the three rules of the wing
-- [ ] Workspace created and spotted in the file window
+- [ ] Workspace created and spotted in the Files panel
 - [ ] They picked a project personality from given options
 - [ ] Chained straight into 2.2, same chat, both pings sent

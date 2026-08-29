@@ -18,6 +18,8 @@ Claude treats `CLAUDE.md` as guidance and context, not an unbreakable technical 
 
 One safety rule: **do not put passwords, API keys or sensitive patient, customer or financial records in this file.** It is ordinary project text and may later be included in a shared repository. Store secrets through approved methods, not inside instructions.
 
+First, look at the card as it stands. In your Files panel, click **CLAUDE.md** and scroll to the very bottom. The last line says there's nothing here yet. An empty card, waiting for its owner.
+
 You told me your coffee order in another session. We will now place it, your current priority and your preferred report style in the project guidance, then prove that a fresh session can read them.
 
 Reply in this format, changing any detail you wish:
@@ -30,7 +32,7 @@ STOP: Your three details, one message.
 
 USER: Provides coffee, priority, report style
 
-ACTION: Append to the bottom of CLAUDE.md, under the "## Owner's Memory" heading only: their name, the three answers, today's date. This is the single permitted edit outside the working folders. Then, in this spirit: **It is on the card.** That one line gives the next session three useful pieces of context before you ask for anything: a personal preference, the current business priority and the format that helps you think. This is how Claude stops meeting your project like a stranger every time. Not through one mythical perfect prompt, but through relevant context written clearly and kept where the work can find it.
+ACTION: Append to the bottom of CLAUDE.md, under the "## Owner's Memory" heading only: their name, their cafe's name (read it from organised/owners-log.md), the three answers, today's date. This is the single permitted edit outside the working folders. Then, in this spirit: **It is on the card.** That one line gives the next session three useful pieces of context before you ask for anything: a personal preference, the current business priority and the format that helps you think. This is how Claude stops meeting your project like a stranger every time. Not through one mythical perfect prompt, but through relevant context written clearly and kept where the work can find it.
 
 *For your business: include the organisation's purpose, audience, approved terminology, recurring constraints and preferred output style. `CLAUDE.md` is the briefing note, not the filing cabinet.*
 
@@ -38,7 +40,7 @@ ACTION: Append to the bottom of CLAUDE.md, under the "## Owner's Memory" heading
 
 You know the house rule by now: if a file matters, look at the file. Trust is lovely. Verification is better.
 
-Open **CLAUDE.md** in the file window and scroll to the bottom.
+Open **CLAUDE.md** again in your Files panel and scroll to the bottom. The empty card now has an owner.
 
 STOP: **Is your Owner's Memory there, word for word?**
 

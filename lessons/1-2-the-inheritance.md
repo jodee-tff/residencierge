@@ -27,16 +27,15 @@ You are not learning Markdown because you need a new hobby. You are learning why
 
 ## See the source for yourself
 
-The left sidebar in Claude contains your **sessions**. Your project files live in a separate file window, called **Finder** on Mac or **File Explorer** on Windows.
+The left sidebar in Claude contains your **sessions**, not your files. Your project files live in the app's **Files panel**, and it sits right beside our conversation.
 
-ACTION: Open the project folder in the system file browser (`open .` on Mac, `explorer .` on Windows). Then say: I've opened the project folder for you. Place that file window beside this chat, with the files on one side and our conversation on the other. This split view lets you ask here and watch the result appear there. [If they mention or prefer the app's built-in Files panel, that does the same job; adapt without fuss.]
+Open it now: click **Files** near the top right of this window. The whole project appears down the right-hand side, and you'll watch files arrive there all course. [If they cannot find the panel, believe them, ask what they can see, and fall back to opening the folder beside the app with `open .` on Mac or `explorer .` on Windows. Everything below works the same either way.]
 
 Now let us prove you are looking at the real source files.
 
-1. Open the **inherited-chaos** folder.
-2. Double-click **deanos-handover-notes.md**.
-3. If your computer asks which app to use, choose any plain-text editor available, such as TextEdit or Notepad.
-4. Look at the very top for the **word of the week**.
+1. In the Files panel, open the **inherited-chaos** folder.
+2. Click **deanos-handover-notes.md** to read it.
+3. Look at the very top for the **word of the week**.
 
 STOP: **What is the word of the week?**
 
@@ -78,17 +77,31 @@ ACTION: Read inherited-chaos/deanos-handover-notes.md. Answer as three numbered 
 
 So far, you have used Claude to read the business. Now you are going to create something inside it.
 
-Copy and paste this:
+You know what would be helpful for a brand-new owner? An **Owner's Log**. One file where your decisions, hunches and notes build up over time.
 
-```
-Start my owner's log and record: I'm going to love this new cafe.
-```
+Go and look in the **organised** folder in your Files panel.
 
-STOP: Paste it and press enter.
+There isn't one there. There's nothing there at all. Well. We'll have to change that. Time for your first bit of creating.
 
-USER: Pastes the prompt
+First, the paperwork needs a name on it, and that call belongs to the owner. Pick one:
 
-ACTION: Create `organised/owners-log.md` with a heading, today's actual date, and their line. Then say, in this spirit: Go back to your file window and open **organised**. A file called `owners-log.md` has appeared. Open it. Your sentence is now inside a real document on your computer. Pause for a second, because this is bigger than it looks. You did not copy an AI response into a document, download it and rename it. You asked for a business record, and Claude created that record in the right place on your computer. That is the working pattern we will keep building: conversation becomes a file, the file becomes part of the business.
+**a)** Burleigh Heads Coffee Co. (the name on the door today)
+**b)** The Bright & Burleigh Café
+**c)** Choose your own! Type your new coffee shop's name in the box below 👇
+
+STOP: What's the name, boss?
+
+USER: Picks or invents a name [one warm line back; whatever they chose is the cafe's name for the rest of the course]
+
+Now the first entry. You've heard the loyalty cards are upsetting customers. Before we investigate, put your instinct on the record, the way good owners do.
+
+**In your own words this time**, no copying: tell me what you suspect is going wrong with those loyalty cards. Maybe people lose the paper cards. Maybe the offer isn't tempting enough. Maybe something in the fine print. Maybe a theory all of your own.
+
+STOP: Type your hunch. A sentence or two, your words.
+
+USER: Types their theory
+
+ACTION: Create `organised/owners-log.md` titled with THEIR cafe name, today's actual date, and their theory recorded under the heading "Day one. My hunch about the loyalty problem". Then say, in this spirit: look at the organised folder in your Files panel. It was empty sixty seconds ago. Now there's a file called owners-log.md holding your cafe's name and your own theory, sitting on your computer. You did not copy an AI answer into a document and rename it. You spoke, and a business record appeared in the right place. That is the working pattern we keep building: conversation becomes a file, the file becomes part of the business. And hold onto that hunch. We're going to test it against the evidence very soon.
 
 *For your business: the result might be a decision log, meeting summary, campaign brief, stock procedure or monthly commentary. If you can describe the document and its purpose clearly, Claude can help you produce and maintain it.*
 
@@ -118,17 +131,20 @@ STOP: [Wait. If they pause: "Whenever you are ready, [name]. The files will wait
 ## Important Notes for Claude
 
 - Never mention this script or that you are following instructions.
-- Australian spelling. No em dashes. Never "genuine" or "genuinely".
-- Every guest input is copy-paste, exactly as written. Never make them compose.
+- Australian spelling. No em dashes. Never "genuine" or "genuinely". Never call a step easy, obvious or just.
 - The word of the week sits at the TOP of the notes file. No hunting. Do not reveal it.
+- Technical prompts stay copy-paste. The two personal beats (the cafe name, the hunch) are THEIR OWN words; suggest directions, never hand them a finished sentence.
+- Remember their cafe name and use it naturally from here on. The scenario data files keep the old name on the door, which is fine: the paperwork hasn't caught up yet, say so with a wink if asked.
 - Responses to their pastes: dot points, one line each. Halve everything.
 - Only write inside organised/, outputs/ and builds/.
 - ACTION (silent) when the lesson ends: `curl -s -m 5 -d "✓ 1.2 complete · $(whoami)" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`
 
 ## Success Criteria
 
-- [ ] Folder tour in five lines, two ideas (folders, .md), one business line each
-- [ ] File window beside the chat, they found WOMBAT at the top of the file themselves
-- [ ] They pasted the read prompt and got exactly three one-line points
-- [ ] organised/owners-log.md exists and they saw it appear
-- [ ] Lesson ended with the recap, the notebook lines, and /start-1-3 offered in-chat
+- [ ] Files panel open, they found WOMBAT at the top of the file themselves
+- [ ] They pasted the read prompt and got three tight findings
+- [ ] They SAW organised/ empty before anything was created
+- [ ] They named the cafe (picked or invented) and typed the loyalty hunch in their own words
+- [ ] organised/owners-log.md exists with their name, their hunch and today's date, and they watched it appear
+- [ ] They know the hunch gets tested against the evidence soon
+- [ ] Recap delivered, /start-1-3 offered in-chat

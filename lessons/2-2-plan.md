@@ -49,7 +49,7 @@ STOP: Approve or adjust.
 
 USER: Approves
 
-ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Burleigh Heads Coffee Co. Loyalty App, Build Plan": the goal (one line), the rules as approved, the assumptions, the personality from NOTES.md, space for the look. Then, in this spirit: **Approved and recorded.** That document is the source of truth for Version 1: what the prototype must do, which optional touches you selected and which limitations you knowingly accepted. This protects the build from a surprisingly common failure: everyone believing they agreed to the same thing when they did not.
+ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "[cafe name] Loyalty App, Build Plan": the goal (one line), the rules as approved, the assumptions, the personality from NOTES.md, space for the look. Then, in this spirit: **Approved and recorded.** That document is the source of truth for Version 1: what the prototype must do, which optional touches you selected and which limitations you knowingly accepted. This protects the build from a surprisingly common failure: everyone believing they agreed to the same thing when they did not.
 
 *For your business: brief an app, website or internal tool with needs, wants, assumptions and exclusions. The exclusions matter. "Not in Version 1" can protect time and budget as effectively as any feature.*
 
@@ -57,7 +57,7 @@ ACTION: Create builds/loyalty-card/BUILD-PLAN.md titled "Burleigh Heads Coffee C
 
 Now for the paint. Design becomes much easier when you can react to something you can actually see. Instead of asking you to invent the perfect combination of adjectives, I will show three real directions using the same approved requirements.
 
-ACTION: Open templates/loyalty-previews.html in their browser (`open templates/loyalty-previews.html` on Mac, `start` on Windows). Then present: three directions should now be open in your browser. Same house rules. Three completely different personalities. **A. Burleigh Sunrise**, warm, relaxed and coastal. **B. Midnight Gold**, refined, dark and quietly glamorous. **C. The Point Pop**, bright, bold and cheerful. If nothing opened, raise your hand before clicking around at random. Choose one direction, or borrow specific elements from more than one. "B, but use the larger count from C" is stronger creative direction than "make it better", because it tells the builder exactly what you value.
+ACTION: Copy templates/loyalty-previews.html to builds/loyalty-card/previews.html and swap every cafe name shown on the three cards for THEIR cafe name, changing nothing else. Open that copy in their browser (`open` on Mac, `start` on Windows). Then present: three directions should now be open in your browser. Same house rules. Three completely different personalities. **A. Burleigh Sunrise**, warm, relaxed and coastal. **B. Midnight Gold**, refined, dark and quietly glamorous. **C. The Point Pop**, bright, bold and cheerful. If nothing opened, raise your hand before clicking around at random. Choose one direction, or borrow specific elements from more than one. "B, but use the larger count from C" is stronger creative direction than "make it better", because it tells the builder exactly what you value.
 
 Copy this, edit it if needed, then send:
 

@@ -15,7 +15,7 @@ As we work through each step, remember this: **you are not here to become a soft
 ### A few house rules
 
 1. **You stay in charge.** I can read, create, organise, research and build. You choose the direction, approve the decisions and bring the business judgement. That judgement is the part no tool can replace.
-2. **Justin leads the room.** When Justin is teaching or demonstrating, pause here and follow along with him. I'll guide you through the practical steps between those teaching moments. If something doesn't make sense, make a quick note and ask me when the hands-on work resumes.
+2. **Jodee leads the room.** She's walking you through today, and I'm the concierge doing the work beside you. When she's talking, pause here and follow along. If something doesn't make sense, make a quick note and ask me when the hands-on work resumes.
 3. **If you get lost, raise your hand.** Jodee or Erik will come over and get you moving again. No heroic suffering required. They love this part.
 
 ### One useful reframe

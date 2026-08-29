@@ -145,3 +145,17 @@ Every lesson rewritten against the recorded feedback. The standing law now lives
 
 - **Names are dynamic now.** Scripts carry [name]; BOOTSTRAP and SCRIPT_INSTRUCTIONS rule 14 resolve it (Owner's Memory, then the computer account's display name, then ask warmly). Override: Justin Kabbani goes by Juz. Guest pronouns default to they/them. No more per-copy editing for the cohort.
 - **The Files panel replaces the Finder split screen** as the primary way guests see files (Jodee's screenshot confirmed the Code tab's built-in panel, top right). Finder/Explorer stays as the scripted fallback. Rule 18 carries the details; lesson 1-2 teaches the panel.
+
+## 30 August 2026: Justin's demo feedback, actioned
+
+Justin's verdict on the demo run: extraordinary, keep the name, keep the quirk level. His feedback plus Jodee's decisions, now built:
+
+- **See it empty first, everywhere:** organised/ before the owner's log (1.2), CLAUDE.md's empty card before the memory (1.6), outputs/ before the brief (1.3), builds/ before the app (2.3), organised/ before the tidy-up (1.4).
+- **Owner's log reworked (1.2):** the concierge proposes an Owner's Log, the guest sees the empty folder, then two PERSONAL BEATS typed in their own words, never pasted: naming the cafe (a. Burleigh Heads Coffee Co. / b. The Bright & Burleigh Café / c. their own) and a day-one hunch about the loyalty problem. 1.3 now reads the hunch back after the flyer reveal and appends a verdict entry. [cafe name] flows through the whole course: the brief, the Owner's Memory, the previews copy and the built app all carry the guest's chosen name.
+- **Models taught as 1.4 move four:** engines analogy, same prompt on Haiku then Opus picked from the bar below the message box (never /model), guest describes the difference, back to Sonnet. Experiential only, no benchmark claims in script. Room opens on Sonnet + Medium (Jodee's spoken line, see DELIVERY-NOTES.md).
+- **Jodee leads the room:** 1.1 rule two names Jodee as presenter; SCRIPT_INSTRUCTIONS rule 11 and CLAUDE.md positioning updated. Never invent quotes from Jodee or Justin.
+- **Files panel restored as the taught path** (Jodee's final call), Finder as fallback. Rule 18, 1.2, 1.6, 2.1, 2.3, plus the website.
+- **builders/DELIVERY-NOTES.md** holds Jodee's spoken lines (safety line with the phone-home reveal, model line), timing plan, novice test protocol, reminders.
+- **Working copy moved out of iCloud:** canonical local copy is now ~/residencierge (fresh clone; the old ~/Documents/residencierge copy is stale, Jodee to delete by hand). HANDOVER updated.
+- **hub/** folder added to the repo: the standalone hub page plus a README for Justin to drop into the Exec Hub.
+- Parked: localhost visual companion for visual learners (Justin's idea, post-residency). Pre-made GitHub/Vercel accounts: rejected, guests bring or create their own; GitHub signup goes in pre-event comms.

@@ -73,11 +73,13 @@ USER: Pastes the prompt [if they guess the expiry problem first instead: praise 
 
 ACTION: Analyse attachments/loyalty-flyer.png. Present three bolded findings: the offer (buy nine, tenth free), the hidden condition (stamps expire 14 days after purchase, no digital record kept), the practical effect (a regular buying three coffees a week earns about six stamps in 14 days; reaching nine before expiry needs about four and a half coffees every week). Then, in this spirit: the program is asking a loyal customer to behave like a caffeinated endurance athlete. Bold strategy. Terrible loyalty program. The number of stamps is reasonable; the time allowed does not match how customers actually buy. And the owner's lesson worth keeping: technology cannot rescue a broken promise. Fix the rule first, then choose the best way to record it.
 
+ACTION: Now the callback. Open organised/owners-log.md, read their day-one hunch back to them word for word, and append a dated entry: "Mystery solved: stamps expire 14 days after purchase, buried in the flyer's fine print. My day-one hunch: [their words]. Verdict: [right on the money / close / the truth was sneakier than I thought]." Tell them: your log grew by itself, the way a real one should. Day one you wrote a theory. Today you tested it against evidence. That is the whole discipline, in two entries.
+
 *For your business: Claude can inspect scanned forms, supplier sheets, packaging, invoices and screenshots. Treat extracted text as a reading of the source, then inspect the original before relying on a critical detail.*
 
 ## Skill four: compare with current public research
 
-You have found the problem inside Burleigh Heads Coffee Co. Now we will compare it with current industry and regulatory guidance outside the business.
+You have found the problem inside [cafe name]. Now we will compare it with current industry and regulatory guidance outside the business.
 
 Copy and paste this:
 
@@ -114,7 +116,7 @@ STOP: Your decision, boss.
 
 USER: Gives the decision
 
-ACTION: Using templates/insight-brief-template.md, create outputs/loyalty-insight-brief.md (situation, evidence with a source named per line, the outside view with sources, their decision as the recommendation, dated) AND outputs/loyalty-insight-brief.html, a clean printable one-page version, opened in their browser. Announce it in this spirit: decision made, and properly recorded. Two files have appeared: the editable working document and the presentation version, ready for review, printing or sharing. You began with scattered notes, reviews, figures and one overlooked flyer. You finished with a decision brief that shows exactly how the evidence led to the action. That is the complete loop: find the evidence, test the interpretation, make the call, record it.
+ACTION: First, one line: glance at the outputs folder in your Files panel. Empty. Watch this. Then, using templates/insight-brief-template.md, create outputs/loyalty-insight-brief.md (situation, evidence with a source named per line, the outside view with sources, their decision as the recommendation, dated) AND outputs/loyalty-insight-brief.html, a clean printable one-page version, opened in their browser. Announce it in this spirit: decision made, and properly recorded. Two files have appeared: the editable working document and the presentation version, ready for review, printing or sharing. You began with scattered notes, reviews, figures and one overlooked flyer. You finished with a decision brief that shows exactly how the evidence led to the action. That is the complete loop: find the evidence, test the interpretation, make the call, record it.
 
 *For your business: this can become a management brief, compliance note, campaign recommendation, product decision or board-paper draft. "Ready for review" is the right standard. Important decisions still deserve human checking and any professional review your field requires.*
 
