@@ -13,6 +13,8 @@
   body{display:flex;justify-content:center;background:#191919}
   .card{width:100%;max-width:430px;min-height:100dvh;display:flex;flex-direction:column;position:relative;overflow:hidden}
   .stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;padding:20px 26px 0;position:relative;z-index:2}
+  body.theme-b .stamps{padding:20px 30px 0}
+  body.theme-c .stamps{padding:16px 24px 0}
   .st{aspect-ratio:1;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;border:none;font-size:20px;transition:transform .12s ease}
   .st:active{transform:scale(.9)}
   .head{position:relative;z-index:2}
@@ -20,7 +22,7 @@
   .promise{position:relative;z-index:2}
   .btn{cursor:pointer;position:relative;z-index:2;transition:transform .12s ease}
   .btn:active{transform:scale(.97)}
-  .topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 24px 0;position:relative;z-index:5}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 26px 0;position:relative;z-index:5}
   .iconbtn{width:40px;height:40px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;background:transparent;border:none;color:inherit;transition:transform .12s ease}
   .iconbtn:active{transform:scale(.9)}
   .iconbtn i{display:block;width:16px;height:2px;margin:2px 0;background:currentColor;border-radius:2px}
@@ -31,6 +33,10 @@
   .trk-frac{font-variant-numeric:tabular-nums;opacity:.75;font-size:12px;white-space:nowrap}
   .trk-bar{height:8px;border-radius:99px;overflow:hidden}
   .trk-fill{height:100%;border-radius:99px;width:0%;transition:width .3s ease}
+  .brandmark{position:absolute;top:66px;right:24px;width:56px;height:56px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:30px;z-index:3}
+  body.theme-a .brandmark{background:rgba(255,255,255,.6);box-shadow:0 3px 12px rgba(196,99,60,.18)}
+  body.theme-b .brandmark{border:1px solid rgba(201,169,110,.4);background:rgba(201,169,110,.08)}
+  body.theme-c .brandmark{background:#fff;border:3px solid #1A1A1A;box-shadow:3px 3px 0 #1A1A1A;border-radius:14px}
   .toast{position:fixed;left:50%;transform:translateX(-50%) translateY(20px);bottom:30px;background:#111;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:all .3s ease;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.35)}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
   canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
@@ -45,7 +51,7 @@
   /* ============ THEME A: BURLEIGH SUNRISE ============ */
   body.theme-a .card{background:linear-gradient(175deg,#FFE9C9 0%,#FFD9A8 30%,#F6EFE3 30.2%,#F6EFE3 100%);color:#173F3F;font-family:'Nunito',sans-serif}
   body.theme-a .sun{position:absolute;top:76px;right:30px;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#FFC978,#FF8A50 78%);box-shadow:0 0 54px 16px rgba(255,150,80,.5)}
-  body.theme-a .head{padding:12px 26px 6px}
+  body.theme-a .head{padding:16px 26px 6px}
   body.theme-a .iconbtn{color:#0E4A4A;background:rgba(255,255,255,.55)}
   body.theme-a .st:not(.on)::before{color:#C4956B}
   body.theme-a .tracker{background:rgba(255,255,255,.72);color:#1E5555}
@@ -62,13 +68,13 @@
   body.theme-a .promise{margin:16px 26px 0;background:rgba(255,255,255,.72);border-radius:14px;padding:12px 15px;font-size:13.5px;font-weight:700;color:#1E5555}
   body.theme-a .btn{margin:16px 26px;background:#0E4A4A;color:#FFEFD9;font-family:'Fredoka',sans-serif;font-weight:600;font-size:18px;border:none;border-radius:999px;padding:17px;box-shadow:0 6px 16px rgba(14,74,74,.32)}
   body.theme-a .foot{margin-top:auto;height:76px;background:radial-gradient(64px 34px at 24% 0,#BFE3DA 98%,transparent),radial-gradient(64px 34px at 74% 0,#BFE3DA 98%,transparent),#8FCCC0}
-  body.theme-a .stamp-icon-on::before{content:"☀"}
+  body.theme-a .stamp-icon-on::before{content:"★"}
 
   /* ============ THEME B: MIDNIGHT GOLD ============ */
   body.theme-b{background:#0D0C0A}
   body.theme-b .card{background:linear-gradient(180deg,#141210 0%,#0D0C0A 100%);color:#EFE9DD;font-family:'Plus Jakarta Sans',sans-serif}
   body.theme-b .frame{position:absolute;inset:14px;border:1px solid rgba(201,169,110,.4);border-radius:22px;pointer-events:none;z-index:3}
-  body.theme-b .head{padding:8px 30px 0;text-align:center}
+  body.theme-b .head{padding:12px 30px 0;text-align:center}
   body.theme-b .iconbtn{color:#C9A96E;border:1px solid rgba(201,169,110,.45)}
   body.theme-b .st:not(.on)::before{color:#9c8a63}
   body.theme-b .tracker{margin:14px 30px 0;border:1px solid rgba(201,169,110,.28);background:rgba(201,169,110,.06);color:#EFE9DD}
@@ -86,8 +92,8 @@
   body.theme-b .count-label{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#8E8674;margin-top:2px;text-indent:.34em}
   body.theme-b .st{border:1px solid rgba(201,169,110,.45);color:transparent;background:rgba(201,169,110,.05)}
   body.theme-b .st.on{background:linear-gradient(150deg,#E2C893,#B98F55);color:#181509;border-color:#E2C893;box-shadow:0 2px 12px rgba(201,169,110,.34)}
-  body.theme-b .promise{margin:18px 32px 0;text-align:center;font-size:12.5px;color:#B4AC99;border-top:1px solid rgba(201,169,110,.22);border-bottom:1px solid rgba(201,169,110,.22);padding:11px 0}
-  body.theme-b .btn{margin:17px 32px;background:transparent;border:1px solid #C9A96E;color:#E2C893;font-size:13px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;text-indent:.26em;padding:16px}
+  body.theme-b .promise{margin:18px 30px 0;text-align:center;font-size:12.5px;color:#B4AC99;border-top:1px solid rgba(201,169,110,.22);border-bottom:1px solid rgba(201,169,110,.22);padding:11px 0}
+  body.theme-b .btn{margin:17px 30px;background:transparent;border:1px solid #C9A96E;color:#E2C893;font-size:13px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;text-indent:.26em;padding:16px}
   body.theme-b .foot{margin-top:auto;text-align:center;padding-bottom:22px;font-size:10px;letter-spacing:.3em;color:#6E6654;text-transform:uppercase;text-indent:.3em}
   body.theme-b .stamp-icon-on::before{content:"✦"}
 
@@ -96,7 +102,7 @@
   body.theme-c .card{background:#FFF3E0;color:#1A1A1A;font-family:'Space Grotesk',sans-serif}
   body.theme-c .topbar{background:#E8442E}
   body.theme-c .iconbtn{color:#FFF3E0}
-  body.theme-c .banner{background:#E8442E;color:#FFF3E0;padding:12px 24px 15px;position:relative;z-index:2}
+  body.theme-c .banner{background:#E8442E;color:#FFF3E0;padding:14px 24px 16px;position:relative;z-index:2}
   body.theme-c .st:not(.on)::before{color:#1A1A1A;opacity:.35}
   body.theme-c .tracker{margin:14px 24px 0;background:#fff;border:3px solid #1A1A1A;box-shadow:3px 3px 0 #1A1A1A;border-radius:12px;color:#1A1A1A}
   body.theme-c .trk-bar{background:#F5E7CB;border:2px solid #1A1A1A;height:10px}
@@ -141,6 +147,7 @@
 <div class="card">
   <div class="frame"></div>
   <div class="sun"></div>
+  <div class="brandmark" id="brandmark"></div>
   <div class="topbar">
     <button class="iconbtn" id="menuBtn" aria-label="Menu"><i></i><i></i><i></i></button>
     <button class="iconbtn" id="profileBtn" aria-label="Profile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
@@ -177,7 +184,8 @@
 <script>
 // ================= CONFIG: everything the owner decided lives here =================
 const CONFIG = {
-  theme: "b",                                   // "a" sunrise · "b" midnight gold · "c" pop
+  theme: "b",
+  emoji: "",                                    // decorative brand emoji, top right corner; stamps stay stars                                   // "a" sunrise · "b" midnight gold · "c" pop
   cardSize: 10,                                 // stamps for a free coffee
   headStart: true,                              // new cards begin with stamp 1 already on
   promiseText: "Your stamps never expire. Ever. We checked. Twice.",
@@ -190,6 +198,11 @@ const CONFIG = {
 // ===================================================================================
 
 document.body.className = "theme-" + CONFIG.theme;
+if (CONFIG.emoji) {
+  const bm = document.getElementById("brandmark");
+  bm.textContent = CONFIG.emoji; bm.style.display = "flex";
+  const sun = document.querySelector(".sun"); if (sun) sun.style.display = "none";
+}
 document.getElementById("promise").textContent = CONFIG.promiseText;
 document.getElementById("addBtn").textContent = CONFIG.addButtonText;
 document.getElementById("foot").textContent = CONFIG.theme === "b" ? CONFIG.footText : "";
