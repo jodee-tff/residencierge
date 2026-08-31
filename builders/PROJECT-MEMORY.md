@@ -167,3 +167,7 @@ Fresh clone, claude-jk profile, deliberately awkward guest (cafe named "Steve", 
 ## 1 September 2026, pre-room hardening: the progress log
 
 Reviewer feedback actioned: pings no longer carry usernames, and nothing about them reads as covert. Each machine invents a two-word coffee codename at bootstrap (stored in Owner's Memory); all progress logs are "▶/✓ N.N · codename". Every instruction now says "housekeeping, no need to narrate" instead of "silently/never mention", the README disclosure names the codename mechanism, and the standing rule tells the tutor to answer plainly if a guest asks. Jodee maps codenames to seats by watching who starts when, or by asking. The topic remains public-but-obscure; with codenames the payload is harmless. Rotate the topic before any future cohort.
+
+## 1 September 2026: progress log identity, Jodee's call
+
+Logs now carry first name plus last initial (from the account display name, stored as "Log name" in the Owner's Memory) instead of the coffee codename, so the crew sees who is who at a glance. Paired with a rotation to a fresh ntfy topic that has never appeared in any transcript or screenshot. Payload stays minimal: lesson number plus "Jodee B". Disclosure updated to match.
