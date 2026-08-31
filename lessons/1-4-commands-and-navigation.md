@@ -17,7 +17,7 @@ Typing `/` in the message box opens a menu of **commands and skills**: reusable 
 
 This might sound confusing, but you've actually been using them all along. Every time you typed `/start-1-2`, you were calling a saved set of instructions, a skill, and it ran the whole lesson for you.
 
-Some entries are built-in commands that perform a fixed action. Others are skills that load a detailed set of instructions for Claude to follow. You do not need to memorise the distinction today. You only need to know that a repeatable process can be packaged as a skill and run again and again, whenever you need it.
+Some entries are built-in commands that perform a fixed action. Others are skills that load a detailed set of instructions for Claude to follow. You do not need to memorise the distinction today. You only need to know that a repeatable process can be packaged as a skill and run again and again, whenever you need it. (And you'll notice more /start commands in that menu than you'll ever type: a few lessons flow into the next on their own, no command needed.)
 
 That idea becomes powerful inside a real business:
 
