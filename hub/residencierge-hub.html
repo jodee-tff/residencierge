@@ -199,6 +199,7 @@
 </head>
 <body>
 
+
 <button class="menubtn" id="menubtn" aria-label="Open course menu">☰&nbsp; Course menu</button>
 <div class="app">
   <aside class="sidebar" id="sidebar">
@@ -355,6 +356,7 @@
         <li><b>Install and open it</b><p>Mac: drag it into Applications. Windows: run the installer and accept the prompts. If your laptop asks for an administrator password, that is normal.</p></li>
         <li><b>Sign in</b><p>Use the same Claude account as your pre-work. The app opens looking like the Claude you know.</p></li>
         <li><b>Find the Code tab</b><p>Top left of the app window. Click it. That is where the Residencierge lives, and where every lesson happens.</p></li>
+        <li><b>Mac only: a one-off Git check</b><p>Claude Code needs a small helper called Git. Open <b>Terminal</b> (press Cmd+Space, type Terminal) and type <code>git --version</code>, then Enter. If your Mac offers to install "command line developer tools", click <b>Install</b> and let it finish (a few minutes). If it just shows a version number, you're already set. Windows installs handle this on their own.</p></li>
       </ol>
 
       <div class="tip"><span class="t">Good to know, as at August 2026</span><p>Inside the Code tab, the left-hand sidebar shows your chats and projects, not your files. Your files appear in the <b>Files panel</b>, opened from the three dots menu at the top right, right beside the conversation. The course shows you exactly where to click.</p></div>
@@ -363,6 +365,7 @@
       <div class="trouble">
         <div class="row"><div class="prob">The install is blocked or asks for an admin password I don't have</div><div class="fix">Your laptop is company-managed. <b>Raise your hand</b>, this is the number one thing the setup clinic exists for.</div></div>
         <div class="row"><div class="prob">I can't see a Code tab</div><div class="fix">Make sure you're in the desktop app, not the browser, and signed in to your paid account. Still missing? <b>Raise your hand.</b></div></div>
+        <div class="row"><div class="prob">It says "Git is required for local sessions"</div><div class="fix">Run the one-off Git check in step 5 above, then quit and reopen Claude Desktop. Stuck? <b>Raise your hand.</b></div></div>
         <div class="row"><div class="prob">It's asking me about model or permission settings</div><div class="fix">Leave everything on its defaults. The course handles the rest.</div></div>
       </div>
 
@@ -397,7 +400,7 @@
 
       <h2>Troubleshooting</h2>
       <div class="trouble">
-        <div class="row"><div class="prob">My Mac asked to install "command line developer tools"</div><div class="fix">Click <b>Install</b> and let it finish, then tell Claude to carry on. One-time thing.</div></div>
+        <div class="row"><div class="prob">"Git is required for local sessions", or my Mac asked to install "command line developer tools"</div><div class="fix">Same one-time thing: open Terminal, type <code>git --version</code>, click <b>Install</b> when offered, let it finish, then quit and reopen Claude Desktop.</div></div>
         <div class="row"><div class="prob">Typing / doesn't show the start commands</div><div class="fix">Your chat probably isn't pointed at the course folder. Start a new chat with the residencierge folder as the project. Or paste: <b>Read lessons/SCRIPT_INSTRUCTIONS.md, then the script for the lesson I'm up to in lessons/, and begin teaching immediately.</b></div></div>
         <div class="row"><div class="prob">Something else entirely</div><div class="fix"><b>Raise your hand.</b> Jodee or Erik will sort it in under a minute.</div></div>
       </div>

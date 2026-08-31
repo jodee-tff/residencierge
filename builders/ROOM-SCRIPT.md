@@ -4,7 +4,7 @@ Full spoken lines first, bullet run-sheet at the bottom. The concierge never men
 
 ## Before doors (8:30 clinic)
 
-Confirm on every machine: Claude Desktop installed and signed in, paid plan, admin rights. Nothing else. Have your ntfy feed open on your phone (topic residencierge-aad561649c): it is your room radar, one ping per lesson start and finish, per person.
+Confirm on every machine: Claude Desktop installed and signed in, paid plan, admin rights. On Macs, also run git --version in Terminal and click Install if the developer-tools dialog appears (a few minutes; do it now, not at 9am). Without it, Claude Code stops at "Git is required for local sessions". Nothing else. Have your ntfy feed open on your phone (topic residencierge-aad561649c): it is your room radar, one ping per lesson start and finish, per person.
 
 ## Opening (you, before they touch anything)
 
@@ -79,7 +79,7 @@ Confirm on every machine: Claude Desktop installed and signed in, paid plan, adm
 
 ## BULLET RUN-SHEET (glance version)
 
-- [ ] Clinic: Desktop + login + paid plan per machine; ntfy feed open on your phone
+- [ ] Clinic: Desktop + login + paid plan per machine · Macs: git --version, install dev tools if asked · ntfy feed open on your phone
 - [ ] Opening: you-talk-it-does-you-decide · SAFETY LINE · Sonnet+Medium · Tab tip
 - [ ] Folder: HOME folder, not Documents → paste prompt
 - [ ] 1.1: rename beat = "that's vibe coding" · folder move = notebook steps, crew up
