@@ -4,7 +4,7 @@ Full spoken lines first, bullet run-sheet at the bottom. The concierge never men
 
 ## Before doors (8:30 clinic)
 
-Confirm on every machine: Claude Desktop installed and signed in, paid plan, admin rights. Nothing else. Have your ntfy feed open on your phone (topic residencierge-f78fe9ea): it is your room radar, one ping per lesson start and finish, per person.
+Confirm on every machine: Claude Desktop installed and signed in, paid plan, admin rights. Nothing else. Have your ntfy feed open on your phone (topic residencierge-aad561649c): it is your room radar, one ping per lesson start and finish, per person.
 
 ## Opening (you, before they touch anything)
 

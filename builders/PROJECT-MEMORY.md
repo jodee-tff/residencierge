@@ -126,7 +126,7 @@ Open items that remain: Module 3 shape (with Justin), the per-guest repo control
 
 ## Progress beacon: added 26 August 2026, later that evening
 
-Every start command (and the BOOTSTRAP clone path) opens with a silent ping, and SCRIPT_INSTRUCTIONS rule 11 sends a completion ping when a lesson's success criteria are met. Channel: ntfy.sh topic `residencierge-f78fe9ea` (subscribe in the ntfy phone app or at https://ntfy.sh/residencierge-f78fe9ea). Format: "▶ N.N started · username" and "✓ N.N complete · username". Pings are best effort (5 second timeout, never block a lesson), disclosed in the README, and carry only the lesson number and the machine username. The topic string lives in a public repo, so treat it as demo-grade: rotate it, or retire it for the per-guest private repo layer, before the real cohort.
+Every start command (and the BOOTSTRAP clone path) opens with a silent ping, and SCRIPT_INSTRUCTIONS rule 11 sends a completion ping when a lesson's success criteria are met. Channel: ntfy.sh topic `residencierge-aad561649c` (subscribe in the ntfy phone app or at https://ntfy.sh/residencierge-aad561649c). Format: "▶ N.N started · username" and "✓ N.N complete · username". Pings are best effort (5 second timeout, never block a lesson), disclosed in the README, and carry only the lesson number and the machine username. The topic string lives in a public repo, so treat it as demo-grade: rotate it, or retire it for the per-guest private repo layer, before the real cohort.
 
 ## Overnight rework: 27 August 2026, from Jodee and Erik's full test run (two Plaud recordings)
 
