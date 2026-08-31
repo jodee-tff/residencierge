@@ -1,0 +1,1 @@
+things customers said to me at the till 2025 to 2026, wrote down the good ones. "youse should do bigger cookies" heard that three times. couple asked if we do dog treats for the beach crowd. one bloke wants stronger batch brew before 7am. tourists keep asking for a keep cup with the logo

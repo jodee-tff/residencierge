@@ -1,6 +1,6 @@
 # Lesson 2.3: Build and Iterate
 
-ACTION: Read builds/loyalty-card/BUILD-PLAN.md and NOTES.md. One line first: look at builds/loyalty-card in your Files panel, the plan and notes, nothing else yet. Then BUILD: copy templates/loyalty-card-base.html to builds/loyalty-card/index.html and customise it to the contract: put THEIR cafe name on the card everywhere the brand appears (replace the full text of every brand element, then search the file to confirm no trace of the old name remains), set CONFIG.theme to the chosen direction, apply the wants (headStart, promise line text, celebration), any mixing notes (adjust theme styles while keeping the design system's fonts and spacing), and any wording they chose. Verify the file saved, then open it in their browser (`open index.html` on Mac, `start index.html` on Windows, from builds/loyalty-card). Then announce, in this spirit:
+ACTION: Read builds/loyalty-card/BUILD-PLAN.md and NOTES.md. One line first: look at builds/loyalty-card in your Files panel, the plan and notes, nothing else yet. Then BUILD: copy templates/loyalty-card-base.html to builds/loyalty-card/index.html and customise it to the contract: put THEIR cafe name on the card everywhere the brand appears (replace the full text of every brand element, then search the file to confirm no trace of the old name remains), set CONFIG.theme to the chosen direction, apply their two colours to that direction's accents (unless they chose Midnight Gold, which stays black and gold) and their emoji as the filled-stamp icon and the decorative top-right mark, apply the wants (headStart, promise line text, celebration), any mixing notes (adjust theme styles while keeping the design system's fonts and spacing), and any wording they chose. No em dashes anywhere in the file. Verify the file saved, then open it in their browser (`open index.html` on Mac, `start index.html` on Windows, from builds/loyalty-card). Then announce, in this spirit:
 
 # YOUR FIRST BUILD IS ALIVE! 🛠️🎉
 
@@ -41,9 +41,18 @@ How to ask for changes, keep this list:
 - **Instant undo**: "change it back", any time, no cost
 - **The nuclear option**: "bin it, start again". Also free.
 
+A few easy ones to try if you'd like inspiration:
+
+- Remove the sun and add a big coffee cup
+- Change the colours to pink and white
+- Add something beachy to the design
+- Add the customer's name at the top of the screen
+
+And remember: if you want to point at a specific spot, or you're seeing an error, screenshot it and paste it straight into this chat.
+
 STOP: Does that complete Version 1, or is there one more change you want before we save this point?
 
-USER: Iterates or calls it done [honour "change it back" instantly and cheerfully; each round: change, refresh, judge]
+USER: Iterates or calls it done [honour "change it back" instantly and cheerfully; each round: change, refresh, judge; after a third change, add warmly: "Remember, this is version one. You can always come back and perfect it later."]
 
 ACTION: When they call it done, add "Version 1, approved by the owner" with today's date to BUILD-PLAN.md. Then, in this spirit:
 
@@ -51,7 +60,7 @@ ACTION: When they call it done, add "Version 1, approved by the owner" with toda
 
 It has been named and dated in the build plan. A version number does not mean "perfect forever". It means: this is a coherent, working point we understand and may want to return to. That is why saving versions matters.
 
-## Look what you can do now
+## Let's recap what we learned
 
 - Turn an approved brief into a working prototype
 - Test behaviour against written requirements
@@ -61,9 +70,11 @@ It has been named and dated in the build plan. A version number does not mean "p
 
 You also proved something personally important: you did not need to read the source code to direct a useful iteration. You used judgement, observation and precise language. Those are the skills that moved the build forward.
 
-**For your notebook:** test the promise, describe the evidence, change one thing clearly, then test again.
+**For your notebook:** when testing any AI build, go promise by promise from the plan: test the promise, describe what you actually saw, change one thing clearly, then test again.
 
-Right now, this working version exists only on this laptop. If the laptop has an unexpected meeting with the Pacific Ocean, our prototype has a very bad afternoon. Next, we create a proper version snapshot and place the project in GitHub, so today's working point is not dependent on one machine.
+Right now, this working version exists only on this laptop. If the laptop has an unexpected meeting with the Pacific Ocean, our prototype has a very bad afternoon.
+
+Next, we move into a crazy little concept called **GitHub**. We're going to learn exactly what it is, what it does, and why it's about to become your new best friend.
 
 Type this here when you are ready:
 

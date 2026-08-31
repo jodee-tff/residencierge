@@ -1,0 +1,1 @@
+tommo came by 1 aug 2025. beans going up 40c a kilo from october, says everyone's copping it. he'll hold our price til december cos we're old faithfuls. remember to actually thank him. also he reckons the batch brew blend should rotate monthly not weekly, less waste

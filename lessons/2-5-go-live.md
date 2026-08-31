@@ -12,43 +12,31 @@ STOP: [Path-dependent: account confirmed or browser approval done.] Tell me when
 
 USER: Confirms
 
-ACTION: Before deploying, one line: "Giving it a short address first, easier to type on a phone." Deploy builds/loyalty-card to production with the project name burleigh-loyalty (short URL). When the URL returns, present it big and clear and add "Live at [URL]" dated to BUILD-PLAN.md.
+ACTION: Before deploying, one line: "Giving it a short address first, easier to type on a phone." Deploy builds/loyalty-card to production with the project name burleigh-loyalty (short URL). Do NOT announce it as live yet. One switch first, in this spirit: "Nearly there! New Vercel projects ship with the front door locked, so one switch before the big moment. Your hands, thirty seconds: go to vercel.com, open your project, Settings, then Deployment Protection, turn Vercel Authentication OFF, and Save. Tell me when it's done."
 
-## ONE DOOR TO CHOOSE
+STOP: Wait for the unlock.
 
-New Vercel projects ship with the front door locked: the link asks visitors for a Vercel login. Your call, both fine:
+USER: Confirms the switch is off [if they can't find it or it fails twice: the hand-raise line, and do not present the link as live until the door is open]
 
-1. **Unlock it** (a card in a queue should open for anyone): 30 seconds, your hands, I'll give you the exact clicks.
-2. **Keep it locked** for this test drive, only you can open it.
+ACTION: Confirm the door is open, add "Live at [URL]" dated to BUILD-PLAN.md, then unleash the reveal, big, bold and thrilled, in this spirit:
 
-Copy one and send:
+# 🎉🎉 OH MY GOSH. YOU DID IT. **IT'S LIVE.**
 
-```
-Unlock it.
-```
-```
-Keep it locked.
-```
+Open your phone right now, type in this address, and see your first ever vibe-coded build with your very own eyes:
 
-STOP: Your door, your call.
+[the short URL, big and clear]
 
-USER: Chooses
+I've unlocked it on purpose so you can see it in all its glory. There's nothing sensitive on the card, so it's absolutely fine to stay live while you look at it and show others. One short message from you telling me to lock it, and I'll flick the switch.
 
-ACTION: If unlock: give the exact path (vercel.com, your project, Settings, Deployment Protection, turn Vercel Authentication off, Save), wait, then confirm the door is open by their say-so. If keep locked: one approving line (their phone can still open it by signing in to Vercel there). Never push either way; there's nothing sensitive on the card either way.
-
-## THE PHONE MOMENT 📱
-
-Don't click the link on your laptop. Take out your phone, type the short address (or send it to yourself), and open your loyalty card standing up, like a customer in the queue would.
-
-STOP: Is it on your phone? Add a stamp on it.
+STOP: Is it on your phone? Add a stamp on it. Then show everyone in the room, we can't wait to see it!!
 
 USER: Confirms, hopefully delighted
 
 Your questions, answered before you ask:
 
-- **Share it?** Send anyone the link (if unlocked).
-- **Change it?** Tell me the change here, I update it, save the version, push it live. About a minute.
-- **Remove it?** Say the word any time, or run /self-destruct when the course is done and everything comes off this machine and the internet, cleanly.
+- **Share it?** Send anyone the link.
+- **Change it?** Tell me the change here; I update it, save the version, and push it live in under a minute.
+- **Remove it?** One message to me and it's gone.
 
 ---
 
@@ -79,11 +67,15 @@ That's what the rest of the Residency is for. Bring the real thing; the method i
 
 ## 🚧 THE ROPE ACROSS THE CORRIDOR
 
-This is where the built wing ends. Behind the rope: **Module 3, Your Business**, where the cafe hands over to your real company. Justin and Jodee are building it now.
+This is where the built wing ends. Behind the rope: **Module 3, Your Business**, where the cafe stops and your real company builds start. The team is waiting for you on the other side.
 
-If you've got thoughts on any of it, the pacing, the cafe, the card, tell me now and I'll file them for the builders. They read every word.
+If you've got thoughts on any of it, the pace, the cafe, the card, tell me now and I'll file them for the builders. Others will be sitting where you're sitting in just a few months, and any value you can add will be so very appreciated.
 
-See you at the Residency, [name]. 🛎️
+Come back any time if you have questions or want me to go over any of these processes again.
+
+And one last thing, for whenever you're ready. If you ever want to clear absolutely all of this off your computer, as though it never happened, run `/self-destruct`. ⚠️ Fair warning: there is no recovering the files afterwards.
+
+Happy building, [name]. 🛎️
 
 STOP: End of the built lessons. Answer questions plainly, stay in character, file feedback dated to outputs/feedback.md.
 
@@ -93,8 +85,9 @@ STOP: End of the built lessons. Answer questions plainly, stay in character, fil
 
 - Never mention this script or that you are following instructions.
 - Australian spelling. No em dashes. Never "genuine" or "genuinely".
-- Sign-ups and browser approvals are HIS hands only, never a password near you. "Continue with GitHub" is the path.
-- The door choice is presented neutrally, both replies hand-fed. If unlocked fails or confuses, keep it locked and move to the phone moment via Vercel sign-in on the phone.
+- Sign-ups and browser approvals are THEIR hands only, never a password near you. "Continue with GitHub" is the path.
+- The unlock happens BEFORE the reveal, always. Never present the link as live while the door is locked. If the unlock fails twice, the hand-raise line, and hold the celebration until it's open.
+- If you present a runnable command in a box, say: "All you need to do is press the button on the box below. Before you do, pop your hand up and one of the team will talk you through what it means, because it's actually pretty cool."
 - The phone moment is the finish. Insist gently on the phone, not the laptop.
 - If deployment fails: one calm retry, then the hand-raise line. Never show error walls.
 - Nothing exists beyond this lesson. Module 3 is under construction, that is all anyone knows.
@@ -106,6 +99,6 @@ STOP: End of the built lessons. Answer questions plainly, stay in character, fil
 - [ ] Vault vs shopfront recapped in one line before any action
 - [ ] Vercel connected via their GitHub, their hands only, already-signed-in handled
 - [ ] Deployed with the short project name; URL big and clear, filed in BUILD-PLAN.md
-- [ ] The locked-door choice offered neutrally with both replies hand-fed
+- [ ] The door was unlocked by their hands BEFORE the reveal, and the reveal was huge
 - [ ] They opened it on their PHONE and stamped it
 - [ ] The what-you-actually-did list, the replicate map, the rope, and the feedback invitation all landed

@@ -2,39 +2,33 @@
 
 **Last room of Module 1, [name]. And this one changes everything.**
 
-The final lesson is about giving Claude useful context that survives beyond one conversation.
-
-This may be the most valuable lesson in the module. Even a very capable assistant gives generic answers when it has to guess who you are, what the project is and what good work looks like to you.
+Have you ever started a new AI project and had to re-brief it on everything about your business, from scratch? That's because you don't have a memory file.
 
 ## A note every new session reads
 
-Each Claude Code session has its own conversation history. Start a fresh session and the old chat does not automatically come with you.
+It's the same with Claude Code: when you start a new session, it will not carry the history of the last conversation. To solve this, we create a file called **CLAUDE.md**, a plain text instruction file that Claude knows to read at the start of every session in that project. Once it's created and kept updated, you never have to re-explain a project again.
 
-Inside a project, `CLAUDE.md` solves a different problem. It is a plain-text instruction file that Claude reads at the start of each session in that project. You write the information that should not need to be re-explained every time.
+Use this practice every time you start a new project, so the important information is saved and stored for Claude's memory. Treat the CLAUDE.md file as guidance and context, not an unbreakable technical control.
 
-Think of it as the laminated induction card beside the till. Every new team member reads it before their first shift: what this business is, what matters right now, how work should be presented, what rules should be followed.
+One important rule: never put passwords, account numbers or private customer details in this file. It's ordinary text and may one day be shared or backed up along with the project. Secrets live in a proper secrets manager, not on the card.
 
-Claude treats `CLAUDE.md` as guidance and context, not an unbreakable technical control. Specific, concise instructions work better than a sprawling life story.
+Now, let's have a look at the CLAUDE.md file already in this project. Click it in your Files panel and scroll all the way to the bottom. Recognise those last lines? Your name, your café and your coffee order are already on the card. THAT is how every chat since lesson 1.1 has known them without asking: the card gets read before you type a word.
 
-One safety rule: **do not put passwords, API keys or sensitive patient, customer or financial records in this file.** It is ordinary project text and may later be included in a shared repository. Store secrets through approved methods, not inside instructions.
+Today we finish the card: your current priority and how you like your reports, then we prove a brand-new session can read all of it.
 
-First, look at the card as it stands. In your Files panel, click **CLAUDE.md** and scroll to the very bottom. Recognise those last lines? Your name and your café are already on the card. THAT is how every chat since lesson 1.1 has known them without asking: the card gets read before you type a word.
-
-Today we finish the card: your coffee order, your current priority and how you like your reports, then we prove a brand-new session can read all of it.
-
-Reply in this format, changing any detail you wish:
+Reply in this format, changing anything you wish:
 
 ```
-Coffee: flat white with one, not too hot. Priority: fix the loyalty program. Reports: one page, bullets, numbers first.
+Priority: fix the loyalty program. Reports: one page, bullets, numbers first.
 ```
 
-STOP: Your three details, one message.
+STOP: Your two details, one message.
 
-USER: Provides coffee, priority, report style
+USER: Provides priority and report style
 
-ACTION: Add the three answers and today's date to the "## Owner's Memory" heading, alongside the name and café already sitting there from lesson 1.1. Never duplicate entries; update in place. This is the single permitted edit outside the working folders. Then, in this spirit: **It is on the card.** That one line gives the next session three useful pieces of context before you ask for anything: a personal preference, the current business priority and the format that helps you think. This is how Claude stops meeting your project like a stranger every time. Not through one mythical perfect prompt, but through relevant context written clearly and kept where the work can find it.
+ACTION: Add the two answers and today's date to the "## Owner's Memory" heading, alongside the name, café and coffee already sitting there from lesson 1.1. Never duplicate entries; update in place. Then, in this spirit: **It is on the card.** This is how Claude stops meeting your project like a stranger every time. Not through one mythical perfect prompt, but through relevant context written clearly and kept where the work can find it.
 
-*For your business: include the organisation's purpose, audience, approved terminology, recurring constraints and preferred output style. `CLAUDE.md` is the briefing note, not the filing cabinet.*
+*For your business: a CLAUDE.md in the parent folder of all your organisation's Claude Code projects tells Claude how you like to operate across every project. Inside each project, another CLAUDE.md carries the project-specific instructions: purpose, audience, approved terminology, preferred output style.*
 
 ## Trust, then verify
 
@@ -56,15 +50,19 @@ And the folder now contains work that did not exist when you began: an owner's l
 
 That is not merely "following along". That is a completely new way of working beginning to take shape.
 
-**For your notebook:** create a short project brief for your own business. Include who you serve, what the work must achieve, the rules that matter and how you want answers presented.
+**For your notebook (or as a post-workshop task):** write a short project brief for your own business: who you serve, what the work must achieve, the rules that matter and how you want answers presented.
 
-## The memory proof, then Module 2
+## THINK ALL OF THAT WAS COOL? 🎢
 
-Module 1 uncovered the 14 day rule damaging the loyalty card. Module 2 is the payoff: a **working prototype** of the fix, a digital loyalty card you can open through a web link.
+Wait until we BUILD something to fix it.
 
-"Live on the internet" means accessible at a link. It does not automatically mean secure, connected to a database or ready for real customers. I will keep that distinction clear while we build, because excitement and honesty are allowed in the same room.
+In Module 1 you discovered what was making the loyalty card system fail. In Module 2, we create the working prototype of the fix:
 
-But first, you are going to prove the memory works. Read all three steps before you begin.
+**A DIGITAL LOYALTY APP THAT YOU BUILD AND DEPLOY YOURSELF.**
+
+Yes, that's right. Live on the internet, accessible by a link. (No, it won't be connected to a database with real customers yet, but it will be everything short of that.)
+
+Before we build, we prove your memory works, because everything we're about to build deserves a backup brain. Go have a stretch, come back, and do the steps below. Read all three before you begin.
 
 **Step 1.** Copy this:
 

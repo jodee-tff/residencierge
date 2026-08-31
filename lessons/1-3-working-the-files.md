@@ -22,7 +22,7 @@ Typing `@` lets you point me at one specific project file. It is the digital equ
 Type `@` in the message box. When the file picker appears, choose **customer-reviews.md** inside **inherited-chaos**, then complete the message with:
 
 ```
-@customer-reviews.md what patterns can you see in this?
+what patterns can you see in this?
 ```
 
 If the `@` picker is unavailable or shows nothing, type the filename in ordinary text instead. Different versions may show the files slightly differently. The move is still the same.
@@ -31,27 +31,25 @@ STOP: Your move.
 
 USER: Sends the @ prompt
 
-ACTION: Read inherited-chaos/customer-reviews.md. Answer with two headed lists from the actual reviews: "What customers value" (three dot points, one line each) and "What customers complain about" (three numbered points, ranked, loyalty stamps first because it breaks the promise the card is meant to keep). Then one honest catch, in this spirit: reviews tell us what this group felt strongly enough to write about, not total sales, profit or what every silent customer thinks. Use review patterns to decide what to investigate next, not to pretend the investigation is finished.
+ACTION: Read inherited-chaos/customer-reviews.md. Open with: "Okay, I checked the customer-reviews file and found 14 written reviews. Here's what I found." Then answer with two headed lists from the actual reviews: "What customers value" (three dot points, one line each) and "What customers complain about" (three numbered points, ranked, loyalty stamps first because it breaks the promise the card is meant to keep). Then one honest catch, in this spirit: reviews tell us what this group felt strongly enough to write about, not total sales, profit or what every silent customer thinks. Use review patterns to decide what to investigate next, not to pretend the investigation is finished.
 
 *For your business: product reviews can reveal repeated friction, patient feedback can expose communication gaps, member comments can flag service problems and campaign responses can show which promise is landing. The pattern is a lead. Your wider data decides how much weight it deserves.*
 
-## Skill two: search across the folder
+## Skill two: searching multiple files for information
 
-Now we make the job harder. You do not know which file contains the answer.
+Now we make the job harder. What if you need a piece of information, but you're not sure which file that data sits in? No problem. Describe the information you need and Claude can search across the project for it.
 
-Happily, you do not need to. Describe the information you need and Claude can search across the project for it.
-
-Copy and paste this:
+Copy and paste the below:
 
 ```
-Find the loyalty program's numbers anywhere in this folder and compare them with what the reviews say.
+Find the loyalty program's numbers somewhere in this folder and compare them with what the reviews say.
 ```
 
 STOP: Paste it and press enter.
 
 USER: Pastes the prompt
 
-ACTION: Read inherited-chaos/loyalty-card-numbers.md and connect it with the reviews. Present: around 500 cards handed out since March, only nine free coffees redeemed, customers reporting stamps that "disappear" or "expire". Name the recorded redemption rate (about 1.8%), then the honest caveat in this spirit: that number does not prove the cause by itself, cards may be unfinished, lost or poorly recorded, but beside repeated expiry complaints it is a strong reason to inspect the rules of the offer. Close: one source gives the scale, another the human experience, together they tell you where to look next.
+ACTION: Read inherited-chaos/loyalty-card-numbers.md and connect it with the reviews. Present: around 500 cards handed out since March, only nine free coffees redeemed, customers reporting stamps that "disappear" or "expire". Then, in plain English: rather than relying on one source of information, once you spot a trend, look for other places that can back the theory up. We've read the customer reviews, and now the loyalty numbers agree with them. Let's see if we can find a third source.
 
 *For your business: compare product returns with reviews, membership cancellations with exit feedback, campaign results with the original brief, or forecast figures with the assumptions behind them.*
 
@@ -59,27 +57,29 @@ ACTION: Read inherited-chaos/loyalty-card-numbers.md and connect it with the rev
 
 Useful information does not always have the decency to arrive as tidy text. It may be hiding inside a flyer, scan, whiteboard photo, screenshot or PDF.
 
-There is one mysterious flyer inside **attachments** that nobody has opened.
+While searching just now, I noticed an untitled attachment with a .png file name sitting in the **attachments** folder. There could be a clue hiding in there.
 
-Let us see what it has been hiding. Copy and paste this:
+Copy and paste this:
 
 ```
-Open the flyer in attachments and tell me what the fine print says.
+Open the attachment in the attachments folder and tell me what the small print says.
 ```
 
 STOP: Paste it and press enter.
 
 USER: Pastes the prompt [if they guess the expiry problem first instead: praise the instinct for connecting complaints with the low redemption number, then: now do the part that turns a good instinct into a defensible finding, check the source. Re-offer the same paste. Never confirm before the image is read.]
 
-ACTION: Analyse attachments/loyalty-flyer.png. Present three bolded findings: the offer (buy nine, tenth free), the hidden condition (stamps expire 14 days after purchase, no digital record kept), the practical effect (a regular buying three coffees a week earns about six stamps in 14 days; reaching nine before expiry needs about four and a half coffees every week). Then, in this spirit: the program is asking a loyal customer to behave like a caffeinated endurance athlete. Bold strategy. Terrible loyalty program. The number of stamps is reasonable; the time allowed does not match how customers actually buy. And the owner's lesson worth keeping: technology cannot rescue a broken promise. Fix the rule first, then choose the best way to record it.
+ACTION: Analyse attachments/loyalty-flyer.png. Present three bolded findings: the offer (buy nine, tenth free), the small print (the terms and conditions at the bottom of the flyer say stamps expire 14 days after purchase), the practical effect (a regular buying three coffees a week earns about six stamps in 14 days; reaching nine before expiry needs about four and a half coffees every week). Then, in this spirit: the program is asking a loyal customer to behave like a caffeinated endurance athlete. Bold strategy. Terrible loyalty program. The number of stamps is reasonable; the time allowed does not match how customers actually buy. And the owner's lesson worth keeping: technology cannot rescue a broken promise. Fix the rule first, then choose the best way to record it.
 
-ACTION: Now the callback. Open organised/owners-log.md, read their day-one hunch back to them word for word, and append a dated entry: "Mystery solved: stamps expire 14 days after purchase, buried in the flyer's fine print. My day-one hunch: [their words]. Verdict: [right on the money / close / the truth was sneakier than I thought]." Tell them: your log grew by itself, the way a real one should. Day one you wrote a theory. Today you tested it against evidence. That is the whole discipline, in two entries.
+ACTION: Now update the log. Append a dated entry to organised/owners-log.md, phrased kindly and never as a scorecard, no em dashes: "Found the real source of the loyalty card issue: stamps expire 14 days after purchase, hidden in the flyer's small print." If their day-one entry held a hunch, one warm line comparing it is welcome; never anything like "you were wrong". Tell them the log grew by itself, the way a real one should.
 
-*For your business: Claude can inspect scanned forms, supplier sheets, packaging, invoices and screenshots. Treat extracted text as a reading of the source, then inspect the original before relying on a critical detail.*
+*For your business: once you reach a conclusion or an important milestone in a conversation or a Claude project, it's a great idea to prompt Claude to update a log, a spreadsheet, a memory file or an activity tracker, so your progress is recorded somewhere.*
+
+*Also for your business: Claude can inspect scanned forms, supplier sheets, packaging, invoices and screenshots. Treat extracted text as a reading of the source, then inspect the original before relying on a critical detail.*
 
 ## Skill four: compare with current public research
 
-You have found the problem inside [cafe name]. Now we will compare it with current industry and regulatory guidance outside the business.
+Well, we've found the problem inside the café. I wonder if others in the industry have the same problem? What do the regulatory guidelines say? Is there advice from others who have been through this?
 
 Copy and paste this:
 
@@ -91,7 +91,7 @@ STOP: Paste it and press enter.
 
 USER: Pastes the prompt
 
-ACTION: Do a live web search on cafe loyalty program practice, preferring Australian and regulatory sources where they surface. Report five lines maximum: whether the stamps-to-reward shape is normal, what good practice says about matching the timeframe to real visit patterns, what digital cards fix and what they don't, and any consumer-protection guidance about expiry terms being clear rather than buried. Then a **Sources** list, each on its own line, name and link. Add one research habit, in this spirit: notice who published each source; vendors are useful for patterns but are not neutral proof, a regulator is the authoritative voice. If web access fails, say so plainly and give widely known basics, labelled as such.
+ACTION: Do a live web search on cafe loyalty program practice, preferring Australian and regulatory sources where they surface. Report five lines maximum: whether the stamps-to-reward shape is normal, what good practice says about matching the timeframe to real visit patterns, that other cafés and restaurants have found digital cards help fix lost and forgotten physical cards (as long as the terms and expiry are reasonable), and any consumer-protection guidance about expiry terms being clear rather than buried. Then a **Sources** list, each on its own line, name and link. Add one research habit, in this spirit: notice who published each source; vendors are useful for patterns but are not neutral proof, a regulator is the authoritative voice. If web access fails, say so plainly and give widely known basics, labelled as such.
 
 *For your business: you can compare internal data with current regulation, supplier documentation, industry benchmarks or competitor offers. Name the sources, check their dates and understand what each publisher stands to gain.*
 
@@ -120,7 +120,7 @@ ACTION: First, one line: glance at the outputs folder in your Files panel. Empty
 
 *For your business: this can become a management brief, compliance note, campaign recommendation, product decision or board-paper draft. "Ready for review" is the right standard. Important decisions still deserve human checking and any professional review your field requires.*
 
-## Look what you can do now
+## Let's recap what we learned
 
 - Point Claude at one exact file with `@`
 - Find information without knowing which filename contains it
@@ -138,7 +138,7 @@ Type this here when you are ready:
 /start-1-4
 ```
 
-Or take a break. When you return, start a new session in this folder and use the same command.
+Or take a break. When you return, copy and paste the same command into the prompt box.
 
 STOP: [Wait. If they pause: "Ready when you are, [name]. You solved the loyalty mystery properly. Evidence first, owner second, technology third. Keep that order and you will make much better decisions than people who begin with a shiny tool."]
 

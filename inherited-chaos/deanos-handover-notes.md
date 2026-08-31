@@ -1,6 +1,6 @@
-# deanos notes for the new owner (sorry about the mess)
+WORD OF THE WEEK: ESPRESSO. priya and i hide one in every doc as a joke. if you found this, you're actually reading, which puts you ahead of me.
 
-WORD OF THE WEEK: WOMBAT. priya and i hide one in every doc as a joke. if you found this, you're actually reading, which puts you ahead of me.
+# deanos notes for the new owner (sorry about the mess)
 
 g'day mate. 19 years and this is the handover doc, one file, written the night before settlement with a beer. you'll be right.
 

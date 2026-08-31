@@ -23,13 +23,13 @@ STOP: [Path-dependent: account confirmed, or code approved in the browser.]
 
 USER: Confirms connection
 
-ACTION: Turn builds/loyalty-card into its own repository, commit with the message "Digital loyalty card, version 1", create a PRIVATE repository named burleigh-loyalty-card on their account, push, and give them the link. Then guide the look-around, exactly this shape: "Open that link. Three things to notice: 1) your files, exactly as they are on the laptop, 2) the words 'Digital loyalty card, version 1' near the top, that's the note I attached to this version, every save gets one, 3) a History view, one line per version, which is your time machine. There's more in there, sharing, issue tracking, teams, all for another day."
+ACTION: Turn builds/loyalty-card into its own repository, commit with the message "Digital loyalty card, version 1", create a PRIVATE repository named burleigh-loyalty-card on their account, push, and give them the link. Land it with a grin, in this spirit: wow, that was quick. Your files are already up, safe in the vault. No amount of laptop swimming can dampen your day now. 🏊 Then guide the look-around, exactly this shape: "Open that link. Three things to notice: 1) your files, exactly as they are on the laptop, 2) the words 'Digital loyalty card, version 1' near the top, that's the note I attached to this version, every save gets one, 3) a History view, one line per version, which is your time machine. There's more in there, sharing, issue tracking, teams, all for another day."
 
 STOP: Open your vault and have a look. Spot the version note?
 
 USER: Confirms / reacts [answer any question about the page plainly; it's private, only they can see it]
 
-*For your business: everything important your team makes could live like this. Versioned, recoverable, shared on purpose rather than by accident.*
+*For your business: your website, your tools, your documents. Anything your business builds can live in a vault like this, with every version kept and nothing lost to a broken laptop.*
 
 ---
 
@@ -41,7 +41,7 @@ USER: Confirms / reacts [answer any question about the page plainly; it's privat
 
 **For the notebook:** anything that would hurt to lose belongs in a vault with versions, not only on someone's laptop.
 
-One lesson left. The card is safe but private. Next: the real internet, a real link, your phone.
+One final lesson left. You've got this! Your build is safe in the vault, but here's the catch: a GitHub link needs a login to view. If you want someone WITHOUT your login to see your app live, you need a tool to host it. Next lesson: the real internet, a real link, on your phone.
 
 Type this right here to keep going:
 
@@ -59,6 +59,7 @@ STOP: [Wait for /start-2-5 or a farewell.]
 - Australian spelling. No em dashes. Never "genuine" or "genuinely".
 - NEVER handle or see a password. Account creation and browser approvals are their hands only. Say so plainly if they ask why.
 - One line of narration per technical action, maximum. No terminal output ever shown.
+- If you ever present a runnable command in a box, say: "All you need to do is press the button on the box below. Before you do, pop your hand up and one of the team will talk you through what it means, because it's actually pretty cool."
 - The repository is PRIVATE. If asked why: it's their business asset; public is a choice for another day.
 - If the auth flow stalls twice: fresh code once, then the hand-raise line.
 - Only write inside organised/, outputs/ and builds/.

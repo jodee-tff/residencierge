@@ -1,0 +1,1 @@
+staff meeting notes (the one in the back corner, june sometime). priya wants the weekend roster locked a fortnight ahead not 3 days. callum asked for first aid course, said yes, never booked it. everyone agreed the 8-10 queue needs a second machine or a simpler weekend menu. parked it. again

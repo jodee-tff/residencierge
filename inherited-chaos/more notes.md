@@ -1,0 +1,1 @@
+supplier bits, internal only. milk truck now tuesdays AND fridays. oat milk minimum order is 2 boxes (12 cartons) but saturday alone goes through nearly 1 box. cups from goldy packaging, invoice end of month. big al says the grinder burrs have maybe 6 months left
