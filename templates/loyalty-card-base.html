@@ -20,6 +20,17 @@
   .promise{position:relative;z-index:2}
   .btn{cursor:pointer;position:relative;z-index:2;transition:transform .12s ease}
   .btn:active{transform:scale(.97)}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 0;position:relative;z-index:5}
+  .iconbtn{width:40px;height:40px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;background:transparent;border:none;color:inherit;transition:transform .12s ease}
+  .iconbtn:active{transform:scale(.9)}
+  .iconbtn i{display:block;width:16px;height:2px;margin:2px 0;background:currentColor;border-radius:2px}
+  .st:not(.on)::before{content:attr(data-n);font-size:14px;font-weight:700;opacity:.55}
+  .st[data-gift]:not(.on)::before{content:"🎁";font-size:16px;opacity:.9}
+  .tracker{margin:14px 26px 0;padding:13px 15px;border-radius:14px;position:relative;z-index:2}
+  .trk-top{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:700;margin-bottom:9px;gap:10px}
+  .trk-frac{font-variant-numeric:tabular-nums;opacity:.75;font-size:12px;white-space:nowrap}
+  .trk-bar{height:8px;border-radius:99px;overflow:hidden}
+  .trk-fill{height:100%;border-radius:99px;width:0%;transition:width .3s ease}
   .toast{position:fixed;left:50%;transform:translateX(-50%) translateY(20px);bottom:30px;background:#111;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;padding:12px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:all .3s ease;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.35)}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
   canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
@@ -33,8 +44,13 @@
 
   /* ============ THEME A: BURLEIGH SUNRISE ============ */
   body.theme-a .card{background:linear-gradient(175deg,#FFE9C9 0%,#FFD9A8 30%,#F6EFE3 30.2%,#F6EFE3 100%);color:#173F3F;font-family:'Nunito',sans-serif}
-  body.theme-a .sun{position:absolute;top:52px;right:30px;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#FFC978,#FF8A50 78%);box-shadow:0 0 54px 16px rgba(255,150,80,.5)}
-  body.theme-a .head{padding:58px 26px 6px}
+  body.theme-a .sun{position:absolute;top:76px;right:30px;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#FFC978,#FF8A50 78%);box-shadow:0 0 54px 16px rgba(255,150,80,.5)}
+  body.theme-a .head{padding:12px 26px 6px}
+  body.theme-a .iconbtn{color:#0E4A4A;background:rgba(255,255,255,.55)}
+  body.theme-a .st:not(.on)::before{color:#C4956B}
+  body.theme-a .tracker{background:rgba(255,255,255,.72);color:#1E5555}
+  body.theme-a .trk-bar{background:rgba(14,74,74,.15)}
+  body.theme-a .trk-fill{background:linear-gradient(90deg,#FF9A62,#E85F33)}
   body.theme-a .brand{font-family:'Fredoka',sans-serif;font-weight:700;font-size:27px;line-height:1.1;color:#124040;max-width:220px}
   body.theme-a .subtitle{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C4633C;margin-top:7px}
   body.theme-a .count-wrap{padding:14px 26px 0}
@@ -52,7 +68,13 @@
   body.theme-b{background:#0D0C0A}
   body.theme-b .card{background:linear-gradient(180deg,#141210 0%,#0D0C0A 100%);color:#EFE9DD;font-family:'Plus Jakarta Sans',sans-serif}
   body.theme-b .frame{position:absolute;inset:14px;border:1px solid rgba(201,169,110,.4);border-radius:22px;pointer-events:none;z-index:3}
-  body.theme-b .head{padding:56px 30px 0;text-align:center}
+  body.theme-b .head{padding:8px 30px 0;text-align:center}
+  body.theme-b .iconbtn{color:#C9A96E;border:1px solid rgba(201,169,110,.45)}
+  body.theme-b .st:not(.on)::before{color:#9c8a63}
+  body.theme-b .tracker{margin:14px 30px 0;border:1px solid rgba(201,169,110,.28);background:rgba(201,169,110,.06);color:#EFE9DD}
+  body.theme-b .trk-frac{color:#8E8674}
+  body.theme-b .trk-bar{background:rgba(201,169,110,.15)}
+  body.theme-b .trk-fill{background:linear-gradient(90deg,#E2C893,#A8854D)}
   body.theme-b .crest{font-size:20px;color:#C9A96E;letter-spacing:.4em;text-indent:.4em}
   body.theme-b .brand{font-family:'Fraunces',serif;font-weight:300;font-size:29px;line-height:1.16;margin-top:10px;color:#F2ECDF;max-width:280px;margin-left:auto;margin-right:auto}
   body.theme-b .brand em{font-style:italic;color:#E2C893}
@@ -72,7 +94,13 @@
   /* ============ THEME C: THE POINT POP ============ */
   body.theme-c{background:#FFF3E0}
   body.theme-c .card{background:#FFF3E0;color:#1A1A1A;font-family:'Space Grotesk',sans-serif}
-  body.theme-c .banner{background:#E8442E;color:#FFF3E0;padding:54px 24px 15px;position:relative;z-index:2}
+  body.theme-c .topbar{background:#E8442E}
+  body.theme-c .iconbtn{color:#FFF3E0}
+  body.theme-c .banner{background:#E8442E;color:#FFF3E0;padding:12px 24px 15px;position:relative;z-index:2}
+  body.theme-c .st:not(.on)::before{color:#1A1A1A;opacity:.35}
+  body.theme-c .tracker{margin:14px 24px 0;background:#fff;border:3px solid #1A1A1A;box-shadow:3px 3px 0 #1A1A1A;border-radius:12px;color:#1A1A1A}
+  body.theme-c .trk-bar{background:#F5E7CB;border:2px solid #1A1A1A;height:10px}
+  body.theme-c .trk-fill{background:#1F3BB3}
   body.theme-c .banner::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:18px;background:radial-gradient(9px 9px at 9px 9px,transparent 8px,#E8442E 8.5px);background-size:22px 18px;background-position:0 -9px}
   body.theme-c .brand{font-family:'Archivo Black',sans-serif;font-size:24px;line-height:1.04;text-transform:uppercase}
   body.theme-c .subtitle{display:inline-block;background:#1F3BB3;color:#FFF3E0;font-weight:700;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;margin-top:10px;transform:rotate(-1.6deg)}
@@ -104,7 +132,7 @@
       content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
       width:112px; height:26px; background:#0a0a0a; border-radius:0 0 17px 17px; z-index:6;
     }
-    body.theme-a .head, body.theme-b .head, body.theme-c .banner{padding-top:60px}
+    .topbar{padding-top:34px}
   }
 
 </style>
@@ -113,6 +141,10 @@
 <div class="card">
   <div class="frame"></div>
   <div class="sun"></div>
+  <div class="topbar">
+    <button class="iconbtn" id="menuBtn" aria-label="Menu"><i></i><i></i><i></i></button>
+    <button class="iconbtn" id="profileBtn" aria-label="Profile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+  </div>
   <div class="banner">
     <div class="head">
       <div class="crest">◆</div>
@@ -128,6 +160,10 @@
   <div class="stamps" id="stamps"></div>
   <div class="promise" id="promise"></div>
   <button class="btn" id="addBtn"></button>
+  <div class="tracker">
+    <div class="trk-top"><span id="trkText"></span><span class="trk-frac" id="trkFrac"></span></div>
+    <div class="trk-bar"><div class="trk-fill" id="trkFill"></div></div>
+  </div>
   <div class="foot" id="foot"></div>
 </div>
 <div class="toast" id="toast"></div>
@@ -174,6 +210,8 @@ const stampsEl = document.getElementById("stamps");
 for (let i = 0; i < CONFIG.cardSize; i++) {
   const b = document.createElement("button");
   b.className = "st";
+  b.dataset.n = i + 1;
+  if (i === CONFIG.cardSize - 1) b.dataset.gift = "1";
   b.setAttribute("aria-label", "Stamp " + (i + 1));
   b.addEventListener("click", () => toggle(i));
   stampsEl.appendChild(b);
@@ -190,6 +228,12 @@ function render(){
     el.classList.toggle("on", state.stamps[i]);
     el.classList.toggle("stamp-icon-on", state.stamps[i]);
   });
+  const away = CONFIG.cardSize - n;
+  document.getElementById("trkText").textContent =
+    n === CONFIG.cardSize ? "Free coffee unlocked! Show this at the till" :
+    "You're " + away + " stamp" + (away === 1 ? "" : "s") + " away from your free coffee!";
+  document.getElementById("trkFrac").textContent = n + "/" + CONFIG.cardSize;
+  document.getElementById("trkFill").style.width = (n / CONFIG.cardSize * 100) + "%";
 }
 
 function toast(msg){
@@ -227,6 +271,11 @@ document.getElementById("newCardBtn").addEventListener("click", () => {
   document.getElementById("celebrate").classList.remove("show");
   toast("New card started" + (CONFIG.headStart ? ", first stamp on us" : ""));
 });
+
+document.getElementById("menuBtn").addEventListener("click", () =>
+  toast("The menu arrives in version 2. The coffee is available now."));
+document.getElementById("profileBtn").addEventListener("click", () =>
+  toast("Free coffees earned so far: " + state.freeCoffees));
 
 // -------- confetti --------
 function confetti(){
