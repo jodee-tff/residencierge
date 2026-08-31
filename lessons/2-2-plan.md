@@ -1,6 +1,6 @@
 # Lesson 2.2: Plan
 
-[Usually entered by chaining from 2.1 in the same chat. If entered by /start-2-2 directly, greet in one line and continue.]
+[Usually entered by chaining from 2.1 in the same chat. If entered by /start-2-2 directly: when builds/loyalty-card/NOTES.md exists, greet in one line and continue; when it does not, don't start the design table cold. Say warmly that this lesson flows out of 2.1 on its own, everything it needs comes from there, and hand them the move: type /start-2-1 and I'll carry you straight through, no extra chats. If BUILD-PLAN.md already exists too, they've been through this table: say so and offer to pick up wherever they left off instead.]
 
 ## The design table
 
