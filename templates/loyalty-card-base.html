@@ -54,7 +54,7 @@
   body.theme-b .frame{position:absolute;inset:14px;border:1px solid rgba(201,169,110,.4);border-radius:22px;pointer-events:none;z-index:3}
   body.theme-b .head{padding:56px 30px 0;text-align:center}
   body.theme-b .crest{font-size:20px;color:#C9A96E;letter-spacing:.4em;text-indent:.4em}
-  body.theme-b .brand{font-family:'Fraunces',serif;font-weight:300;font-size:29px;line-height:1.16;margin-top:10px;color:#F2ECDF}
+  body.theme-b .brand{font-family:'Fraunces',serif;font-weight:300;font-size:29px;line-height:1.16;margin-top:10px;color:#F2ECDF;max-width:280px;margin-left:auto;margin-right:auto}
   body.theme-b .brand em{font-style:italic;color:#E2C893}
   body.theme-b .subtitle{display:none}
   body.theme-b .rule{width:48px;height:1px;background:#C9A96E;margin:14px auto 0}
@@ -86,6 +86,27 @@
   body.theme-c .btn{margin:17px 24px;background:#1F3BB3;color:#FFF3E0;font-family:'Archivo Black',sans-serif;font-size:17px;text-transform:uppercase;border:3px solid #1A1A1A;border-radius:14px;box-shadow:4px 4px 0 #1A1A1A;padding:15px}
   body.theme-c .foot{margin-top:auto;background:repeating-linear-gradient(-45deg,#F7C948 0 14px,#1A1A1A 14px 28px);height:28px}
   body.theme-c .stamp-icon-on::before{content:"★"}
+
+  /* ============ DESKTOP: the card wears a phone ============ */
+  @media (min-width: 700px){
+    body, body.theme-a, body.theme-b, body.theme-c{
+      background:radial-gradient(1000px 700px at 50% 18%, #262523, #161616 75%);
+      display:flex; align-items:center; justify-content:center;
+      min-height:100vh; padding:44px 24px;
+    }
+    .card{
+      width:400px; max-width:400px;
+      height:min(844px, calc(100vh - 88px)); min-height:640px;
+      border:12px solid #0a0a0a; border-radius:52px;
+      box-shadow:0 34px 90px rgba(0,0,0,.6), 0 0 0 1.5px #333;
+    }
+    .card::after{
+      content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
+      width:112px; height:26px; background:#0a0a0a; border-radius:0 0 17px 17px; z-index:6;
+    }
+    body.theme-a .head, body.theme-b .head, body.theme-c .banner{padding-top:60px}
+  }
+
 </style>
 </head>
 <body class="theme-b">

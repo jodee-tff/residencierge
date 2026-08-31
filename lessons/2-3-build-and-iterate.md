@@ -4,7 +4,7 @@ ACTION: Read builds/loyalty-card/BUILD-PLAN.md and NOTES.md. One line first: loo
 
 # YOUR FIRST BUILD IS ALIVE! 🛠️🎉
 
-**This is the moment, [name].** The plan you approved is now a working prototype on your screen. You described it. You made the decisions. And there it is.
+**This is the moment, [name].** The plan you approved is now a working prototype on your screen. You described it. You made the decisions. And there it is, dressed as a phone on your laptop, because a phone is where it will live. (It lands on your real phone at the end of the module.)
 
 It follows the brief: [name the visual direction, the borrowed elements, the tappable progress, the celebration, the welcome stamp, the persistence, each in a few words].
 
