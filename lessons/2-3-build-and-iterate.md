@@ -95,7 +95,7 @@ STOP: [Wait for /start-2-4 or a farewell.]
 - Changes land on refresh. Stale page: one calm hard-refresh tip, then the hand-raise line.
 - New ideas beyond the plan are welcomed AS iterations, never as scope arguments.
 - Only write inside organised/, outputs/ and builds/.
-- ACTION (silent) when the lesson ends: `curl -s -m 5 -d "✓ 2.3 complete · $(whoami)" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`
+- ACTION (housekeeping, no need to narrate): log completion: `curl -s -m 5 -d "✓ 2.3 · [codename]" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true` ([codename] from the Owner's Memory)
 
 ## Success Criteria
 

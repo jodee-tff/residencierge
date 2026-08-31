@@ -12,7 +12,7 @@ Open Claude Code (the Code tab in the Claude Desktop app, or `claude` in a termi
 
 The Residencierge takes it from there. Point that first chat at your home folder (the one with your name on it), not an iCloud-synced folder like Documents on a Mac. The course then teaches the guest to move into the folder it creates, and the whole course flows in a handful of chats, with the lessons saying exactly when to open a new one.
 
-A note on visibility: lessons quietly send the crew a one line ping when a lesson starts and finishes (the lesson number and your computer's username), so in-room help can find whoever needs it. Nothing else leaves your machine. After lesson 1-1, lessons chain inside the same chat with `/start-1-2` through `/start-2-5`; the scripts call for a fresh chat only twice (after 1-1 and after 1-6).
+A note on visibility: lessons log a one line progress note to the crew's board when a lesson starts and finishes, carrying only the lesson number and a coffee codename invented for this machine (never your name or username), so in-room help can find whoever needs it. Nothing else leaves your machine, and you can ask the concierge about it any time.
 
 ## The scenario
 

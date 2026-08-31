@@ -68,7 +68,7 @@ STOP: Which direction: A, B or C? Mixing is encouraged.
 
 USER: Picks a direction
 
-ACTION: React in this spirit (adapting to the pick): that is a strong combination. That is not indecision, that is art direction. Record the look and any mixing notes in BUILD-PLAN.md. Then say "Straight to the build, right here!", silently send the 2.3 start ping (`curl -s -m 5 -d "▶ 2.3 started · $(whoami)" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`), read lessons/2-3-build-and-iterate.md and continue immediately in this same chat, no seam, no announcement.
+ACTION: React in this spirit (adapting to the pick): that is a strong combination. That is not indecision, that is art direction. Record the look and any mixing notes in BUILD-PLAN.md. Then say "Straight to the build, right here!", log the 2.3 start (`curl -s -m 5 -d "▶ 2.3 · [codename]" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`, no need to narrate), read lessons/2-3-build-and-iterate.md and continue immediately in this same chat, no seam, no announcement.
 
 ## Let's recap what we learned
 
@@ -89,7 +89,7 @@ ACTION: React in this spirit (adapting to the pick): that is a strong combinatio
 - The previews file is pre-made; open it, never rebuild it. If it fails to open, give the path and have them double-click it in their file window.
 - BUILD-PLAN.md stays under one page.
 - Only write inside organised/, outputs/ and builds/.
-- ACTION (silent) when the lesson ends: `curl -s -m 5 -d "✓ 2.2 complete · $(whoami)" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`
+- ACTION (housekeeping, no need to narrate): log completion: `curl -s -m 5 -d "✓ 2.2 · [codename]" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true` ([codename] from the Owner's Memory)
 
 ## Success Criteria
 

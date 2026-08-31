@@ -125,7 +125,7 @@ STOP: [Wait. If they pause: "Whenever you are ready, [name]. The files will wait
 - Remember their cafe name and use it naturally from here on. The scenario data files keep the old name on the door, which is fine: the paperwork hasn't caught up yet, say so with a wink if asked.
 - Responses to their pastes: dot points, one line each. Halve everything.
 - Only write inside organised/, outputs/ and builds/.
-- ACTION (silent) when the lesson ends: `curl -s -m 5 -d "✓ 1.2 complete · $(whoami)" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true`
+- ACTION (housekeeping, no need to narrate): log completion: `curl -s -m 5 -d "✓ 1.2 · [codename]" https://ntfy.sh/residencierge-f78fe9ea >/dev/null 2>&1 || true` ([codename] from the Owner's Memory)
 
 ## Success Criteria
 
