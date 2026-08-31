@@ -140,22 +140,8 @@
   .mod h3{margin:.25rem 0 .3rem;font-size:1.05rem}
   .mod p{font-size:.88rem;color:var(--jk-text-muted);margin-bottom:.4rem}
   .mod.locked{opacity:.55}
-  /* cards */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.9rem;margin:1.4rem 0}
-  .card{
-    display:block;background:var(--jk-elevated);border:1px solid var(--jk-border-strong);
-    border-radius:12px;padding:1.15rem 1.2rem;transition:transform .18s ease,border-color .18s ease;
-  }
-  a.card:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--jk-gold-dim)}
-  .card .cn{font-family:var(--mono);font-size:.72rem;color:var(--jk-gold-dim)}
-  .card h3{margin:.3rem 0 .35rem;font-size:1rem;color:var(--jk-text)}
-  .card p{font-size:.85rem;margin:0;color:var(--jk-text-muted)}
-  .card.primary{background:linear-gradient(135deg,var(--jk-gold-glow),var(--jk-elevated) 60%);border-color:var(--jk-gold-dim)}
-  .card.locked{opacity:.55}
-  .modmap{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
   .lessonlist{list-style:none;margin:.75rem 0 0;display:grid;gap:.3rem}
   .lessonlist li{font-size:.84rem;color:var(--jk-text-2);padding:.18rem 0}
-  .lessonlist li.soon{color:var(--jk-text-muted)}
   .lessonlist a{color:var(--jk-text-2);display:block}
   .lessonlist a:hover{color:var(--jk-gold-bright);text-decoration:none}
   .lessonlist .ln{font-family:var(--mono);font-size:.72rem;color:var(--jk-gold-dim);margin-right:.35rem}
@@ -371,7 +357,7 @@
         <li><b>Find the Code tab</b><p>Top left of the app window. Click it. That is where the Residencierge lives, and where every lesson happens.</p></li>
       </ol>
 
-      <div class="tip"><span class="t">Good to know, as at August 2026</span><p>Inside the Code tab, the left-hand sidebar shows your chats and projects, not your files. Your files appear in the <b>Files panel</b>, opened from near the top right, right beside the conversation. The course shows you exactly where to click.</p></div>
+      <div class="tip"><span class="t">Good to know, as at August 2026</span><p>Inside the Code tab, the left-hand sidebar shows your chats and projects, not your files. Your files appear in the <b>Files panel</b>, opened from the three dots menu at the top right, right beside the conversation. The course shows you exactly where to click.</p></div>
 
       <h2>Troubleshooting</h2>
       <div class="trouble">
@@ -412,7 +398,7 @@
       <h2>Troubleshooting</h2>
       <div class="trouble">
         <div class="row"><div class="prob">My Mac asked to install "command line developer tools"</div><div class="fix">Click <b>Install</b> and let it finish, then tell Claude to carry on. One-time thing.</div></div>
-        <div class="row"><div class="prob">Typing / doesn't show the start commands</div><div class="fix">Your chat probably isn't pointed at the course folder. Start a new chat with the residencierge folder as the project. Or paste: <b>Read lessons/SCRIPT_INSTRUCTIONS.md then the lesson script and begin teaching immediately.</b></div></div>
+        <div class="row"><div class="prob">Typing / doesn't show the start commands</div><div class="fix">Your chat probably isn't pointed at the course folder. Start a new chat with the residencierge folder as the project. Or paste: <b>Read lessons/SCRIPT_INSTRUCTIONS.md, then the script for the lesson I'm up to in lessons/, and begin teaching immediately.</b></div></div>
         <div class="row"><div class="prob">Something else entirely</div><div class="fix"><b>Raise your hand.</b> Jodee or Erik will sort it in under a minute.</div></div>
       </div>
 
@@ -454,7 +440,7 @@
       <h1>1.2 · The <span class="serif gold">inheritance</span></h1>
       <div class="meta"><span class="chip">⏱ <b>15 minutes</b></span><span class="chip">Prerequisites: <b>1.1</b></span></div>
       <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-1-2</div>
-      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Fresh chat pointed at the residencierge folder, then the command. (Lesson 1.1 walks you through it.)</p>
 
       <p class="lede">Deano left you a folder. This lesson teaches you to actually see it: what the folders hold, what an .md file is, and how to watch files appear as you and the concierge make them.</p>
 
@@ -470,7 +456,7 @@
       <p>That table is most of Markdown. You never need to write it by hand, the concierge does, but now nothing in these files will look mysterious.</p>
 
       <h2>Seeing your files for real</h2>
-      <p>In the Claude Desktop app (as at August 2026), the left-hand sidebar is navigation for chats and projects, <strong>not</strong> your files. Your files show in the <strong>Files panel</strong>, opened from near the top right of the Code tab, listing the whole project right beside the conversation. From then on you watch files appear there, in real time, as you create them by talking. (Prefer a real window? Finder or File Explorer beside the app works too, and the concierge can open it for you.)</p>
+      <p>In the Claude Desktop app (as at August 2026), the left-hand sidebar is navigation for chats and projects, <strong>not</strong> your files. Your files show in the <strong>Files panel</strong>, opened from the three dots menu at the top right of the Code tab, listing the whole project right beside the conversation. From then on you watch files appear there, in real time, as you create them by talking. (Prefer a real window? Finder or File Explorer beside the app works too, and the concierge can open it for you.)</p>
 
       <h2>The word of the week</h2>
       <p>A word of the week sits at the top of the handover notes, and the lesson asks you to open the file yourself and read it out. A small thing with a serious job: it proves you are looking at the real file with your own eyes, not taking the AI's word for anything. Verification is a habit worth keeping all week.</p>
@@ -511,7 +497,7 @@
       <ol class="steps">
         <li><b>Patterns from one messy file</b><p>You @ the customer reviews file and ask what patterns it holds. Customers love the coffee, but a cluster say their loyalty stamps "disappear". One question turns noise into a ranked list.</p></li>
         <li><b>A contradiction across files</b><p>The concierge reads Deano's loyalty numbers and his notes together: about 500 cards handed out, stamps given constantly, 9 free coffees ever redeemed. Two files, one contradiction, and Deano had every clue for months without connecting them.</p></li>
-        <li><b>The unopened picture</b><p>The answer sits in <code>attachments/</code>, in the loyalty flyer nobody looked at. Claude reads images too, and it finds the villain in the small print. No spoilers here: open it in the lesson.</p></li>
+        <li><b>The unopened picture</b><p>The answer sits in <code>attachments/</code>, in the loyalty flyer nobody looked at. Claude reads images too, and it finds the culprit in the small print. No spoilers here: open it in the lesson.</p></li>
       </ol>
 
       <h2>Then the outside world, then the brief</h2>
@@ -627,10 +613,10 @@
       <p>You describe what you want and steer while the concierge builds it. You will not write code, see code or need to understand code. It's how you work with a good tradie: you don't hold the saw, you hold the vision, and you inspect the work.</p>
 
       <h2>The mission</h2>
-      <p>Module 1 found the villain: paper stamp cards that die at 14 days. A memo won't fix that. So Module 2 builds the fix, a <strong>digital loyalty card</strong> for Burleigh Heads Coffee Co. Stamps that never vanish, never wash out, never expire. By 2.5 it's live on the internet.</p>
+      <p>Module 1 found the culprit: paper stamp cards that die at 14 days. A memo won't fix that. So Module 2 builds the fix, a <strong>digital loyalty card</strong> for Burleigh Heads Coffee Co. Stamps that never vanish, never wash out, never expire. By 2.5 it's live on the internet.</p>
 
       <h2>What happens in the lesson</h2>
-      <p>The concierge greets you from memory (the 1.6 proof), lays out the whole module map in five lines (plan, build, iterate, save to GitHub, go live on Vercel), the build workspace appears in <code>builds/</code>, and you pick the project's personality from three fun options. Then it flows straight into 2.2, same chat, no seam.</p>
+      <p>The concierge greets you from memory (the 1.6 proof), lays out the six-step journey ahead (plan and design, build, test and iterate, save the version with GitHub, deploy with Vercel, then update and manage), the build workspace appears in <code>builds/</code>, you switch the model to <strong>Opus</strong> for the building ahead, and you answer three plain questions about what the app is for. Then it flows straight into 2.2, same chat, no seam.</p>
 
       <div class="pager">
         <a href="#/1-6"><span class="dir">Previous</span><span class="dest">← 1.6 · Project Memory</span></a>
@@ -655,7 +641,7 @@
       <ol class="steps">
         <li><b>Needs, then wants</b><p>The can't-live-without rules come locked in. The fun extras (confetti at ten, a head-start stamp, a cheeky promise line) are yours to pick from a menu.</p></li>
         <li><b>Assumptions on the table</b><p>The concierge fills every gap with a sensible assumption and declares each one, so nothing hides. Correct any, or wave them through.</p></li>
-        <li><b>Choose the look with your eyes</b><p>Three ready-made directions open in your browser: Burleigh Sunrise, Midnight Gold, The Point Pop. Genuinely different worlds. Pick one, or mix.</p></li>
+        <li><b>Choose the look with your eyes</b><p>Three ready-made directions open in your browser: Burleigh Sunrise, Midnight Gold, The Point Pop. Properly different worlds. Pick one, or mix.</p></li>
         <li><b>Sign the contract</b><p><code>BUILD-PLAN.md</code> captures rules, look and scope on one page. Lesson 2.3 builds exactly this.</p></li>
       </ol>
 
@@ -780,7 +766,7 @@
   document.querySelectorAll(".copybtn").forEach(btn=>{
     btn.addEventListener("click", async ()=>{
       const box = btn.closest(".promptbox");
-      const text = box.textContent.replace(/^\s*Paste into Claude Code|^\s*Run this lesson/,"").replace(/Copy|Copied!/g,"").trim();
+      const text = box.textContent.replace(/^\s*Paste into Claude Code|^\s*Run this lesson/,"").replace(/Copied!|Copy/g,"").trim();
       try{ await navigator.clipboard.writeText(text); }catch(e){
         const r=document.createRange(); r.selectNodeContents(box); const s=getSelection(); s.removeAllRanges(); s.addRange(r);
       }
