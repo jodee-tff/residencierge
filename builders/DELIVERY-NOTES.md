@@ -12,6 +12,11 @@ For Jodee only. The concierge never mentions this file.
 
 (The course teaches models properly in lesson 1.4, move four. Confirm the exact model names showing on guest machines on the morning; say whatever the picker actually displays.)
 
+## Say in the first 5 to 10 minutes (moved out of the script, Jodee's call)
+
+- **The Tab tip:** "Claude Code sometimes shows a grey suggested reply in the chat box. Press Tab to accept it, then Enter to send. If no suggestion appears, nothing is wrong, type your own."
+- The model line (below) and the safety line (above) also belong in this window.
+
 ## Timing plan
 
 - Module 1 in the room: allow 2 hours with questions. Trim fat as we go.

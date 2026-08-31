@@ -18,9 +18,9 @@ Claude treats `CLAUDE.md` as guidance and context, not an unbreakable technical 
 
 One safety rule: **do not put passwords, API keys or sensitive patient, customer or financial records in this file.** It is ordinary project text and may later be included in a shared repository. Store secrets through approved methods, not inside instructions.
 
-First, look at the card as it stands. In your Files panel, click **CLAUDE.md** and scroll to the very bottom. The last line says there's nothing here yet. An empty card, waiting for its owner.
+First, look at the card as it stands. In your Files panel, click **CLAUDE.md** and scroll to the very bottom. Recognise those last lines? Your name and your café are already on the card. THAT is how every chat since lesson 1.1 has known them without asking: the card gets read before you type a word.
 
-You told me your coffee order in another session. We will now place it, your current priority and your preferred report style in the project guidance, then prove that a fresh session can read them.
+Today we finish the card: your coffee order, your current priority and how you like your reports, then we prove a brand-new session can read all of it.
 
 Reply in this format, changing any detail you wish:
 
@@ -32,7 +32,7 @@ STOP: Your three details, one message.
 
 USER: Provides coffee, priority, report style
 
-ACTION: Append to the bottom of CLAUDE.md, under the "## Owner's Memory" heading only: their name, their cafe's name (read it from organised/owners-log.md), the three answers, today's date. This is the single permitted edit outside the working folders. Then, in this spirit: **It is on the card.** That one line gives the next session three useful pieces of context before you ask for anything: a personal preference, the current business priority and the format that helps you think. This is how Claude stops meeting your project like a stranger every time. Not through one mythical perfect prompt, but through relevant context written clearly and kept where the work can find it.
+ACTION: Add the three answers and today's date to the "## Owner's Memory" heading, alongside the name and café already sitting there from lesson 1.1. Never duplicate entries; update in place. This is the single permitted edit outside the working folders. Then, in this spirit: **It is on the card.** That one line gives the next session three useful pieces of context before you ask for anything: a personal preference, the current business priority and the format that helps you think. This is how Claude stops meeting your project like a stranger every time. Not through one mythical perfect prompt, but through relevant context written clearly and kept where the work can find it.
 
 *For your business: include the organisation's purpose, audience, approved terminology, recurring constraints and preferred output style. `CLAUDE.md` is the briefing note, not the filing cabinet.*
 
@@ -40,7 +40,7 @@ ACTION: Append to the bottom of CLAUDE.md, under the "## Owner's Memory" heading
 
 You know the house rule by now: if a file matters, look at the file. Trust is lovely. Verification is better.
 
-Open **CLAUDE.md** again in your Files panel and scroll to the bottom. The empty card now has an owner.
+Open **CLAUDE.md** again in your Files panel and scroll to the bottom. The card is complete: who you are, your café, your coffee, your priority, your format.
 
 STOP: **Is your Owner's Memory there, word for word?**
 
@@ -95,7 +95,8 @@ STOP: See you in Module 2, [name]. You have learned how to work with the busines
 
 ## Success Criteria
 
-- [ ] They heard WHY memory is the number one answer-quality upgrade, before being asked anything
+- [ ] They saw their name and café already on the card and heard that this is how chats knew them
+- [ ] They heard WHY memory is the number one answer-quality upgrade
 - [ ] The repeat coffee question was named as the teaching moment (chats forget, the card doesn't)
 - [ ] Owner's Memory is on CLAUDE.md and they verified it with their own eyes
 - [ ] Module 1 recap and notebook line delivered

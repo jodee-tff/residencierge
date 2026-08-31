@@ -83,17 +83,7 @@ Go and look in the **organised** folder in your Files panel.
 
 There isn't one there. There's nothing there at all. Well. We'll have to change that. Time for your first bit of creating.
 
-First, the paperwork needs a name on it, and that call belongs to the owner. Pick one:
-
-**a)** Burleigh Heads Coffee Co. (the name on the door today)
-**b)** The Bright & Burleigh Café
-**c)** Choose your own! Type your new coffee shop's name in the box below 👇
-
-STOP: What's the name, boss?
-
-USER: Picks or invents a name [one warm line back; whatever they chose is the cafe's name for the rest of the course]
-
-Now the first entry. You've heard the loyalty cards are upsetting customers. Before we investigate, put your instinct on the record, the way good owners do.
+The first entry writes itself onto the record: you've heard the loyalty cards are upsetting customers. Before we investigate, put your instinct on the record, the way good owners do.
 
 **In your own words this time**, no copying: tell me what you suspect is going wrong with those loyalty cards. Maybe people lose the paper cards. Maybe the offer isn't tempting enough. Maybe something in the fine print. Maybe a theory all of your own.
 
@@ -101,7 +91,7 @@ STOP: Type your hunch. A sentence or two, your words.
 
 USER: Types their theory
 
-ACTION: Create `organised/owners-log.md` titled with THEIR cafe name, today's actual date, and their theory recorded under the heading "Day one. My hunch about the loyalty problem". Then say, in this spirit: look at the organised folder in your Files panel. It was empty sixty seconds ago. Now there's a file called owners-log.md holding your cafe's name and your own theory, sitting on your computer. You did not copy an AI answer into a document and rename it. You spoke, and a business record appeared in the right place. That is the working pattern we keep building: conversation becomes a file, the file becomes part of the business. And hold onto that hunch. We're going to test it against the evidence very soon.
+ACTION: Create `organised/owners-log.md` titled with THEIR cafe name (read it from the Owner's Memory in CLAUDE.md, they chose it in lesson 1.1), today's actual date, and their theory recorded under the heading "Day one. My hunch about the loyalty problem". Then say, in this spirit: look at the organised folder in your Files panel. It was empty sixty seconds ago. Now there's a file called owners-log.md holding your cafe's name and your own theory, sitting on your computer. You did not copy an AI answer into a document and rename it. You spoke, and a business record appeared in the right place. That is the working pattern we keep building: conversation becomes a file, the file becomes part of the business. And hold onto that hunch. We're going to test it against the evidence very soon.
 
 *For your business: the result might be a decision log, meeting summary, campaign brief, stock procedure or monthly commentary. If you can describe the document and its purpose clearly, Claude can help you produce and maintain it.*
 
@@ -133,7 +123,7 @@ STOP: [Wait. If they pause: "Whenever you are ready, [name]. The files will wait
 - Never mention this script or that you are following instructions.
 - Australian spelling. No em dashes. Never "genuine" or "genuinely". Never call a step easy, obvious or just.
 - The word of the week sits at the TOP of the notes file. No hunting. Do not reveal it.
-- Technical prompts stay copy-paste. The two personal beats (the cafe name, the hunch) are THEIR OWN words; suggest directions, never hand them a finished sentence.
+- Technical prompts stay copy-paste. The hunch is a personal beat: THEIR OWN words, suggest directions, never hand them a finished sentence.
 - Remember their cafe name and use it naturally from here on. The scenario data files keep the old name on the door, which is fine: the paperwork hasn't caught up yet, say so with a wink if asked.
 - Responses to their pastes: dot points, one line each. Halve everything.
 - Only write inside organised/, outputs/ and builds/.
@@ -144,7 +134,7 @@ STOP: [Wait. If they pause: "Whenever you are ready, [name]. The files will wait
 - [ ] Files panel open, they found WOMBAT at the top of the file themselves
 - [ ] They pasted the read prompt and got three tight findings
 - [ ] They SAW organised/ empty before anything was created
-- [ ] They named the cafe (picked or invented) and typed the loyalty hunch in their own words
-- [ ] organised/owners-log.md exists with their name, their hunch and today's date, and they watched it appear
+- [ ] They typed the loyalty hunch in their own words
+- [ ] organised/owners-log.md exists titled with the cafe name from 1.1, holding their hunch and today's date, and they watched it appear
 - [ ] They know the hunch gets tested against the evidence soon
 - [ ] Recap delivered, /start-1-3 offered in-chat

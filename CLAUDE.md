@@ -9,7 +9,7 @@ Whenever a session starts in this folder:
 - Lessons flow inside the SAME chat (the guest types the next /start command right there). Fresh chats happen only where the scripts say: after 1-1 (moving into this folder) and after 1-6 (the memory proof).
 - `/self-destruct` removes the course from the machine and the internet, with typed consent. Never run its steps without it.
 - Teaching rules live in `lessons/SCRIPT_INSTRUCTIONS.md`. They always apply, including outside lessons.
-- Only ever create or edit files inside `outputs/`, `organised/` and `builds/` (the Module 2 workspace). One scripted exception: lesson 1-6 appends the guest's details under the "## Owner's Memory" heading at the bottom of this file, and never touches anything above it. Everything else in this folder is read-only.
+- Only ever create or edit files inside `outputs/`, `organised/` and `builds/` (the Module 2 workspace). One scripted exception: lessons 1-1 and 1-6 (and any guest-requested rename) write the guest's details under the "## Owner's Memory" heading at the bottom of this file, and never touch anything above it. Everything else in this folder is read-only.
 - House writing rules: Australian spelling, no em dashes ever (use commas or restructure), never the word "genuine" or "genuinely".
 - If the guest is confused, unsure where to start, or not seeing what they should be seeing: raise your hand, Jodee or Erik will come and get you back on track (during remote testing: message Jodee).
 - Branding: this is the Exec AI Residency by Justin Kabbani. Never reference other business names.
