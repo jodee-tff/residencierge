@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Residencierge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+  :root{
+    --jk-bg:#0a0a0a; --jk-elevated:#111110; --jk-raised:#161513; --jk-hover:#1d1b18;
+    --jk-border:#26231e; --jk-border-strong:#38332b;
+    --jk-text:#f2efe9; --jk-text-2:#b8b2a6; --jk-text-muted:#7d776b;
+    --jk-gold:#c9a96e; --jk-gold-bright:#e2c893; --jk-gold-dim:#8a7448;
+    --jk-gold-glow:rgba(201,169,110,.14); --jk-gold-glow-strong:rgba(201,169,110,.28);
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--jk-bg); color:var(--jk-text);
+    font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Schibsted Grotesk','Plus Jakarta Sans',sans-serif;letter-spacing:-0.02em;line-height:1.12;text-wrap:balance}
+  h1{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800}
+  h2{font-size:1.35rem;font-weight:700;margin:2.6rem 0 .8rem}
+  h3{font-size:1.05rem;font-weight:700;margin:1.6rem 0 .5rem}
+  p{margin:0 0 1rem;color:var(--jk-text-2);max-width:68ch}
+  strong{color:var(--jk-text)}
+  a{color:var(--jk-gold-bright);text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--jk-gold);outline-offset:2px;border-radius:4px}
+  .serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400}
+  .gold{
+    background:linear-gradient(100deg,var(--jk-gold) 10%,var(--jk-gold-bright) 55%,var(--jk-gold) 95%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+    padding-bottom:0.16em;margin-bottom:-0.16em;padding-right:0.14em;margin-right:-0.14em;
+  }
+  .eyebrow{
+    display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--jk-gold);margin-bottom:.7rem;
+  }
+  /* ---------- shell ---------- */
+  .app{display:flex;min-height:100vh}
+  .sidebar{
+    width:264px;flex:0 0 264px;border-right:1px solid var(--jk-border);
+    background:rgba(13,12,11,.92);backdrop-filter:blur(8px);
+    position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.6rem 1.1rem 2rem;
+  }
+  .brand{display:block;margin-bottom:1.6rem}
+  .brand .key{font-size:1.3rem}
+  .brand-name{font-family:'Schibsted Grotesk',sans-serif;font-weight:800;font-size:1.06rem;letter-spacing:-0.01em;color:var(--jk-text)}
+  .brand-sub{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--jk-text-muted);margin-top:.15rem}
+  .navgroup{margin-bottom:1.35rem}
+  .navgroup>.glabel{font-size:.68rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--jk-text-muted);margin:0 .55rem .45rem}
+  .nav a{
+    display:block;padding:.42rem .55rem;border-radius:8px;color:var(--jk-text-2);
+    font-size:.86rem;font-weight:500;border:1px solid transparent;
+  }
+  .nav a:hover{background:var(--jk-hover);text-decoration:none;color:var(--jk-text)}
+  .nav a.active{background:var(--jk-gold-glow);border-color:var(--jk-border-strong);color:var(--jk-gold-bright)}
+  .nav a .n{color:var(--jk-gold-dim);font-family:var(--mono);font-size:.74rem;margin-right:.45rem}
+  .nav a.locked{color:var(--jk-text-muted)}
+  .nav a.locked:hover{background:transparent;color:var(--jk-text-muted);cursor:default}
+  /* ---------- main ---------- */
+  main{flex:1;min-width:0}
+  .page{display:none;padding:3rem clamp(1.2rem,5vw,4.5rem) 4.5rem;max-width:920px}
+  .page.active{display:block}
+  .meta{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.1rem 0 1.8rem}
+  .chip{
+    font-size:.76rem;font-weight:600;color:var(--jk-text-2);
+    border:1px solid var(--jk-border-strong);border-radius:999px;padding:.28rem .75rem;background:var(--jk-elevated);
+  }
+  .chip b{color:var(--jk-gold-bright);font-weight:600}
+  .lede{font-size:1.08rem;color:var(--jk-text-2);max-width:62ch}
+  /* prompt / command boxes */
+  .promptbox{
+    position:relative;background:var(--jk-elevated);border:1px solid var(--jk-border-strong);
+    border-left:3px solid var(--jk-gold);border-radius:10px;padding:1rem 5.4rem 1rem 1.1rem;
+    font-family:var(--mono);font-size:.86rem;line-height:1.55;color:var(--jk-text);
+    margin:1.1rem 0 1.4rem;white-space:pre-wrap;word-break:break-word;
+  }
+  .promptbox .label{
+    position:absolute;top:-.62rem;left:.9rem;background:var(--jk-bg);padding:0 .5rem;
+    font-family:'Plus Jakarta Sans',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--jk-gold);
+  }
+  .copybtn{
+    position:absolute;top:.65rem;right:.65rem;font-size:.72rem;font-weight:700;
+    font-family:'Plus Jakarta Sans',sans-serif;color:var(--jk-gold-bright);
+    background:var(--jk-raised);border:1px solid var(--jk-border-strong);border-radius:7px;
+    padding:.32rem .7rem;cursor:pointer;
+  }
+  .copybtn:hover{background:var(--jk-hover)}
+  code{
+    font-family:var(--mono);font-size:.85em;background:var(--jk-raised);
+    border:1px solid var(--jk-border);border-radius:5px;padding:.1em .4em;color:var(--jk-gold-bright);
+  }
+  /* callouts */
+  .tip{
+    border:1px solid var(--jk-border-strong);border-left:3px solid var(--jk-gold);
+    background:linear-gradient(90deg,var(--jk-gold-glow),transparent 55%);
+    border-radius:10px;padding:.95rem 1.15rem;margin:1.3rem 0;
+  }
+  .tip .t{font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--jk-gold);display:block;margin-bottom:.3rem}
+  .tip p{margin:0;max-width:62ch}
+  .steps{list-style:none;counter-reset:s;margin:1.2rem 0 1.5rem}
+  .steps li{
+    counter-increment:s;position:relative;padding:0 0 1.25rem 3rem;
+  }
+  .steps li::before{
+    content:counter(s);position:absolute;left:0;top:.05rem;width:2rem;height:2rem;
+    border-radius:50%;background:var(--jk-raised);border:1px solid var(--jk-border-strong);
+    color:var(--jk-gold-bright);font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:.85rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .steps li:not(:last-child)::after{
+    content:"";position:absolute;left:calc(1rem - 1px);top:2.35rem;bottom:.15rem;width:2px;background:var(--jk-border);
+  }
+  .steps b{color:var(--jk-text)}
+  .steps p{margin:.25rem 0 0}
+  /* tables */
+  .twrap{overflow-x:auto;margin:1.1rem 0 1.4rem;border:1px solid var(--jk-border-strong);border-radius:10px}
+  table{border-collapse:collapse;width:100%;font-size:.88rem}
+  th{background:var(--jk-raised);color:var(--jk-gold-bright);font-weight:600;text-align:left}
+  th,td{padding:.6rem .9rem;border-bottom:1px solid var(--jk-border);vertical-align:top}
+  td{color:var(--jk-text-2)}
+  tr:last-child td{border-bottom:none}
+  td:first-child{color:var(--jk-text);font-weight:500;white-space:nowrap}
+  /* troubleshooting */
+  .trouble{margin:1.1rem 0 1.4rem;display:grid;gap:.7rem}
+  .trouble .row{background:var(--jk-elevated);border:1px solid var(--jk-border);border-radius:10px;padding:.85rem 1.05rem}
+  .trouble .prob{font-weight:600;color:var(--jk-text);font-size:.92rem}
+  .trouble .fix{color:var(--jk-text-2);font-size:.9rem;margin-top:.25rem}
+  .trouble .fix b{color:var(--jk-gold-bright)}
+  .modlist{display:flex;flex-direction:column;gap:1.6rem;margin:1.4rem 0;max-width:640px}
+  .mod{border-left:2px solid var(--jk-border-strong);padding-left:1.15rem}
+  .mod .cn{font-family:var(--mono);font-size:.72rem;color:var(--jk-gold-dim)}
+  .mod h3{margin:.25rem 0 .3rem;font-size:1.05rem}
+  .mod p{font-size:.88rem;color:var(--jk-text-muted);margin-bottom:.4rem}
+  .mod.locked{opacity:.55}
+  .lessonlist{list-style:none;margin:.75rem 0 0;display:grid;gap:.3rem}
+  .lessonlist li{font-size:.84rem;color:var(--jk-text-2);padding:.18rem 0}
+  .lessonlist a{color:var(--jk-text-2);display:block}
+  .lessonlist a:hover{color:var(--jk-gold-bright);text-decoration:none}
+  .lessonlist .ln{font-family:var(--mono);font-size:.72rem;color:var(--jk-gold-dim);margin-right:.35rem}
+  /* hero */
+  .hero{padding-top:1.5rem}
+  .hero h1{font-size:clamp(2.3rem,5.5vw,3.4rem);max-width:16ch}
+  .hero .lede{margin-top:1.1rem}
+  .hero-band{
+    margin-top:2.2rem;background:var(--jk-elevated);border:1px solid var(--jk-border-strong);
+    border-radius:14px;padding:1.4rem 1.5rem;
+  }
+  .hero-band .t{font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--jk-gold);display:block;margin-bottom:.6rem}
+  /* prev/next */
+  .pager{display:flex;gap:.9rem;margin-top:3.2rem;flex-wrap:wrap}
+  .pager a{
+    flex:1;min-width:220px;background:var(--jk-elevated);border:1px solid var(--jk-border-strong);
+    border-radius:12px;padding:.9rem 1.1rem;
+  }
+  .pager a:hover{text-decoration:none;border-color:var(--jk-gold-dim);background:var(--jk-hover)}
+  .pager .dir{font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--jk-text-muted)}
+  .pager .dest{display:block;margin-top:.25rem;font-weight:600;color:var(--jk-gold-bright);font-size:.95rem}
+  .pager a.next{text-align:right}
+  /* construction rope */
+  .rope{
+    margin:2.6rem 0 0;border:1px dashed var(--jk-gold-dim);border-radius:12px;
+    background:repeating-linear-gradient(-45deg,transparent,transparent 14px,var(--jk-gold-glow) 14px,var(--jk-gold-glow) 28px);
+    padding:1.3rem 1.4rem;
+  }
+  .rope .t{font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--jk-gold);display:block;margin-bottom:.35rem}
+  .rope p{margin:0;max-width:64ch}
+  footer{padding:0 clamp(1.2rem,5vw,4.5rem) 2.5rem;color:var(--jk-text-muted);font-size:.78rem;max-width:920px}
+  /* mobile */
+  .menubtn{display:none}
+  @media (max-width:840px){
+    .app{display:block}
+    .sidebar{
+      position:fixed;z-index:40;left:0;top:0;transform:translateX(-100%);transition:transform .25s ease;
+      width:min(80vw,300px);box-shadow:0 0 60px rgba(0,0,0,.6);
+    }
+    .sidebar.open{transform:translateX(0)}
+    .menubtn{
+      display:flex;align-items:center;gap:.55rem;position:sticky;top:0;z-index:30;width:100%;
+      background:rgba(10,10,10,.92);backdrop-filter:blur(8px);border:none;border-bottom:1px solid var(--jk-border);
+      color:var(--jk-gold-bright);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.85rem;
+      padding:.85rem 1.2rem;cursor:pointer;text-align:left;
+    }
+    .page{padding-top:1.8rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .card,a.card:hover{transition:none;transform:none}
+    .sidebar{transition:none}
+  }
+</style>
+</head>
+<body>
+
+
+<button class="menubtn" id="menubtn" aria-label="Open course menu">☰&nbsp; Course menu</button>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#/home">
+      <span class="key">🛎️</span>
+      <div class="brand-name">The Residencierge</div>
+      <div class="brand-sub">Exec AI Residency</div>
+    </a>
+    <nav class="nav" aria-label="Course">
+      <div class="navgroup">
+        <a href="#/home" data-page="home">Home</a>
+      </div>
+      <div class="navgroup">
+        <div class="glabel">Module 0 · Getting Started</div>
+        <a href="#/0-0" data-page="0-0"><span class="n">0.0</span>What Claude Code Is</a>
+        <a href="#/0-1" data-page="0-1"><span class="n">0.1</span>Installation</a>
+        <a href="#/0-2" data-page="0-2"><span class="n">0.2</span>Get the Course &amp; Start</a>
+      </div>
+      <div class="navgroup">
+        <div class="glabel">Module 1 · Fundamentals</div>
+        <a href="#/1-1" data-page="1-1"><span class="n">1.1</span>Welcome &amp; Check-In</a>
+        <a href="#/1-2" data-page="1-2"><span class="n">1.2</span>The Inheritance</a>
+        <a href="#/1-3" data-page="1-3"><span class="n">1.3</span>Working the Files</a>
+        <a href="#/1-4" data-page="1-4"><span class="n">1.4</span>Commands &amp; Navigation</a>
+        <a href="#/1-5" data-page="1-5"><span class="n">1.5</span>Agents</a>
+        <a href="#/1-6" data-page="1-6"><span class="n">1.6</span>Project Memory</a>
+      </div>
+      <div class="navgroup">
+        <div class="glabel">Module 2 · Vibe Coding</div>
+        <a href="#/2-1" data-page="2-1"><span class="n">2.1</span>Setup</a>
+        <a href="#/2-2" data-page="2-2"><span class="n">2.2</span>Plan</a>
+        <a href="#/2-3" data-page="2-3"><span class="n">2.3</span>Build &amp; Iterate</a>
+        <a href="#/2-4" data-page="2-4"><span class="n">2.4</span>GitHub</a>
+        <a href="#/2-5" data-page="2-5"><span class="n">2.5</span>Go Live</a>
+      </div>
+      <div class="navgroup">
+        <div class="glabel">Module 3 · Your Business</div>
+        <a class="locked" aria-disabled="true"><span class="n">3.1</span>Your Real Files 🔒</a>
+        <a class="locked" aria-disabled="true"><span class="n">3.2</span>Connect Your Tools 🔒</a>
+        <a class="locked" aria-disabled="true"><span class="n">3.3</span>Your Weekly Workflow 🔒</a>
+      </div>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- ================= HOME ================= -->
+    <section class="page hero" id="page-home">
+      <span class="eyebrow">Exec AI Residency · Mondrian Gold Coast · 31 Aug to 3 Sept 2026</span>
+      <h1>Learning Claude Code <span class="serif gold">inside</span> Claude Code</h1>
+      <p class="lede">A whole new way of learning: no videos, no manuals, just a conversation with your own personal concierge. It teaches by having you do the real thing, one step at a time, it waits for you at every turn, and the team is beside you every bit of the way. By the end, you'll have made things you didn't think you could.</p>
+
+      <div class="hero-band">
+        <span class="t">How it works</span>
+        <ol class="steps">
+          <li><b>You'll need a Claude login</b><p>A paid Claude account, sorted in your pre-work. If in doubt, ask Jodee.</p></li>
+          <li><b>Install Claude Desktop</b><p>One app, five minutes, no technical setup. Covered in <a href="#/0-1">Installation</a>.</p></li>
+          <li><b>Paste one prompt</b><p>It fetches the course onto your laptop and the concierge introduces itself. Covered in <a href="#/0-2">Get the course</a>.</p></li>
+          <li><b>Follow the concierge</b><p>Each lesson is a conversation. It waits for you at every step, and everything you make is saved in your course folder.</p></li>
+        </ol>
+      </div>
+
+      <h2>The course</h2>
+      <p style="font-size:.9rem">Lessons marked 🔒 are under construction. The map below shows where the whole course is headed, so you always know what the next room holds.</p>
+      <div class="modlist">
+        <div class="mod">
+          <span class="cn">MODULE 0</span><h3>Getting Started</h3>
+          <p>Everything before the first lesson. About 15 minutes, done once.</p>
+          <ul class="lessonlist">
+            <li><a href="#/0-0"><span class="ln">0.0</span> What Claude Code Actually Is</a></li>
+            <li><a href="#/0-1"><span class="ln">0.1</span> Installation</a></li>
+            <li><a href="#/0-2"><span class="ln">0.2</span> Get the Course &amp; Start</a></li>
+          </ul>
+        </div>
+        <div class="mod">
+          <span class="cn">MODULE 1</span><h3>Fundamentals</h3>
+          <p>Claude Code for everyday work, no coding anywhere.</p>
+          <ul class="lessonlist">
+            <li><a href="#/1-1"><span class="ln">1.1</span> Welcome &amp; Check-In</a></li>
+            <li><a href="#/1-2"><span class="ln">1.2</span> The Inheritance: folders, .md files, seeing your work</a></li>
+            <li><a href="#/1-3"><span class="ln">1.3</span> Working the Files: @ mentions, patterns, images, live web</a></li>
+            <li><a href="#/1-4"><span class="ln">1.4</span> Commands &amp; Navigation: skills, screenshots, plans, models</a></li>
+            <li><a href="#/1-5"><span class="ln">1.5</span> Agents: a whole team working for you at once</a></li>
+            <li><a href="#/1-6"><span class="ln">1.6</span> Project Memory: teach it your business once, keep it forever</a></li>
+          </ul>
+        </div>
+        <div class="mod">
+          <span class="cn">MODULE 2</span><h3>Vibe Coding</h3>
+          <p>A conversation becomes a real working app on the internet, with a live link you can send to anyone.</p>
+          <ul class="lessonlist">
+            <li><a href="#/2-1"><span class="ln">2.1</span> Setup: the mindset, the mission, the workspace</a></li>
+            <li><a href="#/2-2"><span class="ln">2.2</span> Plan: the whole app designed in plain English</a></li>
+            <li><a href="#/2-3"><span class="ln">2.3</span> Build &amp; Iterate: watch it take shape, change anything</a></li>
+            <li><a href="#/2-4"><span class="ln">2.4</span> GitHub: every version kept in the off-site safe</a></li>
+            <li><a href="#/2-5"><span class="ln">2.5</span> Go Live: a real link, opened on your phone</a></li>
+          </ul>
+        </div>
+        <div class="mod locked">
+          <span class="cn">MODULE 3</span><h3>Your Business 🔒</h3>
+          <p>The training wheels come off: the same method pointed at your own company.</p>
+        </div>
+      </div>
+      <p style="font-size:.8rem;color:var(--jk-text-muted)">Module 3 is being built now, and its shape may change before the doors open.</p>
+
+      <div class="tip"><span class="t">Stuck at any point?</span><p>Raise your hand. Jodee or Erik will come over and get you back on track. That is what they are there for, and they love it.</p></div>
+
+      <p style="font-size:.85rem;color:var(--jk-text-muted);max-width:68ch">Format inspired by Carl Vellotti's CC for Everyone; all content here is original. Background materials live in your Exec AI Residency Hub.</p>
+    </section>
+
+    <!-- ================= 0.0 ================= -->
+    <section class="page" id="page-0-0">
+      <span class="eyebrow">Module 0 · Getting Started</span>
+      <h1>0.0 · What Claude Code <span class="gold">actually</span> is</h1>
+      <div class="meta"><span class="chip">⏱ <b>4 min read</b></span><span class="chip">Prerequisites: <b>none</b></span></div>
+
+      <p class="lede">The name is the worst thing about it. Claude Code is not a coding tool with a coding name. It is a general assistant that lives on your computer with its sleeves rolled up.</p>
+
+      <h2>The one idea that matters</h2>
+      <p>The Claude you may have used in a browser can only talk. Claude Code can <strong>act</strong>: it reads your files, writes your documents, digs through your data, opens websites, and builds things, all on your own machine, all by conversation. When commands need running, it runs them. You make the calls.</p>
+
+      <h2>What that looks like in practice</h2>
+      <div class="twrap"><table>
+        <tr><th>You say</th><th>It does</th></tr>
+        <tr><td>"Summarise every file in this folder"</td><td>Reads them all in seconds and gives you the three things that matter</td></tr>
+        <tr><td>"Turn that into a one-page brief"</td><td>Creates a real document on your laptop, formatted and dated</td></tr>
+        <tr><td>"What does this flyer say?"</td><td>Reads images too: flyers, whiteboard photos, screenshots, scans</td></tr>
+        <tr><td>"What do competitors charge?"</td><td>Pulls live answers from the web into your working file</td></tr>
+      </table></div>
+
+      <h2>What you need</h2>
+      <ol class="steps">
+        <li><b>A Claude account on a paid plan</b><p>Pro or Max. Your Residency pre-work covered this; if in doubt, ask Jodee.</p></li>
+        <li><b>Your own laptop, Mac or Windows</b><p>With administrator rights, so you can install one app. Company-managed laptops sometimes block installs, which is why we ask in advance.</p></li>
+        <li><b>Zero technical experience</b><p>Truly none. If you can send a message, you can do this course.</p></li>
+      </ol>
+
+      <div class="tip"><span class="t">Mindset for the week</span><p>Justin teaches the thinking in the room. These lessons are where you put your hands on it: you say it, you see it happen, you keep the result. By the time you point this at your real business, the loop already feels normal.</p></div>
+
+      <div class="pager">
+        <a class="next" href="#/0-1"><span class="dir">Next</span><span class="dest">0.1 · Installation →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 0.1 ================= -->
+    <section class="page" id="page-0-1">
+      <span class="eyebrow">Module 0 · Getting Started</span>
+      <h1>0.1 · <span class="gold">Installation</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>5 minutes</b></span><span class="chip">Prerequisites: <b>0.0</b></span><span class="chip">Done at the <b>8:30 setup clinic</b></span></div>
+
+      <p class="lede">One app to install: Claude Desktop. It contains everything, including the Code tab where the whole course happens.</p>
+
+      <h2>Install Claude Desktop</h2>
+      <ol class="steps">
+        <li><b>Download the app</b><p>Go to <code>claude.ai/download</code> and grab the version for your machine, Mac or Windows.</p></li>
+        <li><b>Install and open it</b><p>Mac: drag it into Applications. Windows: run the installer and accept the prompts. If your laptop asks for an administrator password, that is normal.</p></li>
+        <li><b>Sign in</b><p>Use the same Claude account as your pre-work. The app opens looking like the Claude you know.</p></li>
+        <li><b>Find the Code tab</b><p>Top left of the app window. Click it. That is where the Residencierge lives, and where every lesson happens.</p></li>
+        <li><b>Mac only: a one-off Git check</b><p>Claude Code needs a small helper called Git. Open <b>Terminal</b> (press Cmd+Space, type Terminal) and type <code>git --version</code>, then Enter. If your Mac offers to install "command line developer tools", click <b>Install</b> and let it finish (a few minutes). If it just shows a version number, you're already set. Windows installs handle this on their own.</p></li>
+      </ol>
+
+      <div class="tip"><span class="t">Good to know, as at August 2026</span><p>Inside the Code tab, the left-hand sidebar shows your chats and projects, not your files. Your files appear in the <b>Files panel</b>, opened from the three dots menu at the top right, right beside the conversation. The course shows you exactly where to click.</p></div>
+
+      <h2>Troubleshooting</h2>
+      <div class="trouble">
+        <div class="row"><div class="prob">The install is blocked or asks for an admin password I don't have</div><div class="fix">Your laptop is company-managed. <b>Raise your hand</b>, this is the number one thing the setup clinic exists for.</div></div>
+        <div class="row"><div class="prob">I can't see a Code tab</div><div class="fix">Make sure you're in the desktop app, not the browser, and signed in to your paid account. Still missing? <b>Raise your hand.</b></div></div>
+        <div class="row"><div class="prob">It says "Git is required for local sessions"</div><div class="fix">Run the one-off Git check in step 5 above, then quit and reopen Claude Desktop. Stuck? <b>Raise your hand.</b></div></div>
+        <div class="row"><div class="prob">It's asking me about model or permission settings</div><div class="fix">Leave everything on its defaults. The course handles the rest.</div></div>
+      </div>
+
+      <div class="pager">
+        <a href="#/0-0"><span class="dir">Previous</span><span class="dest">← 0.0 · What Claude Code Is</span></a>
+        <a class="next" href="#/0-2"><span class="dir">Next</span><span class="dest">0.2 · Get the Course &amp; Start →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 0.2 ================= -->
+    <section class="page" id="page-0-2">
+      <span class="eyebrow">Module 0 · Getting Started</span>
+      <h1>0.2 · Get the course &amp; <span class="gold">start</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>5 minutes</b></span><span class="chip">Prerequisites: <b>0.1</b></span></div>
+
+      <p class="lede">One pasted prompt fetches the whole course onto your laptop and wakes up the concierge.</p>
+
+      <h2>The magic paste</h2>
+      <ol class="steps">
+        <li><b>Open the Code tab and start a new session</b><p>Claude Desktop app, Code tab, new chat. When it asks which folder to work in, choose your <b>home folder</b>, the one with your name on it (not Documents, which lives in iCloud on a Mac).</p></li>
+        <li><b>Set the model</b><p>In the bar under the message box, click the model name and choose <b>Sonnet&nbsp;5</b> with thinking on <b>Medium</b>. You'll know exactly what this means soon enough.</p></li>
+        <li><b>Paste this prompt</b><p>Exactly as written. Claude fetches the course folder and follows the instructions inside it.</p></li>
+      </ol>
+
+      <div class="promptbox"><span class="label">Paste into Claude Code</span><button class="copybtn">Copy</button>Clone https://github.com/jodee-tff/residencierge into a new folder called residencierge, then read the file BOOTSTRAP.md inside it and follow its instructions exactly.</div>
+
+      <p>Claude will download the course folder, quietly check your setup, and then greet you by name. From there, just respond. The concierge waits for you at every step.</p>
+
+      <h2>Starting each lesson</h2>
+      <p>Lesson 1.1 begins automatically after the paste, and from there the course flows: each lesson ends by handing you the next command to type right where you are, like <code>/start-1-3</code>. The concierge tells you the two moments a fresh chat is needed, and walks you through both.</p>
+      <div class="tip"><span class="t">Taking a break?</span><p>Any time you come back: new chat pointed at the residencierge folder, then the command for the lesson you're up to. Nothing is ever lost, your work lives in the folder.</p></div>
+
+      <h2>Troubleshooting</h2>
+      <div class="trouble">
+        <div class="row"><div class="prob">"Git is required for local sessions", or my Mac asked to install "command line developer tools"</div><div class="fix">Same one-time thing: open Terminal, type <code>git --version</code>, click <b>Install</b> when offered, let it finish, then quit and reopen Claude Desktop.</div></div>
+        <div class="row"><div class="prob">Typing / doesn't show the start commands</div><div class="fix">Your chat probably isn't pointed at the course folder. Start a new chat with the residencierge folder as the project. Or paste: <b>Read lessons/SCRIPT_INSTRUCTIONS.md, then the script for the lesson I'm up to in lessons/, and begin teaching immediately.</b></div></div>
+        <div class="row"><div class="prob">Something else entirely</div><div class="fix"><b>Raise your hand.</b> Jodee or Erik will sort it in under a minute.</div></div>
+      </div>
+
+      <div class="pager">
+        <a href="#/0-1"><span class="dir">Previous</span><span class="dest">← 0.1 · Installation</span></a>
+        <a class="next" href="#/1-1"><span class="dir">Next</span><span class="dest">1.1 · Welcome &amp; Check-In →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 1.1 ================= -->
+    <section class="page" id="page-1-1">
+      <span class="eyebrow">Module 1 · Fundamentals</span>
+      <h1>1.1 · Welcome &amp; <span class="gold">check-in</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>5 minutes</b></span><span class="chip">Starts <b>automatically</b> after the paste</span></div>
+
+      <p class="lede">Your first conversation with the Residencierge. Nothing to prepare, nothing to break. It introduces the method, the scenario, and the three rules of the week.</p>
+
+      <h2>How we'll work best together</h2>
+      <ol class="steps">
+        <li><b>You stay in charge</b><p>The concierge reads, creates, organises, researches and builds. You choose the direction, approve the decisions and bring the business judgement.</p></li>
+        <li><b>In-room lessons come first</b><p>When the team is talking, pause the screen and listen. The concierge waits, and will explain or repeat anything, any time.</p></li>
+        <li><b>Raise your hand</b><p>Confused, unsure where to start, or not seeing what you should be seeing? Hand up. Jodee or Erik will come over and get you back on track.</p></li>
+      </ol>
+
+      <h2>What happens in the lesson</h2>
+      <p>Your first prompt renames you, name and emoji of your choosing, across the entire course. No code required, and that's the point. Then you inherit the coffee shop, choose its name from clickable options (or invent your own), and the concierge walks you into lesson 1.2.</p>
+
+      <div class="tip"><span class="t">Where things live</span><p>Everything you produce saves itself in your residencierge folder, nothing is lost between sessions. Background materials live in your Exec AI Residency Hub. Feedback on any lesson goes straight to Justin and Jodee: just tell the concierge, it files a note.</p></div>
+
+      <div class="pager">
+        <a href="#/0-2"><span class="dir">Previous</span><span class="dest">← 0.2 · Get the Course &amp; Start</span></a>
+        <a class="next" href="#/1-2"><span class="dir">Next</span><span class="dest">1.2 · The Inheritance →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 1.2 ================= -->
+    <section class="page" id="page-1-2">
+      <span class="eyebrow">Module 1 · Fundamentals</span>
+      <h1>1.2 · The <span class="serif gold">inheritance</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>15 minutes</b></span><span class="chip">Prerequisites: <b>1.1</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-1-2</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Fresh chat pointed at the residencierge folder, then the command. (Lesson 1.1 walks you through it.)</p>
+
+      <p class="lede">Deano left you a folder. This lesson teaches you to actually see it: what the folders hold, what an .md file is, and how to watch files appear as you and the concierge make them.</p>
+
+      <h2>What an .md file is</h2>
+      <p>Almost every file in this course ends in <code>.md</code>, short for Markdown. It is just text with a few simple symbols for structure, and it is the format this whole world runs on. Humans read it, Claude reads it perfectly, and it will still open in fifty years. Think of it as a Word document with the forty layers of bloat removed.</p>
+      <div class="twrap"><table>
+        <tr><th>You type</th><th>It means</th></tr>
+        <tr><td><code># Big heading</code></td><td>A title</td></tr>
+        <tr><td><code>## Smaller heading</code></td><td>A section</td></tr>
+        <tr><td><code>- item</code></td><td>A bullet point</td></tr>
+        <tr><td><code>**bold**</code></td><td><strong>bold</strong></td></tr>
+      </table></div>
+      <p>That table is most of Markdown. You never need to write it by hand, the concierge does, but now nothing in these files will look mysterious.</p>
+
+      <h2>Seeing your files for real</h2>
+      <p>In the Claude Desktop app (as at August 2026), the left-hand sidebar is navigation for chats and projects, <strong>not</strong> your files. Your files show in the <strong>Files panel</strong>, opened from the three dots menu at the top right of the Code tab, listing the whole project right beside the conversation. From then on you watch files appear there, in real time, as you create them by talking. (Prefer a real window? Finder or File Explorer beside the app works too, and the concierge can open it for you.)</p>
+
+      <h2>The word of the week</h2>
+      <p>A word of the week sits at the top of the handover notes, and the lesson asks you to open the file yourself and read it out. A small thing with a serious job: it proves you are looking at the real file with your own eyes, not taking the AI's word for anything. Verification is a habit worth keeping all week.</p>
+
+      <h2>What you'll have by the end</h2>
+      <ol class="steps">
+        <li><b>The Files panel, open</b><p>Your whole project listed beside the conversation, live.</p></li>
+        <li><b>Deano's notes, read both ways</b><p>Once by you, once summarised by the concierge in seconds. The division of labour: it reads fast, you read smart.</p></li>
+        <li><b>Your first created file</b><p>An owner's log carrying the cafe name you chose and your own day-one theory about the loyalty problem, landing in a folder you saw empty a minute earlier.</p></li>
+      </ol>
+
+      <h2>Troubleshooting</h2>
+      <div class="trouble">
+        <div class="row"><div class="prob">Double-clicking the .md file opened some app I don't recognise</div><div class="fix">Fine. Any text app works, it's just text. Read it, find the word, close it.</div></div>
+        <div class="row"><div class="prob">I can't find the folder the concierge is talking about</div><div class="fix">Ask it: <b>"open the folder for me"</b>. It will. Still lost? Raise your hand.</div></div>
+      </div>
+
+      <div class="pager">
+        <a href="#/1-1"><span class="dir">Previous</span><span class="dest">← 1.1 · Welcome &amp; Check-In</span></a>
+        <a class="next" href="#/1-3"><span class="dir">Next</span><span class="dest">1.3 · Working the Files →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 1.3 ================= -->
+    <section class="page" id="page-1-3">
+      <span class="eyebrow">Module 1 · Fundamentals</span>
+      <h1>1.3 · Working the <span class="gold">files</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>20 minutes</b></span><span class="chip">Prerequisites: <b>1.2</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-1-3</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+
+      <p class="lede">The payoff lesson. You point the concierge at exact files, pull patterns out of the mess, read an image nobody opened, check the outside world, and solve what is quietly killing Deano's loyalty program.</p>
+
+      <h2>The @ mention</h2>
+      <p>Type <code>@</code> in the message box and a file picker pops up. Choose a file and your message points at exactly that file, no guessing, no "that document about the thing". If the picker ever comes up empty on your machine, typing the file path in plain text works identically, the @ is a shortcut, nothing more.</p>
+
+      <h2>The mystery, in three moves</h2>
+      <ol class="steps">
+        <li><b>Patterns from one messy file</b><p>You @ the customer reviews file and ask what patterns it holds. Customers love the coffee, but a cluster say their loyalty stamps "disappear". One question turns noise into a ranked list.</p></li>
+        <li><b>A contradiction across files</b><p>The concierge reads Deano's loyalty numbers and his notes together: about 500 cards handed out, stamps given constantly, 9 free coffees ever redeemed. Two files, one contradiction, and Deano had every clue for months without connecting them.</p></li>
+        <li><b>The unopened picture</b><p>The answer sits in <code>attachments/</code>, in the loyalty flyer nobody looked at. Claude reads images too, and it finds the culprit in the small print. No spoilers here: open it in the lesson.</p></li>
+      </ol>
+
+      <h2>Then the outside world, then the brief</h2>
+      <p>A quick piece of live web research shows how loyalty programs normally work, so your decision has an outside benchmark. Then you make the call, as the owner, and the concierge builds it into a board-ready one-pager: situation, evidence, benchmark, your recommendation, dated and filed in <code>outputs/</code>. A document that did not exist three minutes earlier, built from a mess, a picture and the live internet.</p>
+
+      <div class="tip"><span class="t">Why this lesson matters</span><p>This exact loop, point me at chaos, I find the pattern, you make the call, we file the brief, is what you will run on your own business for the rest of the Residency. The coffee shop is just the training wheels.</p></div>
+
+      <h2>Troubleshooting</h2>
+      <div class="trouble">
+        <div class="row"><div class="prob">The @ picker shows nothing</div><div class="fix">Type the file path as plain text instead, it works the same. The concierge will already know if your machine has a custom setup, and the crew can tidy it later.</div></div>
+        <div class="row"><div class="prob">The web research step failed</div><div class="fix">Networks happen. The concierge says so plainly and carries on with known basics, clearly labelled. The lesson still lands.</div></div>
+      </div>
+
+      <div class="pager">
+        <a href="#/1-2"><span class="dir">Previous</span><span class="dest">← 1.2 · The Inheritance</span></a>
+        <a class="next" href="#/1-4"><span class="dir">Next</span><span class="dest">1.4 · Commands &amp; Navigation →</span></a>
+      </div>
+    </section>
+
+
+    <!-- ================= 1.4 ================= -->
+    <section class="page" id="page-1-4">
+      <span class="eyebrow">Module 1 · Fundamentals</span>
+      <h1>1.4 · Commands &amp; <span class="gold">navigation</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>12 minutes</b></span><span class="chip">Prerequisites: <b>1.3</b></span><span class="chip">The <b>driving skills</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-1-4</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+
+      <p class="lede">The driving skills: four moves that make every session faster, safer and cheaper to run, each practised the moment you meet it.</p>
+
+      <h2>The four skills</h2>
+      <ol class="steps">
+        <li><b>Slash commands are saved instructions</b><p>Every <code>/start</code> you've typed is one: an instruction card living in the folder. Type <code>/</code> on its own and the menu appears. Businesses build decks of these.</p></li>
+        <li><b>The screenshot move</b><p>Anything on any screen confusing you? Screenshot it, paste it into the chat, ask. You'll do it once in the lesson and use it all week.</p></li>
+        <li><b>Plan before do</b><p>For anything bigger than a question, ask for a plan first. The concierge proposes, you approve, only then does anything happen. You'll use it to organise the inherited files, and watch the folder tidy itself on approval.</p></li>
+        <li><b>Match the model to the job</b><p>Run the same prompt on a small model and a big one, straight from the bar below the message box, and feel the difference yourself. Quick jobs on quick engines, deep work on deep ones.</p></li>
+      </ol>
+
+      <div class="tip"><span class="t">Why this lesson matters</span><p>Plan-before-do is the backbone of Module 2. Nothing gets built there without a plan you've signed off first.</p></div>
+
+      <div class="pager">
+        <a href="#/1-3"><span class="dir">Previous</span><span class="dest">← 1.3 · Working the Files</span></a>
+        <a class="next" href="#/1-5"><span class="dir">Next</span><span class="dest">1.5 · Agents →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 1.5 ================= -->
+    <section class="page" id="page-1-5">
+      <span class="eyebrow">Module 1 · Fundamentals</span>
+      <h1>1.5 · <span class="gold">Agents</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>12 minutes</b></span><span class="chip">Prerequisites: <b>1.4</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-1-5</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+
+      <p class="lede">You stop being one customer of one assistant, and start running a team of them. This is the lesson that changes how you size a to-do list.</p>
+
+      <h2>What an agent is</h2>
+      <p>An agent is another copy of the concierge, sent off with a job. It reads what it needs, works the problem and reports back, while your conversation carries on. Several run at once: walk into the office, say "you three, dig into this", and stay at your desk.</p>
+
+      <h2>Three questions nobody ever answered</h2>
+      <div class="twrap"><table>
+        <tr><th>Question</th><th>The real ask</th></tr>
+        <tr><td>The weekend queue, out the door 8 to 10am</td><td>Staffing problem or menu problem?</td></tr>
+        <tr><td>Oat milk running out every Saturday</td><td>What fixes the ordering?</td></tr>
+        <tr><td>Eleven menu items</td><td>Which actually earn their place?</td></tr>
+      </table></div>
+      <p>One sentence from you launches three investigators at once. Three labelled mini-briefs come back from one wait, you make one owner's pick, and the lot is filed in <code>organised/</code> with your call on top.</p>
+
+      <div class="tip"><span class="t">Coming attractions</span><p>Agents can also be permanent: standing specialists that wake up already knowing their job. That's a Residency-week conversation for your real business.</p></div>
+
+      <div class="pager">
+        <a href="#/1-4"><span class="dir">Previous</span><span class="dest">← 1.4 · Commands &amp; Navigation</span></a>
+        <a class="next" href="#/1-6"><span class="dir">Next</span><span class="dest">1.6 · Project Memory →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 1.6 ================= -->
+    <section class="page" id="page-1-6">
+      <span class="eyebrow">Module 1 · Fundamentals</span>
+      <h1>1.6 · Project <span class="serif gold">memory</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>12 minutes</b></span><span class="chip">Prerequisites: <b>1.5</b></span><span class="chip">Closes <b>Module 1</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-1-6</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+
+      <p class="lede">The most valuable file in the folder: the one every new chat reads before you've typed a word.</p>
+
+      <h2>The card by the till</h2>
+      <p>One special file, <code>CLAUDE.md</code>, is read automatically at the start of every session in the folder. Think of the laminated card by the till that every new staff member reads on day one: who we are, how we do things, what the boss likes. The Residency crew keeps house rules in it. This lesson adds your section: the owner's memory.</p>
+
+      <h2>What goes on the card</h2>
+      <p>Three things, given in one message: your coffee order, your number one priority for the cafe, and how you like your reports. The concierge writes them onto the card, then you open the file and verify your own words, house rule.</p>
+
+      <h2>The proof</h2>
+      <p>The magic lands at the start of the next lesson: a brand new chat that already knows your order. Module 1 closes here, with an inventory worth admiring: an owner's log, a board-ready brief, an approved plan, three investigations, and a memory.</p>
+
+      <div class="pager">
+        <a href="#/1-5"><span class="dir">Previous</span><span class="dest">← 1.5 · Agents</span></a>
+        <a class="next" href="#/2-1"><span class="dir">Next</span><span class="dest">2.1 · Setup →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 2.1 ================= -->
+    <section class="page" id="page-2-1">
+      <span class="eyebrow">Module 2 · Vibe Coding</span>
+      <h1>2.1 · <span class="gold">Setup</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>10 minutes</b></span><span class="chip">Prerequisites: <b>1.6</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-2-1</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Fresh chat pointed at the residencierge folder (the 1.6 memory proof needs one). Ask it how you take your coffee before anything else.</p>
+
+      <p class="lede">Welcome to the wing where a conversation becomes a working product. First: the mindset, the mission, and the workspace.</p>
+
+      <h2>Vibe coding, defined</h2>
+      <p>You describe what you want and steer while the concierge builds it. You will not write code, see code or need to understand code. It's how you work with a good tradie: you don't hold the saw, you hold the vision, and you inspect the work.</p>
+
+      <h2>The mission</h2>
+      <p>Module 1 found the culprit: paper stamp cards that die at 14 days. A memo won't fix that. So Module 2 builds the fix, a <strong>digital loyalty card</strong> for Burleigh Heads Coffee Co. Stamps that never vanish, never wash out, never expire. By 2.5 it's live on the internet.</p>
+
+      <h2>What happens in the lesson</h2>
+      <p>The concierge greets you from memory (the 1.6 proof), lays out the six-step journey ahead (plan and design, build, test and iterate, save the version with GitHub, deploy with Vercel, then update and manage), the build workspace appears in <code>builds/</code>, you switch the model to <strong>Opus</strong> for the building ahead, and you answer three plain questions about what the app is for. Then it flows straight into 2.2, same chat, no seam.</p>
+
+      <div class="pager">
+        <a href="#/1-6"><span class="dir">Previous</span><span class="dest">← 1.6 · Project Memory</span></a>
+        <a class="next" href="#/2-2"><span class="dir">Next</span><span class="dest">2.2 · Plan →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 2.2 ================= -->
+    <section class="page" id="page-2-2">
+      <span class="eyebrow">Module 2 · Vibe Coding</span>
+      <h1>2.2 · <span class="serif gold">Plan</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>12 minutes</b></span><span class="chip">Prerequisites: <b>2.1</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-2-2</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+
+      <p class="lede">The whole app gets designed in plain English before anything is built. Changing a plan costs nothing; changing a built thing costs patience.</p>
+
+      <h2>Software is rules written down</h2>
+      <p>The cafe already runs on them: buy a coffee, get a stamp. Hit ten, the next one's free, card resets. That's the app; everything else is paint. The concierge plays your decisions back as plain when-then lines, and you read them like a contract.</p>
+
+      <h2>The design table</h2>
+      <ol class="steps">
+        <li><b>Needs, then wants</b><p>The can't-live-without rules come locked in. The fun extras (confetti at ten, a head-start stamp, a cheeky promise line) are yours to pick from a menu.</p></li>
+        <li><b>Assumptions on the table</b><p>The concierge fills every gap with a sensible assumption and declares each one, so nothing hides. Correct any, or wave them through.</p></li>
+        <li><b>Choose the look with your eyes</b><p>Three ready-made directions open in your browser: Burleigh Sunrise, Midnight Gold, The Point Pop. Properly different worlds. Pick one, or mix.</p></li>
+        <li><b>Sign the contract</b><p><code>BUILD-PLAN.md</code> captures rules, look and scope on one page. Lesson 2.3 builds exactly this.</p></li>
+      </ol>
+
+      <div class="pager">
+        <a href="#/2-1"><span class="dir">Previous</span><span class="dest">← 2.1 · Setup</span></a>
+        <a class="next" href="#/2-3"><span class="dir">Next</span><span class="dest">2.3 · Build &amp; Iterate →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 2.3 ================= -->
+    <section class="page" id="page-2-3">
+      <span class="eyebrow">Module 2 · Vibe Coding</span>
+      <h1>2.3 · Build &amp; <span class="gold">iterate</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>15 minutes</b></span><span class="chip">Prerequisites: <b>2.2</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-2-3</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+
+      <p class="lede">The plan becomes a working loyalty card, in your browser, in this lesson. Then you shape it by describing what you see.</p>
+
+      <h2>The build</h2>
+      <p>The concierge reads your signed plan and builds it. Then you test it properly: stamp it, close the page, open it again and watch the stamps still standing, the exact thing paper never managed. Stamp to ten and collect.</p>
+
+      <h2>The iteration masterclass</h2>
+      <p>The skill that matters more than the build. You describe what you see ("the stamps are too small"), name the spot if you can, ask for options ("show me two other button styles"), dictate exact words, undo anything ("change it back"), or go nuclear ("bin it, start again"). All free. And since the concierge reads images, screenshot the card and paste it in to point at things. This loop is precisely how you'll build your real app in the next 48 hours.</p>
+
+      <h2>Troubleshooting</h2>
+      <div class="trouble">
+        <div class="row"><div class="prob">I asked for a change and the page looks the same</div><div class="fix">Refresh the browser tab. Still stale? Hold Shift while refreshing. Still? <b>Raise your hand.</b></div></div>
+        <div class="row"><div class="prob">I want something that wasn't in the plan</div><div class="fix">Say so. The plan gets built first, then your new idea becomes the next iteration. That's the method working, not failing.</div></div>
+      </div>
+
+      <div class="pager">
+        <a href="#/2-2"><span class="dir">Previous</span><span class="dest">← 2.2 · Plan</span></a>
+        <a class="next" href="#/2-4"><span class="dir">Next</span><span class="dest">2.4 · GitHub →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 2.4 ================= -->
+    <section class="page" id="page-2-4">
+      <span class="eyebrow">Module 2 · Vibe Coding</span>
+      <h1>2.4 · <span class="gold">GitHub</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>12 minutes</b></span><span class="chip">Prerequisites: <b>2.3</b></span><span class="chip">Needs a <b>browser click</b> from you</span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-2-4</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+
+      <p class="lede">Your loyalty card lives on exactly one laptop. This lesson puts it in the off-site safe, with every version kept forever.</p>
+
+      <h2>Workbench, vault, shopfront</h2>
+      <p>Your laptop is the workbench, where changes happen. GitHub is the vault: every version of your project, kept forever, revertible any time, shareable with a team. Vercel (next lesson) is the shopfront the world sees. Change on the workbench, save to the vault, the shopfront updates.</p>
+
+      <h2>The handshake</h2>
+      <p>The concierge sets up the connector and starts the login. Your browser opens GitHub's page with a short code, you check it matches, you click approve. Your hands, your account, and no password ever goes anywhere near the chat. Then the card goes into a private vault on your account, version one, history begins.</p>
+
+      <h2>Troubleshooting</h2>
+      <div class="trouble">
+        <div class="row"><div class="prob">I don't have a GitHub account</div><div class="fix">Create the free one at <b>github.com</b> yourself, your email and your password, then carry on. The concierge waits.</div></div>
+        <div class="row"><div class="prob">The code page stalled or timed out</div><div class="fix">Ask for a fresh code, second try. Still stuck? <b>Raise your hand.</b></div></div>
+      </div>
+
+      <div class="pager">
+        <a href="#/2-3"><span class="dir">Previous</span><span class="dest">← 2.3 · Build &amp; Iterate</span></a>
+        <a class="next" href="#/2-5"><span class="dir">Next</span><span class="dest">2.5 · Go Live →</span></a>
+      </div>
+    </section>
+
+    <!-- ================= 2.5 ================= -->
+    <section class="page" id="page-2-5">
+      <span class="eyebrow">Module 2 · Vibe Coding</span>
+      <h1>2.5 · Go <span class="serif gold">live</span></h1>
+      <div class="meta"><span class="chip">⏱ <b>12 minutes</b></span><span class="chip">Prerequisites: <b>2.4</b></span><span class="chip">Ends with <b>your phone</b></span></div>
+      <div class="promptbox"><span class="label">Run this lesson</span><button class="copybtn">Copy</button>/start-2-5</div>
+      <p style="font-size:.85rem;color:var(--jk-text-muted)">Lessons flow on in the same chat. Returning after a break? New chat pointed at the residencierge folder, then the command.</p>
+
+      <p class="lede">The finish line: a real address on the real internet, opened on your phone, standing up, like a customer in the queue.</p>
+
+      <h2>Hosting, in one line</h2>
+      <p>Your laptop sleeps when you do. Hosting moves the card to a computer that never sleeps, so anyone with the link can open it any time. The venue is Vercel: it plugs straight into the GitHub account you just connected, and the starter tier costs nothing. Same handshake style, your browser, your click.</p>
+
+      <h2>One door to choose, then the phone</h2>
+      <p>New Vercel projects ship with the front door locked (the link asks visitors to sign in). The lesson hands you the choice with exact clicks either way: unlock it so anyone with the link can open it, or keep it locked for the test drive. Then the finish: the card gets a short address, you open it on your phone standing up like a customer in the queue, and stamp one.</p>
+
+      <h2>What you actually did</h2>
+      <p>The ending counts it back with the real names attached: cloned a repository, analysed unstructured data, ran image analysis and live research, wrote a product spec, built and iterated a web app, kept versions in git and GitHub, deployed to production. A product team's week, by conversation, with every call yours. And every move maps straight onto your business, which is what the rest of the Residency is for.</p>
+
+      <div class="rope">
+        <span class="t">🚧 The rope across the corridor</span>
+        <p>This is where the built wing ends. Behind the rope: <strong>Module 3, Your Business</strong>, where the cafe hands over to your real company, your real files, and the tools you already use. Justin and Jodee are building it now. Same method the whole way: Justin teaches, this guides, you decide.</p>
+      </div>
+
+      <div class="pager">
+        <a href="#/2-4"><span class="dir">Previous</span><span class="dest">← 2.4 · GitHub</span></a>
+        <a class="next" href="#/home"><span class="dir">Back to</span><span class="dest">Home →</span></a>
+      </div>
+    </section>
+
+    <footer>The Residencierge · Exec AI Residency · execairesidency.com</footer>
+  </main>
+</div>
+
+<script>
+  const pages = ["home","0-0","0-1","0-2","1-1","1-2","1-3","1-4","1-5","1-6","2-1","2-2","2-3","2-4","2-5"];
+  const sidebar = document.getElementById("sidebar");
+  const menubtn = document.getElementById("menubtn");
+
+  function route(){
+    let id = (location.hash || "#/home").replace("#/","");
+    if(!pages.includes(id)) id = "home";
+    document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+    const el = document.getElementById("page-"+id);
+    if(el) el.classList.add("active");
+    document.querySelectorAll(".nav a[data-page]").forEach(a=>{
+      a.classList.toggle("active", a.dataset.page===id);
+    });
+    sidebar.classList.remove("open");
+    window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange", route);
+  route();
+
+  menubtn.addEventListener("click", ()=> sidebar.classList.toggle("open"));
+
+  document.querySelectorAll(".copybtn").forEach(btn=>{
+    btn.addEventListener("click", async ()=>{
+      const box = btn.closest(".promptbox");
+      const text = box.textContent.replace(/^\s*Paste into Claude Code|^\s*Run this lesson/,"").replace(/Copied!|Copy/g,"").trim();
+      try{ await navigator.clipboard.writeText(text); }catch(e){
+        const r=document.createRange(); r.selectNodeContents(box); const s=getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      btn.textContent="Copied!"; setTimeout(()=>btn.textContent="Copy",1600);
+    });
+  });
+</script>
+
+</body>
+</html>
