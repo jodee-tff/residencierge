@@ -171,3 +171,11 @@ Reviewer feedback actioned: pings no longer carry usernames, and nothing about t
 ## 1 September 2026: progress log identity, Jodee's call
 
 Logs now carry first name plus last initial (from the account display name, stored as "Log name" in the Owner's Memory) instead of the coffee codename, so the crew sees who is who at a glance. Paired with a rotation to a fresh ntfy topic that has never appeared in any transcript or screenshot. Payload stays minimal: lesson number plus "Jodee B". Disclosure updated to match.
+
+## 1 September 2026, evening: room day one, live fixes and distribution
+
+The room ran today. Live fixes, all pushed: Git is a hard prerequisite of Claude Code ("Git is required for local sessions"), so the clinic checklist, hub 0.1 and 0.2 and the room script now carry the Mac check (git --version, install dev tools) and a five-step Windows install (git-scm.com, Next through every screen, fully quit Claude Desktop from the tray, reopen). Hub 0.1 no longer claims Windows self-handles Git. One Mac was blocked by a full disk (Command Line Tools needs about 12 GB free); triage is free the space or pair the guest with a neighbour.
+
+Distribution: artifact public sharing is blocked by the workspace admin settings, so the hub site now serves publicly from GitHub Pages at jodee-tff.github.io/residencierge (orphan gh-pages branch, index.html is the hub). Update both main and gh-pages when the site changes. Standing rule stands: rotate the ntfy topic before any future cohort.
+
+Session handoff brief (private repo): 1. Aug2026 Cohort/Residencierge/handoffs/HANDOFF-2026-09-01-2215.md
